@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lolfightbazaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="idAdmina" />
+    </Key>
+    <Property Name="idAdmina" Type="int" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="45" />
+    <Property Name="Password" Type="varchar" MaxLength="45" />
+    <Property Name="eMail" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="championi">
+    <Key>
+      <PropertyRef Name="idChampiona" />
+    </Key>
+    <Property Name="idChampiona" Type="int" Nullable="false" />
+    <Property Name="Korisnici_idKorisnika" Type="int" Nullable="false" />
+    <Property Name="Nacija" Type="varchar" MaxLength="45" />
+    <Property Name="SviChampioni_idSviChampioni" Type="int" Nullable="false" />
+    <Property Name="Gold" Type="varchar" MaxLength="45" />
+    <Property Name="DaLiJeAktivan" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="idItema" />
+    </Key>
+    <Property Name="idItema" Type="int" Nullable="false" />
+    <Property Name="Championi_idChampiona" Type="int" Nullable="false" />
+    <Property Name="SviItemi_idSviItem" Type="int" Nullable="false" />
+    <Property Name="DaLiJeAktiviran" Type="bool" />
+  </EntityType>
+  <EntityType Name="izvjestajiborbi">
+    <Key>
+      <PropertyRef Name="idIzvjestajiBorbi" />
+    </Key>
+    <Property Name="idIzvjestajiBorbi" Type="int" Nullable="false" />
+    <Property Name="idNapadaca" Type="int" Nullable="false" />
+    <Property Name="idBranioca" Type="int" Nullable="false" />
+    <Property Name="VrijemeNapada" Type="varchar" MaxLength="45" />
+    <Property Name="OstvareniGold" Type="int" />
+    <Property Name="IzvjestajBorbe" Type="varchar" MaxLength="400" />
+    <Property Name="idPobjednika" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="korisnici">
+    <Key>
+      <PropertyRef Name="idKorisnika" />
+    </Key>
+    <Property Name="idKorisnika" Type="int" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="45" />
+    <Property Name="Password" Type="varchar" MaxLength="45" />
+    <Property Name="eMail" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="logaktivnosti">
+    <Key>
+      <PropertyRef Name="idLogAktivnosti" />
+    </Key>
+    <Property Name="idLogAktivnosti" Type="int" Nullable="false" />
+    <Property Name="Championi_idChampiona" Type="int" Nullable="false" />
+    <Property Name="LogFarmanja_idLogFarmanja" Type="int" Nullable="false" />
+    <Property Name="LogJunglanja_idLogJunglanja" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="logfarmanja">
+    <Key>
+      <PropertyRef Name="idLogFarmanja" />
+    </Key>
+    <Property Name="idLogFarmanja" Type="int" Nullable="false" />
+    <Property Name="PocetakFarmanja" Type="varchar" MaxLength="45" />
+    <Property Name="KojiPutUDanu" Type="int" />
+    <Property Name="DobiveniGold" Type="int" />
+    <Property Name="Statistika" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="logjunglanja">
+    <Key>
+      <PropertyRef Name="idLogJunglanja" />
+    </Key>
+    <Property Name="idLogJunglanja" Type="int" Nullable="false" />
+    <Property Name="VrijemePocetka" Type="varchar" MaxLength="45" />
+    <Property Name="Trajanje" Type="varchar" MaxLength="45" />
+    <Property Name="DobiveniGold" Type="int" />
+    <Property Name="Statistka" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="poruke">
+    <Key>
+      <PropertyRef Name="idPoruke" />
+    </Key>
+    <Property Name="idPoruke" Type="int" Nullable="false" />
+    <Property Name="idPosiljaoca" Type="int" Nullable="false" />
+    <Property Name="idPrimaoca" Type="int" Nullable="false" />
+    <Property Name="Admin_idAdmina" Type="int" />
+    <Property Name="NaslovPoruke" Type="varchar" MaxLength="45" />
+    <Property Name="VrijemePoruke" Type="varchar" MaxLength="45" />
+    <Property Name="TekstPoruke" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="rankstatistika">
+    <Key>
+      <PropertyRef Name="idRankStatistika" />
+    </Key>
+    <Property Name="idRankStatistika" Type="int" Nullable="false" />
+    <Property Name="Championi_idChampiona" Type="int" Nullable="false" />
+    <Property Name="NafarmaniGold" Type="varchar" MaxLength="45" />
+    <Property Name="OpljackaniGold" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="skilovi">
+    <Key>
+      <PropertyRef Name="idSkila" />
+    </Key>
+    <Property Name="idSkila" Type="int" Nullable="false" />
+    <Property Name="Championi_idChampiona" Type="int" Nullable="false" />
+    <Property Name="HP" Type="int" />
+    <Property Name="AttackDmg" Type="int" />
+    <Property Name="AbilityPowerDmg" Type="int" />
+    <Property Name="AttackSpeed" Type="int" />
+    <Property Name="Armor" Type="int" />
+    <Property Name="MagicResist" Type="int" />
+    <Property Name="CritChance" Type="int" />
+    <Property Name="ArmorPen" Type="int" />
+    <Property Name="MagicPen" Type="int" />
+  </EntityType>
+  <EntityType Name="svichampioni">
+    <Key>
+      <PropertyRef Name="idSviChampioni" />
+    </Key>
+    <Property Name="idSviChampioni" Type="int" Nullable="false" />
+    <Property Name="Nacija" Type="varchar" MaxLength="45" />
+    <Property Name="Ime" Type="varchar" MaxLength="45" />
+    <Property Name="HP" Type="int" />
+    <Property Name="AttackDmg" Type="int" />
+    <Property Name="AbilityPowerDmg" Type="int" />
+    <Property Name="AttackSpeed" Type="int" />
+    <Property Name="Armor" Type="int" />
+    <Property Name="MagicResist" Type="int" />
+  </EntityType>
+  <EntityType Name="sviitemi">
+    <Key>
+      <PropertyRef Name="idSviItem" />
+    </Key>
+    <Property Name="idSviItem" Type="int" Nullable="false" />
+    <Property Name="Naziv" Type="varchar" MaxLength="45" />
+    <Property Name="Cijena" Type="int" />
+    <Property Name="HP" Type="int" />
+    <Property Name="AttackDmg" Type="int" />
+    <Property Name="AbilityPower" Type="int" />
+    <Property Name="AttackSpeed" Type="int" />
+    <Property Name="Armor" Type="int" />
+    <Property Name="MagicResist" Type="int" />
+    <Property Name="CritChance" Type="int" />
+    <Property Name="ArmorPen" Type="int" />
+    <Property Name="HealAmount" Type="int" />
+  </EntityType>
+  <Association Name="fk_Championi_Korisnici">
+    <End Role="korisnici" Type="Self.korisnici" Multiplicity="1" />
+    <End Role="championi" Type="Self.championi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="korisnici">
+        <PropertyRef Name="idKorisnika" />
+      </Principal>
+      <Dependent Role="championi">
+        <PropertyRef Name="Korisnici_idKorisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Championi_SviChampioni1">
+    <End Role="svichampioni" Type="Self.svichampioni" Multiplicity="1" />
+    <End Role="championi" Type="Self.championi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="svichampioni">
+        <PropertyRef Name="idSviChampioni" />
+      </Principal>
+      <Dependent Role="championi">
+        <PropertyRef Name="SviChampioni_idSviChampioni" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Itemi_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="inventory" Type="Self.inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="inventory">
+        <PropertyRef Name="Championi_idChampiona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Itemi_SviItemi1">
+    <End Role="sviitemi" Type="Self.sviitemi" Multiplicity="1" />
+    <End Role="inventory" Type="Self.inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sviitemi">
+        <PropertyRef Name="idSviItem" />
+      </Principal>
+      <Dependent Role="inventory">
+        <PropertyRef Name="SviItemi_idSviItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IzvjestajiBorbi_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="izvjestajiborbi" Type="Self.izvjestajiborbi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="izvjestajiborbi">
+        <PropertyRef Name="idNapadaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IzvjestajiBorbi_Championi2">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="izvjestajiborbi" Type="Self.izvjestajiborbi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="izvjestajiborbi">
+        <PropertyRef Name="idBranioca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IzvjestajiBorbi_Championi3">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="izvjestajiborbi" Type="Self.izvjestajiborbi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="izvjestajiborbi">
+        <PropertyRef Name="idPobjednika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_LogAktivnosti_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="logaktivnosti" Type="Self.logaktivnosti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="logaktivnosti">
+        <PropertyRef Name="Championi_idChampiona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_LogAktivnosti_LogFarmanja1">
+    <End Role="logfarmanja" Type="Self.logfarmanja" Multiplicity="1" />
+    <End Role="logaktivnosti" Type="Self.logaktivnosti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="logfarmanja">
+        <PropertyRef Name="idLogFarmanja" />
+      </Principal>
+      <Dependent Role="logaktivnosti">
+        <PropertyRef Name="LogFarmanja_idLogFarmanja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_LogAktivnosti_LogJunglanja1">
+    <End Role="logjunglanja" Type="Self.logjunglanja" Multiplicity="1" />
+    <End Role="logaktivnosti" Type="Self.logaktivnosti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="logjunglanja">
+        <PropertyRef Name="idLogJunglanja" />
+      </Principal>
+      <Dependent Role="logaktivnosti">
+        <PropertyRef Name="LogJunglanja_idLogJunglanja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Poruke_Admin1">
+    <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+    <End Role="poruke" Type="Self.poruke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="admin">
+        <PropertyRef Name="idAdmina" />
+      </Principal>
+      <Dependent Role="poruke">
+        <PropertyRef Name="Admin_idAdmina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Poruke_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="poruke" Type="Self.poruke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="poruke">
+        <PropertyRef Name="idPosiljaoca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Poruke_Championi2">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="poruke" Type="Self.poruke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="poruke">
+        <PropertyRef Name="idPrimaoca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RankStatistika_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="rankstatistika" Type="Self.rankstatistika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="rankstatistika">
+        <PropertyRef Name="Championi_idChampiona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Skilovi_Championi1">
+    <End Role="championi" Type="Self.championi" Multiplicity="1" />
+    <End Role="skilovi" Type="Self.skilovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="championi">
+        <PropertyRef Name="idChampiona" />
+      </Principal>
+      <Dependent Role="skilovi">
+        <PropertyRef Name="Championi_idChampiona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="lolfightbazaModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="championi" EntityType="Self.championi" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="inventory" EntityType="Self.inventory" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="izvjestajiborbi" EntityType="Self.izvjestajiborbi" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="korisnici" EntityType="Self.korisnici" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="logaktivnosti" EntityType="Self.logaktivnosti" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="logfarmanja" EntityType="Self.logfarmanja" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="logjunglanja" EntityType="Self.logjunglanja" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="poruke" EntityType="Self.poruke" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="rankstatistika" EntityType="Self.rankstatistika" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="skilovi" EntityType="Self.skilovi" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="svichampioni" EntityType="Self.svichampioni" Schema="lolfightbaza" store:Type="Tables" />
+    <EntitySet Name="sviitemi" EntityType="Self.sviitemi" Schema="lolfightbaza" store:Type="Tables" />
+    <AssociationSet Name="fk_Championi_Korisnici" Association="Self.fk_Championi_Korisnici">
+      <End Role="korisnici" EntitySet="korisnici" />
+      <End Role="championi" EntitySet="championi" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Championi_SviChampioni1" Association="Self.fk_Championi_SviChampioni1">
+      <End Role="svichampioni" EntitySet="svichampioni" />
+      <End Role="championi" EntitySet="championi" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Itemi_Championi1" Association="Self.fk_Itemi_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="inventory" EntitySet="inventory" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Itemi_SviItemi1" Association="Self.fk_Itemi_SviItemi1">
+      <End Role="sviitemi" EntitySet="sviitemi" />
+      <End Role="inventory" EntitySet="inventory" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IzvjestajiBorbi_Championi1" Association="Self.fk_IzvjestajiBorbi_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="izvjestajiborbi" EntitySet="izvjestajiborbi" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IzvjestajiBorbi_Championi2" Association="Self.fk_IzvjestajiBorbi_Championi2">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="izvjestajiborbi" EntitySet="izvjestajiborbi" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IzvjestajiBorbi_Championi3" Association="Self.fk_IzvjestajiBorbi_Championi3">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="izvjestajiborbi" EntitySet="izvjestajiborbi" />
+    </AssociationSet>
+    <AssociationSet Name="fk_LogAktivnosti_Championi1" Association="Self.fk_LogAktivnosti_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="logaktivnosti" EntitySet="logaktivnosti" />
+    </AssociationSet>
+    <AssociationSet Name="fk_LogAktivnosti_LogFarmanja1" Association="Self.fk_LogAktivnosti_LogFarmanja1">
+      <End Role="logfarmanja" EntitySet="logfarmanja" />
+      <End Role="logaktivnosti" EntitySet="logaktivnosti" />
+    </AssociationSet>
+    <AssociationSet Name="fk_LogAktivnosti_LogJunglanja1" Association="Self.fk_LogAktivnosti_LogJunglanja1">
+      <End Role="logjunglanja" EntitySet="logjunglanja" />
+      <End Role="logaktivnosti" EntitySet="logaktivnosti" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Poruke_Admin1" Association="Self.fk_Poruke_Admin1">
+      <End Role="admin" EntitySet="admin" />
+      <End Role="poruke" EntitySet="poruke" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Poruke_Championi1" Association="Self.fk_Poruke_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="poruke" EntitySet="poruke" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Poruke_Championi2" Association="Self.fk_Poruke_Championi2">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="poruke" EntitySet="poruke" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RankStatistika_Championi1" Association="Self.fk_RankStatistika_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="rankstatistika" EntitySet="rankstatistika" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Skilovi_Championi1" Association="Self.fk_Skilovi_Championi1">
+      <End Role="championi" EntitySet="championi" />
+      <End Role="skilovi" EntitySet="skilovi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

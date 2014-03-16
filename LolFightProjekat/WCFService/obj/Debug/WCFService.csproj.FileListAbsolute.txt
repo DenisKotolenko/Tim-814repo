@@ -1,0 +1,10 @@
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.dll.config
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
