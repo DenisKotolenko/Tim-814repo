@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 using System.ServiceModel.Activation;
+using System.Text;
+using LolFightProjekat.Models;
 
 namespace WCFService
 {
@@ -19,6 +23,59 @@ namespace WCFService
         {
             return new Employee() {Name = "Selvedin", Salary = 123};
         }
+
+        public string IspisiSkilove(int idChampiona)
+        {
+            using (var context = new lolfightbazaEntities())
+            {
+                // selecting skills by champion
+                var skills = 
+                    from skilovi in context.skilovis
+                    where skilovi.championi.idChampiona == idChampiona
+                    select skilovi;
+
+                StringBuilder builder = new StringBuilder();
+                foreach (skilovi skilovi in skills)
+                {
+                    // here i'm supplying only the HP, just for show
+                    // TODO: override a ToString method and/or do something about this database...
+                    builder.Append(skilovi.HP).Append(Environment.NewLine);
+                }
+                // TODO: also revise this wonder where a single champion can have multiple skills containing HP, attack dmg etc...
+                return builder.ToString();
+            }
+        }
+
+        public void PosaljiPoruku(int idChampiona, string imePrimaoca, string naslov, string tekst)
+        {
+            using (var context = new lolfightbazaEntities())
+            {
+                // getting recipient's id by its name, i suppose
+                var targetChampionIds = 
+                    from championi in context.championis
+                    where championi.svichampioni.Ime == imePrimaoca
+                    select championi.idChampiona;
+                int targetChampionId = targetChampionIds.FirstOrDefault();
+                
+
+                // creating a new message
+                poruke message = new poruke()
+                {
+                    idPosiljaoca = idChampiona,
+                    idPrimaoca = targetChampionId,
+                    NaslovPoruke = naslov,
+                    TekstPoruke = tekst,
+
+                    VrijemePoruke = DateTime.Now.ToString(CultureInfo.CurrentCulture) // vrijeme is a string?
+                    // NOTE: there are some unfilled properties here
+                };
+
+                // adding the newly created message and commiting to the context and the database
+                context.porukes.Add(message);
+                context.SaveChanges();
+            }
+        }
+
 
         /*
    //Sve vezano za admina NIJE na web servisu

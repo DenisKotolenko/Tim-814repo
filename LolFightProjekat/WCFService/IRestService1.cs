@@ -15,12 +15,31 @@ namespace WCFService
             RequestFormat = WebMessageFormat.Xml,
             ResponseFormat = WebMessageFormat.Xml,
             UriTemplate = "/DoWork")]
-        String DoWork();
+        string DoWork();
 
         [OperationContract]
         [WebInvoke(
             Method = "POST",
             RequestFormat = WebMessageFormat.Xml)]
         Employee GetEmployee();
+
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/IspisiSkilove")]
+        string IspisiSkilove(int idChampiona);
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/PosaljiPoruku")]
+        void PosaljiPoruku(int idChampiona, String imePrimaoca, String naslov, String tekst);
     }
 }

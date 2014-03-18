@@ -26,7 +26,13 @@
         <AssociationConnector Association="lolfightbazaModel.fk_IzvjestajiBorbi_Championi2" ManuallyRouted="false" />
         <AssociationConnector Association="lolfightbazaModel.fk_IzvjestajiBorbi_Championi3" ManuallyRouted="false" />
         <AssociationConnector Association="lolfightbazaModel.fk_LogAktivnosti_Championi1" ManuallyRouted="false" />
-        <AssociationConnector Association="lolfightbazaModel.fk_Poruke_Championi1" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfightbazaModel.fk_Poruke_Championi1" ManuallyRouted="true" >
+          <ConnectorPoint PointX="4.1562525" PointY="9.375" />
+          <ConnectorPoint PointX="4.1562525" PointY="8.8047900390625" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="8.8047900390625" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="8.8047900390625" />
+          <ConnectorPoint PointX="8.25" PointY="8.8047900390625" />
+        </AssociationConnector>
         <AssociationConnector Association="lolfightbazaModel.fk_Poruke_Championi2" ManuallyRouted="false" />
         <AssociationConnector Association="lolfightbazaModel.fk_RankStatistika_Championi1" ManuallyRouted="false" />
         <AssociationConnector Association="lolfightbazaModel.fk_Skilovi_Championi1" ManuallyRouted="false" />
