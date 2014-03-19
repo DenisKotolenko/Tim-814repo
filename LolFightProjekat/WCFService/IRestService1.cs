@@ -24,7 +24,7 @@ namespace WCFService
         Employee GetEmployee();
 
 
-       /* [OperationContract]
+        [OperationContract]
         [WebInvoke(
             Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
@@ -58,8 +58,6 @@ namespace WCFService
             RequestFormat = WebMessageFormat.Xml,
             ResponseFormat = WebMessageFormat.Xml,
             UriTemplate = "/PosaljiPorukuAdminu?idChampiona={idChampiona}&naslov={naslov}&tekst={tekst}")]
-        void PosaljiPorukuAdminu(int idChampiona, String naslov, String tekst); */
-   
-       
+        void PosaljiPorukuAdminu(int idChampiona, String naslov, String tekst);
     }
 }

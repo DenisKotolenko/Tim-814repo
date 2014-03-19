@@ -27,3 +27,23 @@ C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat
 C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
 C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
 C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Optimization.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.SqlServer.xml
