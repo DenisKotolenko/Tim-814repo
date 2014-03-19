@@ -75,8 +75,45 @@ namespace WCFService
                   context.SaveChanges();
               }
           }
+        public void PosaljiPorukuById(int idChampiona, int idPrimaoca, string naslov, string tekst)
+        {
+            using (var context = new lolfightbazaEntities())
+            {
+                // creating a new message
+                poruke message = new poruke()
+                {
+                    idPosiljaoca = idChampiona,
+                    idPrimaoca = idPrimaoca,
+                    NaslovPoruke = naslov,
+                    TekstPoruke = tekst,
 
-          
+                    VrijemePoruke = DateTime.Now.ToString(CultureInfo.CurrentCulture) // vrijeme treba promjenit
+                    // NOTE: there are some unfilled properties here
+                };
+
+                // adding the newly created message and commiting to the context and the database
+                context.porukes.Add(message);
+                context.SaveChanges();
+            }
+        }
+        public void PosaljiPorukuAdminu(int idChampiona, string naslov, string tekst)
+        {
+          using (var context = new lolfightbazaEntities())
+          {
+              poruke message = new poruke()
+              {
+                  idPosiljaoca = idChampiona,
+                  Admin_idAdmina = 1,
+                  NaslovPoruke = naslov,
+                  TekstPoruke = tekst,
+                  VrijemePoruke = DateTime.Now.ToString(CultureInfo.CurrentCulture) // vrijeme treba promjenit
+
+              };
+              // adding the newly created message and commiting to the context and the database
+              context.porukes.Add(message);
+              context.SaveChanges();            
+       }  
+    }
         /*
    //Sve vezano za admina NIJE na web servisu
 
@@ -110,7 +147,7 @@ public void prodajItem(int idItema, int idChampiona);
 public List<poruke> dajPrimljenePoruke(int idChampiona);
 public List<poruke> dajPoslanePoruke(int idChampiona);   
 public void posaljiPoruku(int idChampiona, String imePrimaoca, String naslov, String tekst);  //Selva
-public void posaljiPoruku(int idChampiona, id idPrimaoca, String naslov, String tekst);
+public void posaljiPoruku(int idChampiona, int idPrimaoca, String naslov, String tekst); //Nera
 public void posaljiPorukuAdminu(int idChampiona, String naslov, String tekst);
 
 //Metode za admina (nece biti u servisu)
