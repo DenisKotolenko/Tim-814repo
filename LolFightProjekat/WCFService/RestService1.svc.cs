@@ -14,6 +14,8 @@ namespace WCFService
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class RestService1 : IRestService1
     {
+        //awbuebawueb
+
         public String DoWork()
         {
             return "Radi Rest";
