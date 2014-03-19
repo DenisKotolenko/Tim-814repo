@@ -146,6 +146,7 @@
     <EntitySetMapping Name="sviitemis">
       <EntityTypeMapping TypeName="lolfightbazaModel.sviitemi">
         <MappingFragment StoreEntitySet="sviitemi">
+          <ScalarProperty Name="linkslike" ColumnName="linkslike" />
           <ScalarProperty Name="idSviItem" ColumnName="idSviItem" />
           <ScalarProperty Name="Naziv" ColumnName="Naziv" />
           <ScalarProperty Name="Cijena" ColumnName="Cijena" />

@@ -31,7 +31,7 @@ namespace LolFightProjekat.Models
         public Nullable<int> CritChance { get; set; }
         public Nullable<int> ArmorPen { get; set; }
         public Nullable<int> HealAmount { get; set; }
-        public string linkSlike { get; set; }
+        public string linkslike { get; set; }
     
         public virtual ICollection<inventory> inventories { get; set; }
     }

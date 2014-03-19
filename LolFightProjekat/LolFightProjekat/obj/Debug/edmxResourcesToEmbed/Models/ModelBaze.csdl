@@ -176,7 +176,7 @@
     <Property Name="ArmorPen" Type="Int32" />
     <Property Name="HealAmount" Type="Int32" />
     <NavigationProperty Name="inventories" Relationship="Self.fk_Itemi_SviItemi1" FromRole="sviitemi" ToRole="inventory" />
-    <Property Name="linkSlike" Type="String" Nullable="false" />
+    <Property Name="linkslike" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="fk_Poruke_Admin1">
     <End Role="admin" Type="Self.admin" Multiplicity="0..1" />

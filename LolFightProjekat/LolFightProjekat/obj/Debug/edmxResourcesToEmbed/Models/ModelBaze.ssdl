@@ -146,6 +146,7 @@
     <Property Name="CritChance" Type="int" />
     <Property Name="ArmorPen" Type="int" />
     <Property Name="HealAmount" Type="int" />
+    <Property Name="linkslike" Type="varchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <Association Name="fk_Championi_Korisnici">
     <End Role="korisnici" Type="Self.korisnici" Multiplicity="1" />

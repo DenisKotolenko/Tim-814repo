@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="lolfightbazaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="lolfightbazaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="admin">
           <Key>
             <PropertyRef Name="idAdmina" />
@@ -151,6 +151,7 @@
           <Property Name="CritChance" Type="int" />
           <Property Name="ArmorPen" Type="int" />
           <Property Name="HealAmount" Type="int" />
+          <Property Name="linkslike" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <Association Name="fk_Championi_Korisnici">
           <End Role="korisnici" Type="Self.korisnici" Multiplicity="1" />
@@ -407,8 +408,7 @@
             <End Role="skilovi" EntitySet="skilovi" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="lolfightbazaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -588,7 +588,7 @@
           <Property Name="ArmorPen" Type="Int32" />
           <Property Name="HealAmount" Type="Int32" />
           <NavigationProperty Name="inventories" Relationship="Self.fk_Itemi_SviItemi1" FromRole="sviitemi" ToRole="inventory" />
-          <Property Name="linkSlike" Type="String" Nullable="false" />
+          <Property Name="linkslike" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="fk_Poruke_Admin1">
           <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
@@ -996,6 +996,7 @@
           <EntitySetMapping Name="sviitemis">
             <EntityTypeMapping TypeName="lolfightbazaModel.sviitemi">
               <MappingFragment StoreEntitySet="sviitemi">
+                <ScalarProperty Name="linkslike" ColumnName="linkslike" />
                 <ScalarProperty Name="idSviItem" ColumnName="idSviItem" />
                 <ScalarProperty Name="Naziv" ColumnName="Naziv" />
                 <ScalarProperty Name="Cijena" ColumnName="Cijena" />
