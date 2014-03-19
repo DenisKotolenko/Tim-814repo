@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AddingItemsController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,6 +143,7 @@
     <Compile Include="Models\championi.cs">
       <DependentUpon>ModelBaze.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ExcludeChar.cs" />
     <Compile Include="Models\inventory.cs">
       <DependentUpon>ModelBaze.tt</DependentUpon>
     </Compile>
@@ -299,6 +301,11 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\AddingItems\Index.cshtml" />
+    <Content Include="Views\AddingItems\Details.cshtml" />
+    <Content Include="Views\AddingItems\Create.cshtml" />
+    <Content Include="Views\AddingItems\Edit.cshtml" />
+    <Content Include="Views\AddingItems\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

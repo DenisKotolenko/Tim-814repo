@@ -1,0 +1,132 @@
+﻿@model LolFightProjekat.Models.sviitemi
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>sviitemi</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idSviItem)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idSviItem)
+            @Html.ValidationMessageFor(model => model.idSviItem)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Naziv)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Naziv)
+            @Html.ValidationMessageFor(model => model.Naziv)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cijena)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cijena)
+            @Html.ValidationMessageFor(model => model.Cijena)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HP)
+            @Html.ValidationMessageFor(model => model.HP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AttackDmg)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AttackDmg)
+            @Html.ValidationMessageFor(model => model.AttackDmg)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AbilityPower)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AbilityPower)
+            @Html.ValidationMessageFor(model => model.AbilityPower)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AttackSpeed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AttackSpeed)
+            @Html.ValidationMessageFor(model => model.AttackSpeed)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Armor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Armor)
+            @Html.ValidationMessageFor(model => model.Armor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MagicResist)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MagicResist)
+            @Html.ValidationMessageFor(model => model.MagicResist)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CritChance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CritChance)
+            @Html.ValidationMessageFor(model => model.CritChance)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ArmorPen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ArmorPen)
+            @Html.ValidationMessageFor(model => model.ArmorPen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HealAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HealAmount)
+            @Html.ValidationMessageFor(model => model.HealAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.linkslike)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.linkslike)
+            @Html.ValidationMessageFor(model => model.linkslike)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

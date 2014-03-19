@@ -11,6 +11,7 @@ namespace LolFightProjekat.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class sviitemi
     {
@@ -20,6 +21,7 @@ namespace LolFightProjekat.Models
         }
     
         public int idSviItem { get; set; }
+        [Required(ErrorMessage = "Name of item must be added")]
         public string Naziv { get; set; }
         public Nullable<int> Cijena { get; set; }
         public Nullable<int> HP { get; set; }
@@ -31,6 +33,7 @@ namespace LolFightProjekat.Models
         public Nullable<int> CritChance { get; set; }
         public Nullable<int> ArmorPen { get; set; }
         public Nullable<int> HealAmount { get; set; }
+        [Required(ErrorMessage="Picture link must be added")]
         public string linkslike { get; set; }
     
         public virtual ICollection<inventory> inventories { get; set; }

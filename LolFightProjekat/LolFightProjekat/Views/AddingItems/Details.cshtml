@@ -1,0 +1,106 @@
+﻿@model LolFightProjekat.Models.sviitemi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>sviitemi</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idSviItem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idSviItem)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Naziv)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Naziv)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cijena)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cijena)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackDmg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackDmg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AbilityPower)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbilityPower)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackSpeed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackSpeed)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Armor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Armor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MagicResist)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MagicResist)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CritChance)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CritChance)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArmorPen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArmorPen)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HealAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HealAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.linkslike)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.linkslike)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -11,6 +11,8 @@ namespace LolFightProjekat.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    
     
     public partial class admin
     {
@@ -18,9 +20,11 @@ namespace LolFightProjekat.Models
         {
             this.porukes = new HashSet<poruke>();
         }
-    
+         [Required]
         public int idAdmina { get; set; }
+         [ExcludeChar("/.,!@#$%", ErrorMessage = "Ime ne smije sadržavati /.,!@#$% karaktere.")]
         public string Username { get; set; }
+         [Required]
         public string Password { get; set; }
         public string eMail { get; set; }
     
