@@ -133,7 +133,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddingItemsController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AfterLoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -319,6 +321,8 @@
     <Content Include="Views\AddingItems\Create.cshtml" />
     <Content Include="Views\AddingItems\Edit.cshtml" />
     <Content Include="Views\AddingItems\Delete.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\AfterLogin\AfterLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

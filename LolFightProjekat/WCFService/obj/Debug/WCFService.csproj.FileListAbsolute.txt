@@ -46,3 +46,5 @@ C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFig
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\WebGrease.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\Antlr3.Runtime.dll
