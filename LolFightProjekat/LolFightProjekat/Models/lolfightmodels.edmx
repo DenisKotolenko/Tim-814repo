@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="lolfighdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="IdAdmin" />
+          </Key>
+          <Property Name="IdAdmin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="45" />
+          <Property Name="Password" Type="nvarchar" MaxLength="45" />
+          <Property Name="eMail" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="AdminMail">
+          <Key>
+            <PropertyRef Name="IdAdminMail" />
+          </Key>
+          <Property Name="IdAdminMail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="45" />
+          <Property Name="Text" Type="nvarchar" MaxLength="200" />
+          <Property Name="IdAdmin" Type="int" Nullable="false" />
+          <Property Name="IdChampion" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Champion">
+          <Key>
+            <PropertyRef Name="IdChampion" />
+          </Key>
+          <Property Name="IdChampion" Type="int" Nullable="false" />
+          <Property Name="IdChampionType" Type="int" Nullable="false" />
+          <Property Name="Gold" Type="int" />
+          <Property Name="BanCooldown" Type="int" />
+        </EntityType>
+        <EntityType Name="ChampionType">
+          <Key>
+            <PropertyRef Name="IdChampionType" />
+          </Key>
+          <Property Name="IdChampionType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nation" Type="nvarchar" MaxLength="45" />
+          <Property Name="Name" Type="nvarchar" MaxLength="45" />
+          <Property Name="ImageLink" Type="nvarchar" MaxLength="45" />
+          <Property Name="HP" Type="int" />
+          <Property Name="AttackDamage" Type="int" />
+          <Property Name="AbilityDamage" Type="int" />
+          <Property Name="AttackSpeed" Type="int" />
+          <Property Name="Armor" Type="int" />
+          <Property Name="MagicResist" Type="int" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="IdInventory" />
+          </Key>
+          <Property Name="IdInventory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdChampion" Type="int" Nullable="false" />
+          <Property Name="IdItem" Type="int" Nullable="false" />
+          <Property Name="Activated" Type="int" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="IdItem" />
+          </Key>
+          <Property Name="IdItem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Price" Type="int" />
+          <Property Name="HP" Type="int" />
+          <Property Name="AttackDamage" Type="int" />
+          <Property Name="AbilityDamage" Type="int" />
+          <Property Name="AttackSpeed" Type="int" />
+          <Property Name="Armor" Type="int" />
+          <Property Name="MagicResist" Type="int" />
+          <Property Name="Critical" Type="int" />
+          <Property Name="ArmorPenetration" Type="int" />
+          <Property Name="MagicPenetration" Type="int" />
+          <Property Name="Heal" Type="int" />
+        </EntityType>
+        <EntityType Name="LogBattle">
+          <Key>
+            <PropertyRef Name="IdLogBattle" />
+          </Key>
+          <Property Name="IdLogBattle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdAttacker" Type="int" Nullable="false" />
+          <Property Name="IdDefender" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="int" />
+          <Property Name="Gold" Type="int" />
+          <Property Name="Report" Type="nvarchar" MaxLength="200" />
+          <Property Name="IdWinner" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LogFarm">
+          <Key>
+            <PropertyRef Name="IdLogFarm" />
+          </Key>
+          <Property Name="IdLogFarm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdChampion" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="int" />
+          <Property Name="DailyRemaining" Type="int" />
+          <Property Name="Gold" Type="int" />
+          <Property Name="Report" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="LogJungle">
+          <Key>
+            <PropertyRef Name="IdLogJungle" />
+          </Key>
+          <Property Name="IdLogJungle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdChampion" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="int" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="Gold" Type="int" />
+          <Property Name="Report" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Mail">
+          <Key>
+            <PropertyRef Name="IdMail" />
+          </Key>
+          <Property Name="IdMail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSender" Type="int" Nullable="false" />
+          <Property Name="IdReceiver" Type="int" Nullable="false" />
+          <Property Name="Time" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="45" />
+          <Property Name="Text" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Ranking">
+          <Key>
+            <PropertyRef Name="IdRanking" />
+          </Key>
+          <Property Name="IdRanking" Type="int" Nullable="false" />
+          <Property Name="FarmGold" Type="int" />
+          <Property Name="StolenGold" Type="int" />
+        </EntityType>
+        <EntityType Name="Skill">
+          <Key>
+            <PropertyRef Name="IdSkill" />
+          </Key>
+          <Property Name="IdSkill" Type="int" Nullable="false" />
+          <Property Name="HP" Type="int" />
+          <Property Name="AttackDamage" Type="int" />
+          <Property Name="AbilityDamage" Type="int" />
+          <Property Name="AttackSpeed" Type="int" />
+          <Property Name="Armor" Type="int" />
+          <Property Name="MagicResist" Type="int" />
+          <Property Name="Critical" Type="int" />
+          <Property Name="ArmorPenetration" Type="int" />
+          <Property Name="MagicPenetration" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="45" />
+          <Property Name="Password" Type="nvarchar" MaxLength="45" />
+          <Property Name="eMail" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK__Champion__IdCham__182C9B23">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Champion" Type="Self.Champion" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ranking__IdRanki__31EC6D26">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Ranking" Type="Self.Ranking" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Ranking">
+              <PropertyRef Name="IdRanking" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Skill__IdSkill__34C8D9D1">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Skill">
+              <PropertyRef Name="IdSkill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AdminMail_dbo_Admin_IdAdmin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AdminMail" Type="Self.AdminMail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="IdAdmin" />
+            </Principal>
+            <Dependent Role="AdminMail">
+              <PropertyRef Name="IdAdmin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AdminMail_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AdminMail" Type="Self.AdminMail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="AdminMail">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Champion_dbo_ChampionType_IdChampionType">
+          <End Role="ChampionType" Type="Self.ChampionType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Champion" Type="Self.Champion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChampionType">
+              <PropertyRef Name="IdChampionType" />
+            </Principal>
+            <Dependent Role="Champion">
+              <PropertyRef Name="IdChampionType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Inventory_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Inventory_dbo_Item_IdItem">
+          <End Role="Item" Type="Self.Item" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="IdItem" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="IdItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdAttacker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdDefender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdWinner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogFarm_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LogFarm" Type="Self.LogFarm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogFarm">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogJungle_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LogJungle" Type="Self.LogJungle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogJungle">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Mail" Type="Self.Mail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Mail">
+              <PropertyRef Name="IdReceiver" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mail_IdSender_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Mail" Type="Self.Mail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Mail">
+              <PropertyRef Name="IdSender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="lolfighdatabaseModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AdminMail" EntityType="Self.AdminMail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Champion" EntityType="Self.Champion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChampionType" EntityType="Self.ChampionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogBattle" EntityType="Self.LogBattle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogFarm" EntityType="Self.LogFarm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogJungle" EntityType="Self.LogJungle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mail" EntityType="Self.Mail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ranking" EntityType="Self.Ranking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Champion__IdCham__182C9B23" Association="Self.FK__Champion__IdCham__182C9B23">
+            <End Role="User" EntitySet="User" />
+            <End Role="Champion" EntitySet="Champion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ranking__IdRanki__31EC6D26" Association="Self.FK__Ranking__IdRanki__31EC6D26">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="Ranking" EntitySet="Ranking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Skill__IdSkill__34C8D9D1" Association="Self.FK__Skill__IdSkill__34C8D9D1">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="Skill" EntitySet="Skill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AdminMail_dbo_Admin_IdAdmin" Association="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="AdminMail" EntitySet="AdminMail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AdminMail_dbo_Champion_IdChampion" Association="Self.FK_dbo_AdminMail_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="AdminMail" EntitySet="AdminMail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Champion_dbo_ChampionType_IdChampionType" Association="Self.FK_dbo_Champion_dbo_ChampionType_IdChampionType">
+            <End Role="ChampionType" EntitySet="ChampionType" />
+            <End Role="Champion" EntitySet="Champion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Inventory_dbo_Champion_IdChampion" Association="Self.FK_dbo_Inventory_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="Inventory" EntitySet="Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Inventory_dbo_Item_IdItem" Association="Self.FK_dbo_Inventory_dbo_Item_IdItem">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="Inventory" EntitySet="Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="LogBattle" EntitySet="LogBattle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="LogBattle" EntitySet="LogBattle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="LogBattle" EntitySet="LogBattle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogFarm_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogFarm_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="LogFarm" EntitySet="LogFarm" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogJungle_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogJungle_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="LogJungle" EntitySet="LogJungle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" Association="Self.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="Mail" EntitySet="Mail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" Association="Self.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champion" />
+            <End Role="Mail" EntitySet="Mail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="lolfighdatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="IdAdmin" />
+          </Key>
+          <Property Name="IdAdmin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="eMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AdminMails" Relationship="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin" FromRole="Admin" ToRole="AdminMail" />
+        </EntityType>
+        <EntityType Name="AdminMail">
+          <Key>
+            <PropertyRef Name="IdAdminMail" />
+          </Key>
+          <Property Name="IdAdminMail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IdAdmin" Type="Int32" Nullable="false" />
+          <Property Name="IdChampion" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Admin" Relationship="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin" FromRole="AdminMail" ToRole="Admin" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_AdminMail_dbo_Champion_IdChampion" FromRole="AdminMail" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="Champion">
+          <Key>
+            <PropertyRef Name="IdChampion" />
+          </Key>
+          <Property Name="IdChampion" Type="Int32" Nullable="false" />
+          <Property Name="IdChampionType" Type="Int32" Nullable="false" />
+          <Property Name="Gold" Type="Int32" />
+          <Property Name="BanCooldown" Type="Int32" />
+          <NavigationProperty Name="AdminMails" Relationship="Self.FK_dbo_AdminMail_dbo_Champion_IdChampion" FromRole="Champion" ToRole="AdminMail" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Champion__IdCham__182C9B23" FromRole="Champion" ToRole="User" />
+          <NavigationProperty Name="Ranking" Relationship="Self.FK__Ranking__IdRanki__31EC6D26" FromRole="Champion" ToRole="Ranking" />
+          <NavigationProperty Name="Skill" Relationship="Self.FK__Skill__IdSkill__34C8D9D1" FromRole="Champion" ToRole="Skill" />
+          <NavigationProperty Name="ChampionType" Relationship="Self.FK_dbo_Champion_dbo_ChampionType_IdChampionType" FromRole="Champion" ToRole="ChampionType" />
+          <NavigationProperty Name="Inventories" Relationship="Self.FK_dbo_Inventory_dbo_Champion_IdChampion" FromRole="Champion" ToRole="Inventory" />
+          <NavigationProperty Name="LogBattles" Relationship="Self.FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion" FromRole="Champion" ToRole="LogBattle" />
+          <NavigationProperty Name="LogBattles1" Relationship="Self.FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion" FromRole="Champion" ToRole="LogBattle" />
+          <NavigationProperty Name="LogBattles2" Relationship="Self.FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion" FromRole="Champion" ToRole="LogBattle" />
+          <NavigationProperty Name="LogFarms" Relationship="Self.FK_dbo_LogFarm_dbo_Champion_IdChampion" FromRole="Champion" ToRole="LogFarm" />
+          <NavigationProperty Name="LogJungles" Relationship="Self.FK_dbo_LogJungle_dbo_Champion_IdChampion" FromRole="Champion" ToRole="LogJungle" />
+          <NavigationProperty Name="Mails" Relationship="Self.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" FromRole="Champion" ToRole="Mail" />
+          <NavigationProperty Name="Mails1" Relationship="Self.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" FromRole="Champion" ToRole="Mail" />
+        </EntityType>
+        <EntityType Name="ChampionType">
+          <Key>
+            <PropertyRef Name="IdChampionType" />
+          </Key>
+          <Property Name="IdChampionType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nation" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="ImageLink" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="HP" Type="Int32" />
+          <Property Name="AttackDamage" Type="Int32" />
+          <Property Name="AbilityDamage" Type="Int32" />
+          <Property Name="AttackSpeed" Type="Int32" />
+          <Property Name="Armor" Type="Int32" />
+          <Property Name="MagicResist" Type="Int32" />
+          <NavigationProperty Name="Champions" Relationship="Self.FK_dbo_Champion_dbo_ChampionType_IdChampionType" FromRole="ChampionType" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="IdInventory" />
+          </Key>
+          <Property Name="IdInventory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdChampion" Type="Int32" Nullable="false" />
+          <Property Name="IdItem" Type="Int32" Nullable="false" />
+          <Property Name="Activated" Type="Int32" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_Inventory_dbo_Champion_IdChampion" FromRole="Inventory" ToRole="Champion" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_dbo_Inventory_dbo_Item_IdItem" FromRole="Inventory" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="IdItem" />
+          </Key>
+          <Property Name="IdItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="HP" Type="Int32" />
+          <Property Name="AttackDamage" Type="Int32" />
+          <Property Name="AbilityDamage" Type="Int32" />
+          <Property Name="AttackSpeed" Type="Int32" />
+          <Property Name="Armor" Type="Int32" />
+          <Property Name="MagicResist" Type="Int32" />
+          <Property Name="Critical" Type="Int32" />
+          <Property Name="ArmorPenetration" Type="Int32" />
+          <Property Name="MagicPenetration" Type="Int32" />
+          <Property Name="Heal" Type="Int32" />
+          <NavigationProperty Name="Inventories" Relationship="Self.FK_dbo_Inventory_dbo_Item_IdItem" FromRole="Item" ToRole="Inventory" />
+        </EntityType>
+        <EntityType Name="LogBattle">
+          <Key>
+            <PropertyRef Name="IdLogBattle" />
+          </Key>
+          <Property Name="IdLogBattle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAttacker" Type="Int32" Nullable="false" />
+          <Property Name="IdDefender" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="Int32" />
+          <Property Name="Gold" Type="Int32" />
+          <Property Name="Report" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IdWinner" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion" FromRole="LogBattle" ToRole="Champion" />
+          <NavigationProperty Name="Champion1" Relationship="Self.FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion" FromRole="LogBattle" ToRole="Champion" />
+          <NavigationProperty Name="Champion2" Relationship="Self.FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion" FromRole="LogBattle" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="LogFarm">
+          <Key>
+            <PropertyRef Name="IdLogFarm" />
+          </Key>
+          <Property Name="IdLogFarm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdChampion" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="Int32" />
+          <Property Name="DailyRemaining" Type="Int32" />
+          <Property Name="Gold" Type="Int32" />
+          <Property Name="Report" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_LogFarm_dbo_Champion_IdChampion" FromRole="LogFarm" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="LogJungle">
+          <Key>
+            <PropertyRef Name="IdLogJungle" />
+          </Key>
+          <Property Name="IdLogJungle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdChampion" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="Int32" />
+          <Property Name="Duration" Type="Int32" />
+          <Property Name="Gold" Type="Int32" />
+          <Property Name="Report" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_LogJungle_dbo_Champion_IdChampion" FromRole="LogJungle" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="Mail">
+          <Key>
+            <PropertyRef Name="IdMail" />
+          </Key>
+          <Property Name="IdMail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSender" Type="Int32" Nullable="false" />
+          <Property Name="IdReceiver" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" FromRole="Mail" ToRole="Champion" />
+          <NavigationProperty Name="Champion1" Relationship="Self.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" FromRole="Mail" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="Ranking">
+          <Key>
+            <PropertyRef Name="IdRanking" />
+          </Key>
+          <Property Name="IdRanking" Type="Int32" Nullable="false" />
+          <Property Name="FarmGold" Type="Int32" />
+          <Property Name="StolenGold" Type="Int32" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK__Ranking__IdRanki__31EC6D26" FromRole="Ranking" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="Skill">
+          <Key>
+            <PropertyRef Name="IdSkill" />
+          </Key>
+          <Property Name="IdSkill" Type="Int32" Nullable="false" />
+          <Property Name="HP" Type="Int32" />
+          <Property Name="AttackDamage" Type="Int32" />
+          <Property Name="AbilityDamage" Type="Int32" />
+          <Property Name="AttackSpeed" Type="Int32" />
+          <Property Name="Armor" Type="Int32" />
+          <Property Name="MagicResist" Type="Int32" />
+          <Property Name="Critical" Type="Int32" />
+          <Property Name="ArmorPenetration" Type="Int32" />
+          <Property Name="MagicPenetration" Type="Int32" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK__Skill__IdSkill__34C8D9D1" FromRole="Skill" ToRole="Champion" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="eMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Champion" Relationship="Self.FK__Champion__IdCham__182C9B23" FromRole="User" ToRole="Champion" />
+        </EntityType>
+        <Association Name="FK_dbo_AdminMail_dbo_Admin_IdAdmin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AdminMail" Type="Self.AdminMail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="IdAdmin" />
+            </Principal>
+            <Dependent Role="AdminMail">
+              <PropertyRef Name="IdAdmin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AdminMail_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AdminMail" Type="Self.AdminMail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="AdminMail">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Champion__IdCham__182C9B23">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Champion" Type="Self.Champion" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ranking__IdRanki__31EC6D26">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Ranking" Type="Self.Ranking" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Ranking">
+              <PropertyRef Name="IdRanking" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Skill__IdSkill__34C8D9D1">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Skill">
+              <PropertyRef Name="IdSkill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Champion_dbo_ChampionType_IdChampionType">
+          <End Role="ChampionType" Type="Self.ChampionType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Champion" Type="Self.Champion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChampionType">
+              <PropertyRef Name="IdChampionType" />
+            </Principal>
+            <Dependent Role="Champion">
+              <PropertyRef Name="IdChampionType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Inventory_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdAttacker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdDefender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="LogBattle" Type="Self.LogBattle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogBattle">
+              <PropertyRef Name="IdWinner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogFarm_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LogFarm" Type="Self.LogFarm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogFarm">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_LogJungle_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LogJungle" Type="Self.LogJungle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="LogJungle">
+              <PropertyRef Name="IdChampion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Mail" Type="Self.Mail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Mail">
+              <PropertyRef Name="IdReceiver" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mail_IdSender_dbo_Champion_IdChampion">
+          <End Role="Champion" Type="Self.Champion" Multiplicity="1" />
+          <End Role="Mail" Type="Self.Mail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Champion">
+              <PropertyRef Name="IdChampion" />
+            </Principal>
+            <Dependent Role="Mail">
+              <PropertyRef Name="IdSender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Inventory_dbo_Item_IdItem">
+          <End Role="Item" Type="Self.Item" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="IdItem" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="IdItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="lolfighdatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="AdminMails" EntityType="Self.AdminMail" />
+          <EntitySet Name="Champions" EntityType="Self.Champion" />
+          <EntitySet Name="ChampionTypes" EntityType="Self.ChampionType" />
+          <EntitySet Name="Inventories" EntityType="Self.Inventory" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="LogBattles" EntityType="Self.LogBattle" />
+          <EntitySet Name="LogFarms" EntityType="Self.LogFarm" />
+          <EntitySet Name="LogJungles" EntityType="Self.LogJungle" />
+          <EntitySet Name="Mails" EntityType="Self.Mail" />
+          <EntitySet Name="Rankings" EntityType="Self.Ranking" />
+          <EntitySet Name="Skills" EntityType="Self.Skill" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_dbo_AdminMail_dbo_Admin_IdAdmin" Association="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="AdminMail" EntitySet="AdminMails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AdminMail_dbo_Champion_IdChampion" Association="Self.FK_dbo_AdminMail_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="AdminMail" EntitySet="AdminMails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Champion__IdCham__182C9B23" Association="Self.FK__Champion__IdCham__182C9B23">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Champion" EntitySet="Champions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ranking__IdRanki__31EC6D26" Association="Self.FK__Ranking__IdRanki__31EC6D26">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="Ranking" EntitySet="Rankings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Skill__IdSkill__34C8D9D1" Association="Self.FK__Skill__IdSkill__34C8D9D1">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="Skill" EntitySet="Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Champion_dbo_ChampionType_IdChampionType" Association="Self.FK_dbo_Champion_dbo_ChampionType_IdChampionType">
+            <End Role="ChampionType" EntitySet="ChampionTypes" />
+            <End Role="Champion" EntitySet="Champions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Inventory_dbo_Champion_IdChampion" Association="Self.FK_dbo_Inventory_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="Inventory" EntitySet="Inventories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="LogBattle" EntitySet="LogBattles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="LogBattle" EntitySet="LogBattles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="LogBattle" EntitySet="LogBattles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogFarm_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogFarm_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="LogFarm" EntitySet="LogFarms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_LogJungle_dbo_Champion_IdChampion" Association="Self.FK_dbo_LogJungle_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="LogJungle" EntitySet="LogJungles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" Association="Self.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="Mail" EntitySet="Mails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" Association="Self.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion">
+            <End Role="Champion" EntitySet="Champions" />
+            <End Role="Mail" EntitySet="Mails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Inventory_dbo_Item_IdItem" Association="Self.FK_dbo_Inventory_dbo_Item_IdItem">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="Inventory" EntitySet="Inventories" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="lolfighdatabaseModelStoreContainer" CdmEntityContainer="lolfighdatabaseEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="eMail" ColumnName="eMail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdminMails">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.AdminMail">
+              <MappingFragment StoreEntitySet="AdminMail">
+                <ScalarProperty Name="IdAdminMail" ColumnName="IdAdminMail" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
+                <ScalarProperty Name="IdChampion" ColumnName="IdChampion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Champions">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Champion">
+              <MappingFragment StoreEntitySet="Champion">
+                <ScalarProperty Name="IdChampion" ColumnName="IdChampion" />
+                <ScalarProperty Name="IdChampionType" ColumnName="IdChampionType" />
+                <ScalarProperty Name="Gold" ColumnName="Gold" />
+                <ScalarProperty Name="BanCooldown" ColumnName="BanCooldown" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChampionTypes">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.ChampionType">
+              <MappingFragment StoreEntitySet="ChampionType">
+                <ScalarProperty Name="IdChampionType" ColumnName="IdChampionType" />
+                <ScalarProperty Name="Nation" ColumnName="Nation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+                <ScalarProperty Name="HP" ColumnName="HP" />
+                <ScalarProperty Name="AttackDamage" ColumnName="AttackDamage" />
+                <ScalarProperty Name="AbilityDamage" ColumnName="AbilityDamage" />
+                <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+                <ScalarProperty Name="Armor" ColumnName="Armor" />
+                <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inventories">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Inventory">
+              <MappingFragment StoreEntitySet="Inventory">
+                <ScalarProperty Name="IdInventory" ColumnName="IdInventory" />
+                <ScalarProperty Name="IdChampion" ColumnName="IdChampion" />
+                <ScalarProperty Name="IdItem" ColumnName="IdItem" />
+                <ScalarProperty Name="Activated" ColumnName="Activated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="IdItem" ColumnName="IdItem" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="HP" ColumnName="HP" />
+                <ScalarProperty Name="AttackDamage" ColumnName="AttackDamage" />
+                <ScalarProperty Name="AbilityDamage" ColumnName="AbilityDamage" />
+                <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+                <ScalarProperty Name="Armor" ColumnName="Armor" />
+                <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+                <ScalarProperty Name="Critical" ColumnName="Critical" />
+                <ScalarProperty Name="ArmorPenetration" ColumnName="ArmorPenetration" />
+                <ScalarProperty Name="MagicPenetration" ColumnName="MagicPenetration" />
+                <ScalarProperty Name="Heal" ColumnName="Heal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogBattles">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.LogBattle">
+              <MappingFragment StoreEntitySet="LogBattle">
+                <ScalarProperty Name="IdLogBattle" ColumnName="IdLogBattle" />
+                <ScalarProperty Name="IdAttacker" ColumnName="IdAttacker" />
+                <ScalarProperty Name="IdDefender" ColumnName="IdDefender" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Gold" ColumnName="Gold" />
+                <ScalarProperty Name="Report" ColumnName="Report" />
+                <ScalarProperty Name="IdWinner" ColumnName="IdWinner" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogFarms">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.LogFarm">
+              <MappingFragment StoreEntitySet="LogFarm">
+                <ScalarProperty Name="IdLogFarm" ColumnName="IdLogFarm" />
+                <ScalarProperty Name="IdChampion" ColumnName="IdChampion" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="DailyRemaining" ColumnName="DailyRemaining" />
+                <ScalarProperty Name="Gold" ColumnName="Gold" />
+                <ScalarProperty Name="Report" ColumnName="Report" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogJungles">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.LogJungle">
+              <MappingFragment StoreEntitySet="LogJungle">
+                <ScalarProperty Name="IdLogJungle" ColumnName="IdLogJungle" />
+                <ScalarProperty Name="IdChampion" ColumnName="IdChampion" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Gold" ColumnName="Gold" />
+                <ScalarProperty Name="Report" ColumnName="Report" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mails">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Mail">
+              <MappingFragment StoreEntitySet="Mail">
+                <ScalarProperty Name="IdMail" ColumnName="IdMail" />
+                <ScalarProperty Name="IdSender" ColumnName="IdSender" />
+                <ScalarProperty Name="IdReceiver" ColumnName="IdReceiver" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rankings">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Ranking">
+              <MappingFragment StoreEntitySet="Ranking">
+                <ScalarProperty Name="IdRanking" ColumnName="IdRanking" />
+                <ScalarProperty Name="FarmGold" ColumnName="FarmGold" />
+                <ScalarProperty Name="StolenGold" ColumnName="StolenGold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Skills">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.Skill">
+              <MappingFragment StoreEntitySet="Skill">
+                <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+                <ScalarProperty Name="HP" ColumnName="HP" />
+                <ScalarProperty Name="AttackDamage" ColumnName="AttackDamage" />
+                <ScalarProperty Name="AbilityDamage" ColumnName="AbilityDamage" />
+                <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+                <ScalarProperty Name="Armor" ColumnName="Armor" />
+                <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+                <ScalarProperty Name="Critical" ColumnName="Critical" />
+                <ScalarProperty Name="ArmorPenetration" ColumnName="ArmorPenetration" />
+                <ScalarProperty Name="MagicPenetration" ColumnName="MagicPenetration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="eMail" ColumnName="eMail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

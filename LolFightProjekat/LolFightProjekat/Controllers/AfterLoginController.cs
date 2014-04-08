@@ -13,16 +13,14 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult AfterLogin()
         {
-            
-                if (Session["LogedUserID"] != null)
-                {
-                    return View();
-                }
-                else
-                {
-                    return RedirectToAction("Index");
-                }
-            
+            if (Session["LogedUserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
         }
 
     }

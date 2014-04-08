@@ -11,14 +11,14 @@ namespace LolFightProjekat.Controllers
 {
     public class AdminController : Controller
     {
-        private lolfightbazaEntities db = new lolfightbazaEntities();
+        private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
         //
         // GET: /Admin/
 
         public ActionResult Index()
         {
-            return View(db.admins.ToList());
+            return View(db.Admins.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            admin admin = db.admins.Find(id);
+            Admin admin = db.Admins.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace LolFightProjekat.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(admin admin)
+        public ActionResult Create(Admin admin)
         {
             if (ModelState.IsValid)
             {
-                db.admins.Add(admin);
+                db.Admins.Add(admin);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -64,7 +64,7 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            admin admin = db.admins.Find(id);
+            Admin admin = db.Admins.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -77,7 +77,7 @@ namespace LolFightProjekat.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(admin admin)
+        public ActionResult Edit(Admin admin)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            admin admin = db.admins.Find(id);
+            Admin admin = db.Admins.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -108,8 +108,8 @@ namespace LolFightProjekat.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            admin admin = db.admins.Find(id);
-            db.admins.Remove(admin);
+            Admin admin = db.Admins.Find(id);
+            db.Admins.Remove(admin);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

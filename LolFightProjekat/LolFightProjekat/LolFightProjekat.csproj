@@ -131,73 +131,76 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AddingItemsController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AfterLoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\admin.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\championi.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\AdminMail.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Champion.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChampionType.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ExcludeChar.cs" />
-    <Compile Include="Models\inventory.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\izvjestajiborbi.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Item.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\korisnici.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\LogBattle.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\logaktivnosti.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\LogFarm.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\logfarmanja.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\LogJungle.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\logjunglanja.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ModelBaze.Context.cs">
+    <Compile Include="Models\lolfightmodels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaze.Context.tt</DependentUpon>
+      <DependentUpon>lolfightmodels.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelBaze.cs">
+    <Compile Include="Models\lolfightmodels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelBaze.Designer.cs">
+    <Compile Include="Models\lolfightmodels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaze.edmx</DependentUpon>
+      <DependentUpon>lolfightmodels.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\poruke.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Mail.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\rankstatistika.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Ranking.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\skilovi.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\Skill.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\svichampioni.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sviitemi.cs">
-      <DependentUpon>ModelBaze.tt</DependentUpon>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\lolfighdatabase.mdf" />
+    <Content Include="App_Data\lolfighdatabase_log.ldf">
+      <DependentUpon>lolfighdatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -259,28 +262,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <EntityDeploy Include="Models\ModelBaze.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBaze.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ModelBaze.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBaze.edmx</DependentUpon>
-      <LastGenOutput>ModelBaze.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ModelBaze.edmx.diagram">
-      <DependentUpon>ModelBaze.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ModelBaze.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBaze.edmx</DependentUpon>
-      <LastGenOutput>ModelBaze.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="Models\lolfightmodels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>lolfightmodels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\lolfightmodels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>lolfightmodels.edmx</DependentUpon>
+      <LastGenOutput>lolfightmodels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\lolfightmodels.edmx.diagram">
+      <DependentUpon>lolfightmodels.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\lolfightmodels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>lolfightmodels.edmx</DependentUpon>
+      <LastGenOutput>lolfightmodels.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -312,22 +315,16 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Details.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
-    <Content Include="Views\AddingItems\Index.cshtml" />
-    <Content Include="Views\AddingItems\Details.cshtml" />
-    <Content Include="Views\AddingItems\Create.cshtml" />
-    <Content Include="Views\AddingItems\Edit.cshtml" />
-    <Content Include="Views\AddingItems\Delete.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\AfterLogin\AfterLogin.cshtml" />
-    <Content Include="Views\User\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

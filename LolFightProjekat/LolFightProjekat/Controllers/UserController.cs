@@ -13,16 +13,16 @@ namespace LolFightProjekat.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(korisnici U)
+        public ActionResult Register(User U)
         {
             if (ModelState.IsValid)
             {
-                using (lolfightbazaEntities dc = new lolfightbazaEntities())
+                using (lolfighdatabaseEntities dc = new lolfighdatabaseEntities())
                 {
-                    dc.korisnicis.Add(U);
+                    dc.Users.Add(U);
                     dc.SaveChanges();
                     ModelState.Clear();
                     U = null;
@@ -32,4 +32,6 @@ namespace LolFightProjekat.Controllers
             return View(U);
         }
     }
-}
+         
+    }
+

@@ -50,7 +50,7 @@ namespace WCFService
              ResponseFormat = WebMessageFormat.Xml,
              UriTemplate = "/PosaljiPorukuById")]
          void PosaljiPorukuById(int idChampiona, int idPrimaoca, String naslov, String tekst);
-          */
+         
         [OperationContract]
         [WebInvoke(
             Method = "GET",
@@ -59,7 +59,7 @@ namespace WCFService
             ResponseFormat = WebMessageFormat.Xml,
             UriTemplate = "/PosaljiPorukuAdminu?idChampiona={idChampiona}&naslov={naslov}&tekst={tekst}")]
         void PosaljiPorukuAdminu(int idChampiona, String naslov, String tekst); 
-   
-       
+    */
+
     }
 }

@@ -12,14 +12,12 @@ namespace LolFightProjekat.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventory
+    public partial class Ranking
     {
-        public int IdInventory { get; set; }
-        public int IdChampion { get; set; }
-        public int IdItem { get; set; }
-        public Nullable<int> Activated { get; set; }
+        public int IdRanking { get; set; }
+        public Nullable<int> FarmGold { get; set; }
+        public Nullable<int> StolenGold { get; set; }
     
         public virtual Champion Champion { get; set; }
-        public virtual Item Item { get; set; }
     }
 }

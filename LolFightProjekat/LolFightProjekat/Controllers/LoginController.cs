@@ -13,31 +13,30 @@ namespace LolFightProjekat.Controllers
         //
         // GET: /Login/
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(korisnici u)
-        {
-            // this action is for handle post (login)
-            if (ModelState.IsValid) // this is check validity
-            {
-                using ( lolfightbazaEntities dc = new lolfightbazaEntities())
-                {
-                    var v = dc.korisnicis.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
-                    if (v != null)
-                    {
-                        Session["LogedUserID"] = v.idKorisnika.ToString();
-                        Session["LogedUserFullname"] = v.Username.ToString();
-                        return RedirectToAction("../AfterLogin/AfterLogin");
-                    }
-                }
-            }
-            return View(u);
-        }
-
+      public ActionResult Login()
+    {
+        return View();
     }
+
+      [HttpPost]
+      [ValidateAntiForgeryToken]
+      public ActionResult Login(User u)
+      {
+          // this action is for handle post (login)
+          if (ModelState.IsValid) // this is check validity
+          {
+              using (lolfighdatabaseEntities dc = new lolfighdatabaseEntities())
+              {
+                  var v = dc.Users.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
+                  if (v != null)
+                  {
+                      Session["LogedUserID"] = v.IdUser.ToString();
+                      Session["LogedUserFullname"] = v.Username.ToString();
+                      return RedirectToAction("../AfterLogin/AfterLogin");
+                  }
+              }
+          }
+          return View(u);
+      }
+}
 }

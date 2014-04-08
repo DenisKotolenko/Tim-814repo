@@ -11,24 +11,19 @@ namespace LolFightProjekat.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-
-    public partial class admin
+    
+    public partial class Admin
     {
-        public admin()
+        public Admin()
         {
-            this.porukes = new HashSet<poruke>();
+            this.AdminMails = new HashSet<AdminMail>();
         }
-        [Required(ErrorMessage = "Mora se unijet id (za sada)")]
-        public int idAdmina { get; set; }
-        [ExcludeChar("/.,!@#$%", ErrorMessage = "Ime ne smije sadržavati /.,!@#$% karaktere.")]
+    
+        public int IdAdmin { get; set; }
         public string Username { get; set; }
-        [Required(ErrorMessage = "Mora se unijeti password")]
         public string Password { get; set; }
-        [Required(ErrorMessage = "Mora se unijeti e-mail")]
         public string eMail { get; set; }
-
-        public virtual ICollection<poruke> porukes { get; set; }
+    
+        public virtual ICollection<AdminMail> AdminMails { get; set; }
     }
 }

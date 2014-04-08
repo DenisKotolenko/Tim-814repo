@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2889bec353a14de98a23480ba23c3f28" Name="Diagram1">
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Admin" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.AdminMail" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Champion" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.ChampionType" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Inventory" Width="1.5" PointX="8.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Item" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.LogBattle" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.LogFarm" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.LogJungle" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Mail" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Ranking" Width="1.5" PointX="5.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.Skill" Width="1.5" PointX="5.25" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.User" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_AdminMail_dbo_Admin_IdAdmin" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_AdminMail_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK__Champion__IdCham__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK__Ranking__IdRanki__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK__Skill__IdSkill__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Champion_dbo_ChampionType_IdChampionType" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Inventory_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_LogBattle_IdAttacker_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_LogBattle_IdDefender_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_LogBattle_IdWinner_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_LogFarm_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_LogJungle_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" ManuallyRouted="false" />
+        <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Inventory_dbo_Item_IdItem" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

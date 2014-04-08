@@ -25,7 +25,7 @@ namespace WCFService
         {
             return new Employee() {Name = "Selvedin", Salary = 123};
         }
-
+        /*
           public string IspisiSkilove(int idChampiona)
           {
               using (var context = new lolfightbazaEntities())
@@ -47,7 +47,7 @@ namespace WCFService
                   return builder.ToString();
               }
           }
-
+        
         public void PosaljiPoruku(int idChampiona, string imePrimaoca, string naslov, string tekst)
           {
               using (var context = new lolfightbazaEntities())
