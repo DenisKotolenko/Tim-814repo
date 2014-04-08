@@ -1,0 +1,190 @@
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+c:\users\denis\documents\visual studio 2013\Projects\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Providers.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\WebGrease.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Newtonsoft.Json.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Mvc.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Razor.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<LolFightProjekat.Models.admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="Content/bootstrap.css" rel="stylesheet">
+<h2>Index</h2>
+<body style="background-image: url(Images/bg.jpg)">
+    <p>
+        @Html.ActionLink("Create new admin", "Create")
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idAdmina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eMail)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    <font color="blue">
+                        @Html.DisplayFor(modelItem => item.idAdmina)
+                    </font>
+                </td>
+                <td>
+                    <font color="blue">
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </font>
+                </td>
+                <td>
+                    <font color="blue">
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </font>
+                </td>
+                <td>
+                    <font color="blue">
+                        @Html.DisplayFor(modelItem => item.eMail)
+                    </font>
+                </td>
+                <td>
+                    <font color="#fff">
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </font>
+                </td>
+            </tr>
+
+        }
+    </table>
+
+</body>

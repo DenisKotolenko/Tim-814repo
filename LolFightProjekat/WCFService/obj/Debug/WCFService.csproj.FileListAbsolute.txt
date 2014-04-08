@@ -1,0 +1,50 @@
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Selvedin\Documents\ETF\P-NWT\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.dll.config
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LolFightProjekat\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll.config
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Optimization.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.pdb
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.xml
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll.config
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Optimization.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\WebGrease.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\LolFightProjekat\WCFService\bin\Antlr3.Runtime.dll

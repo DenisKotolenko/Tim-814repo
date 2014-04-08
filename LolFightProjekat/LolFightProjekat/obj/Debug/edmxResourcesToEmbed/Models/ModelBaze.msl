@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lolfightbazaModelStoreContainer" CdmEntityContainer="lolfightbazaEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="lolfightbazaModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="idAdmina" ColumnName="idAdmina" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="championis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.championi">
+        <MappingFragment StoreEntitySet="championi">
+          <ScalarProperty Name="idChampiona" ColumnName="idChampiona" />
+          <ScalarProperty Name="Korisnici_idKorisnika" ColumnName="Korisnici_idKorisnika" />
+          <ScalarProperty Name="Nacija" ColumnName="Nacija" />
+          <ScalarProperty Name="SviChampioni_idSviChampioni" ColumnName="SviChampioni_idSviChampioni" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="DaLiJeAktivan" ColumnName="DaLiJeAktivan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventories">
+      <EntityTypeMapping TypeName="lolfightbazaModel.inventory">
+        <MappingFragment StoreEntitySet="inventory">
+          <ScalarProperty Name="idItema" ColumnName="idItema" />
+          <ScalarProperty Name="Championi_idChampiona" ColumnName="Championi_idChampiona" />
+          <ScalarProperty Name="SviItemi_idSviItem" ColumnName="SviItemi_idSviItem" />
+          <ScalarProperty Name="DaLiJeAktiviran" ColumnName="DaLiJeAktiviran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="izvjestajiborbis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.izvjestajiborbi">
+        <MappingFragment StoreEntitySet="izvjestajiborbi">
+          <ScalarProperty Name="idIzvjestajiBorbi" ColumnName="idIzvjestajiBorbi" />
+          <ScalarProperty Name="idNapadaca" ColumnName="idNapadaca" />
+          <ScalarProperty Name="idBranioca" ColumnName="idBranioca" />
+          <ScalarProperty Name="VrijemeNapada" ColumnName="VrijemeNapada" />
+          <ScalarProperty Name="OstvareniGold" ColumnName="OstvareniGold" />
+          <ScalarProperty Name="IzvjestajBorbe" ColumnName="IzvjestajBorbe" />
+          <ScalarProperty Name="idPobjednika" ColumnName="idPobjednika" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="korisnicis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.korisnici">
+        <MappingFragment StoreEntitySet="korisnici">
+          <ScalarProperty Name="idKorisnika" ColumnName="idKorisnika" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logaktivnostis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.logaktivnosti">
+        <MappingFragment StoreEntitySet="logaktivnosti">
+          <ScalarProperty Name="idLogAktivnosti" ColumnName="idLogAktivnosti" />
+          <ScalarProperty Name="Championi_idChampiona" ColumnName="Championi_idChampiona" />
+          <ScalarProperty Name="LogFarmanja_idLogFarmanja" ColumnName="LogFarmanja_idLogFarmanja" />
+          <ScalarProperty Name="LogJunglanja_idLogJunglanja" ColumnName="LogJunglanja_idLogJunglanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logfarmanjas">
+      <EntityTypeMapping TypeName="lolfightbazaModel.logfarmanja">
+        <MappingFragment StoreEntitySet="logfarmanja">
+          <ScalarProperty Name="idLogFarmanja" ColumnName="idLogFarmanja" />
+          <ScalarProperty Name="PocetakFarmanja" ColumnName="PocetakFarmanja" />
+          <ScalarProperty Name="KojiPutUDanu" ColumnName="KojiPutUDanu" />
+          <ScalarProperty Name="DobiveniGold" ColumnName="DobiveniGold" />
+          <ScalarProperty Name="Statistika" ColumnName="Statistika" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logjunglanjas">
+      <EntityTypeMapping TypeName="lolfightbazaModel.logjunglanja">
+        <MappingFragment StoreEntitySet="logjunglanja">
+          <ScalarProperty Name="idLogJunglanja" ColumnName="idLogJunglanja" />
+          <ScalarProperty Name="VrijemePocetka" ColumnName="VrijemePocetka" />
+          <ScalarProperty Name="Trajanje" ColumnName="Trajanje" />
+          <ScalarProperty Name="DobiveniGold" ColumnName="DobiveniGold" />
+          <ScalarProperty Name="Statistka" ColumnName="Statistka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="porukes">
+      <EntityTypeMapping TypeName="lolfightbazaModel.poruke">
+        <MappingFragment StoreEntitySet="poruke">
+          <ScalarProperty Name="idPoruke" ColumnName="idPoruke" />
+          <ScalarProperty Name="idPosiljaoca" ColumnName="idPosiljaoca" />
+          <ScalarProperty Name="idPrimaoca" ColumnName="idPrimaoca" />
+          <ScalarProperty Name="Admin_idAdmina" ColumnName="Admin_idAdmina" />
+          <ScalarProperty Name="NaslovPoruke" ColumnName="NaslovPoruke" />
+          <ScalarProperty Name="VrijemePoruke" ColumnName="VrijemePoruke" />
+          <ScalarProperty Name="TekstPoruke" ColumnName="TekstPoruke" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rankstatistikas">
+      <EntityTypeMapping TypeName="lolfightbazaModel.rankstatistika">
+        <MappingFragment StoreEntitySet="rankstatistika">
+          <ScalarProperty Name="idRankStatistika" ColumnName="idRankStatistika" />
+          <ScalarProperty Name="Championi_idChampiona" ColumnName="Championi_idChampiona" />
+          <ScalarProperty Name="NafarmaniGold" ColumnName="NafarmaniGold" />
+          <ScalarProperty Name="OpljackaniGold" ColumnName="OpljackaniGold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skilovis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.skilovi">
+        <MappingFragment StoreEntitySet="skilovi">
+          <ScalarProperty Name="idSkila" ColumnName="idSkila" />
+          <ScalarProperty Name="Championi_idChampiona" ColumnName="Championi_idChampiona" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="AttackDmg" ColumnName="AttackDmg" />
+          <ScalarProperty Name="AbilityPowerDmg" ColumnName="AbilityPowerDmg" />
+          <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+          <ScalarProperty Name="Armor" ColumnName="Armor" />
+          <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+          <ScalarProperty Name="CritChance" ColumnName="CritChance" />
+          <ScalarProperty Name="ArmorPen" ColumnName="ArmorPen" />
+          <ScalarProperty Name="MagicPen" ColumnName="MagicPen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="svichampionis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.svichampioni">
+        <MappingFragment StoreEntitySet="svichampioni">
+          <ScalarProperty Name="idSviChampioni" ColumnName="idSviChampioni" />
+          <ScalarProperty Name="Nacija" ColumnName="Nacija" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="AttackDmg" ColumnName="AttackDmg" />
+          <ScalarProperty Name="AbilityPowerDmg" ColumnName="AbilityPowerDmg" />
+          <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+          <ScalarProperty Name="Armor" ColumnName="Armor" />
+          <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sviitemis">
+      <EntityTypeMapping TypeName="lolfightbazaModel.sviitemi">
+        <MappingFragment StoreEntitySet="sviitemi">
+          <ScalarProperty Name="linkslike" ColumnName="linkslike" />
+          <ScalarProperty Name="idSviItem" ColumnName="idSviItem" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="AttackDmg" ColumnName="AttackDmg" />
+          <ScalarProperty Name="AbilityPower" ColumnName="AbilityPower" />
+          <ScalarProperty Name="AttackSpeed" ColumnName="AttackSpeed" />
+          <ScalarProperty Name="Armor" ColumnName="Armor" />
+          <ScalarProperty Name="MagicResist" ColumnName="MagicResist" />
+          <ScalarProperty Name="CritChance" ColumnName="CritChance" />
+          <ScalarProperty Name="ArmorPen" ColumnName="ArmorPen" />
+          <ScalarProperty Name="HealAmount" ColumnName="HealAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
