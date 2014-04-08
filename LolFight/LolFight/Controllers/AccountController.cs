@@ -25,7 +25,7 @@ namespace LolFight.Controllers
                     dc.SaveChanges();
                     ModelState.Clear();
                     U = null;
-                    ViewBag.Message = "Registered! Get to LolFighting!";
+                    ViewBag.Message = "Registered! Check your email, and get to LolFighting!";
                 }
             }
             return View(U);
