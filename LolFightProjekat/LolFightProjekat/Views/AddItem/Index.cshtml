@@ -1,0 +1,102 @@
+﻿@model IEnumerable<LolFightProjekat.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="Content/bootstrap.css" rel="stylesheet">
+<h2>Index</h2>
+<body style="background-image: url(Images/bg.jpg)">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttackDamage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AbilityDamage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttackSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagicResist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Critical)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorPenetration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagicPenetration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Heal)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdItem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AttackDamage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AbilityDamage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AttackSpeed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Armor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MagicResist)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Critical)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmorPenetration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MagicPenetration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Heal)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

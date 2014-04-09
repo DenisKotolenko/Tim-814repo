@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AddItemController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AfterLoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -323,6 +324,11 @@
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\AfterLogin\AfterLogin.cshtml" />
+    <Content Include="Views\AddItem\Index.cshtml" />
+    <Content Include="Views\AddItem\Details.cshtml" />
+    <Content Include="Views\AddItem\Create.cshtml" />
+    <Content Include="Views\AddItem\Edit.cshtml" />
+    <Content Include="Views\AddItem\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

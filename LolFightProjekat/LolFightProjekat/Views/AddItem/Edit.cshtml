@@ -1,0 +1,124 @@
+﻿@model LolFightProjekat.Models.Item
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Item</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdItem)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IdItem)
+            @Html.ValidationMessageFor(model => model.IdItem)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HP)
+            @Html.ValidationMessageFor(model => model.HP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AttackDamage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AttackDamage)
+            @Html.ValidationMessageFor(model => model.AttackDamage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AbilityDamage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AbilityDamage)
+            @Html.ValidationMessageFor(model => model.AbilityDamage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AttackSpeed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AttackSpeed)
+            @Html.ValidationMessageFor(model => model.AttackSpeed)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Armor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Armor)
+            @Html.ValidationMessageFor(model => model.Armor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MagicResist)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MagicResist)
+            @Html.ValidationMessageFor(model => model.MagicResist)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Critical)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Critical)
+            @Html.ValidationMessageFor(model => model.Critical)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ArmorPenetration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ArmorPenetration)
+            @Html.ValidationMessageFor(model => model.ArmorPenetration)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MagicPenetration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MagicPenetration)
+            @Html.ValidationMessageFor(model => model.MagicPenetration)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Heal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Heal)
+            @Html.ValidationMessageFor(model => model.Heal)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

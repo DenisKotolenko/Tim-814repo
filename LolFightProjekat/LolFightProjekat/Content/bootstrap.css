@@ -56,9 +56,14 @@ b,
 strong {
   font-weight: bold;
 }
+
+white {
+    color: white;
+}
 dfn {
   font-style: italic;
 }
+
 h1 {
   margin: .67em 0;
   font-size: 2em;
@@ -286,6 +291,9 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+blue {
+    color: blue;
 }
 a {
   color: #428bca;
@@ -1466,6 +1474,7 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
+  color: blue;
 }
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {

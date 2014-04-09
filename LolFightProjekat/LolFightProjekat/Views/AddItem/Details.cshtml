@@ -1,0 +1,99 @@
+﻿@model LolFightProjekat.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Item</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdItem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdItem)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackDamage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackDamage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AbilityDamage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbilityDamage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackSpeed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackSpeed)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Armor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Armor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MagicResist)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MagicResist)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Critical)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Critical)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArmorPenetration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArmorPenetration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MagicPenetration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MagicPenetration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Heal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Heal)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
