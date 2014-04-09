@@ -16,6 +16,8 @@ namespace WCFService
     {
         public string GetSkillsByChampion(int championId)
         {
+            // this method is only for show, since nothing works unless you go to this projects'
+            // web config and hard-code the mdf file path... :(
             using (var context = new LolDbContext())
             {
                 var champions =
