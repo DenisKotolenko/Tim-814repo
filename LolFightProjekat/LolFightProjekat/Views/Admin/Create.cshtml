@@ -3,58 +3,61 @@
 @{
     ViewBag.Title = "Create";
 }
-
+<link href="../Content/bootstrap.css" rel="stylesheet">
 <h2>Create</h2>
+<body style="background-image: url(../Images/bg.jpg)">
+  
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+        <fieldset>
+            
 
-    <fieldset>
-        <legend>Admin</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IdAdmin)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IdAdmin)
+                @Html.ValidationMessageFor(model => model.IdAdmin)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.IdAdmin)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IdAdmin)
-            @Html.ValidationMessageFor(model => model.IdAdmin)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Username)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Username)
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Username)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Username)
-            @Html.ValidationMessageFor(model => model.Username)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Password)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Password)
-            @Html.ValidationMessageFor(model => model.Password)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.eMail)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.eMail)
+                @Html.ValidationMessageFor(model => model.eMail)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.eMail)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.eMail)
-            @Html.ValidationMessageFor(model => model.eMail)
-        </div>
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
+       
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+</body>
