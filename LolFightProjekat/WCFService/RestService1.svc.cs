@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.ServiceModel.Activation;
 using System.Text;
-using LolFightProjekat.Models;
+using WCFService.Models;
 
 namespace WCFService
 {
@@ -18,14 +18,17 @@ namespace WCFService
         {
             // this method is only for show, since nothing works unless you go to this projects'
             // web config and hard-code the mdf file path... :(
-            using (var context = new LolDbContext())
-            {
-                var champions =
-                    from champion in context.Champions
-                    where champion.IdChampion == championId
-                    select champion;
 
-                return champions.Count().ToString();
+            //My dear Selva this method still doesn't work anything usefull but
+            //now it works with database
+            using (var context = new lolfighdatabaseEntities1())
+            {
+                var admins =
+                    from Admin in context.Admins
+                    where Admin.eMail != ""
+                    select Admin;
+
+                return admins.Count().ToString();
 
 
 

@@ -39,10 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -62,20 +66,94 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\lolfighdatabase.mdf" />
+    <Content Include="App_Data\lolfighdatabase_log.ldf">
+      <DependentUpon>lolfighdatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="RestService1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminMail.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Champion.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChampionType.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Item.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogBattle.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogFarm.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogJungle.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mail.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ranking.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Restlolfightdatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Restlolfightdatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Restlolfightdatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Restlolfightdatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Restlolfightdatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Skill.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Restlolfightdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="RestService1.svc.cs">
       <DependentUpon>RestService1.svc</DependentUpon>
     </Compile>
     <Compile Include="IRestService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="packages.config" />
+    <EntityDeploy Include="Models\Restlolfightdatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Restlolfightdatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Restlolfightdatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Restlolfightdatabase.edmx</DependentUpon>
+      <LastGenOutput>Restlolfightdatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Restlolfightdatabase.edmx.diagram">
+      <DependentUpon>Restlolfightdatabase.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Restlolfightdatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Restlolfightdatabase.edmx</DependentUpon>
+      <LastGenOutput>Restlolfightdatabase.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -88,6 +166,9 @@
       <Project>{bcc6ccf7-d280-478c-8788-12a0f5ec0214}</Project>
       <Name>LolFightProjekat</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

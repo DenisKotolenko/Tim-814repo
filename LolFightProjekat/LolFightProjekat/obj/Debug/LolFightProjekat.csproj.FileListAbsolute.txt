@@ -219,7 +219,6 @@ C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-81
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.WebPages.Razor.xml
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.dll
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.pdb
-C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
 D:\NWT\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll.config
 D:\NWT\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.dll
 D:\NWT\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\LolFightProjekat.pdb
