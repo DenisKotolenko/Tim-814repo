@@ -13,14 +13,14 @@ namespace LolFightProjekat.Controllers
         //
         // GET: /Login/
 
-      public ActionResult Login()
+      public ActionResult Index()
     {
         return View();
     }
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public ActionResult Login(User u)
+      public ActionResult Index(User u)
       {
           // this action is for handle post (login)
           if (ModelState.IsValid) // this is check validity
@@ -32,7 +32,7 @@ namespace LolFightProjekat.Controllers
                   {
                       Session["LogedUserID"] = v.IdUser.ToString();
                       Session["LogedUserFullname"] = v.Username.ToString();
-                      return RedirectToAction("../AfterLogin/AfterLogin");
+                      return RedirectToAction("../AfterLogin");
                   }
               }
           }

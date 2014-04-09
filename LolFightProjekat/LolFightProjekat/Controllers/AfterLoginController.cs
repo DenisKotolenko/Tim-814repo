@@ -11,7 +11,7 @@ namespace LolFightProjekat.Controllers
         //
         // GET: /AfterLogin/
 
-        public ActionResult AfterLogin()
+        public ActionResult Index()
         {
             if (Session["LogedUserID"] != null)
             {
