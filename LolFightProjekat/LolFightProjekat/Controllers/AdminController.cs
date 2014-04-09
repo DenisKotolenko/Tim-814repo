@@ -11,12 +11,20 @@ namespace LolFightProjekat.Controllers
 {
     public class AdminController : Controller
     {
-        private LolDbContext db = new LolDbContext();
+        private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
         //
         // GET: /Admin/
 
         public ActionResult Index()
+        {
+            return View(db.Admins.ToList());
+        }
+
+        //
+        // GET: /Admin/AddAdmin
+
+        public ActionResult AddAdmin()
         {
             return View(db.Admins.ToList());
         }

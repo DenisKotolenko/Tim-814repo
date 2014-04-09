@@ -1,15 +1,19 @@
 ﻿@model IEnumerable<LolFightProjekat.Models.Item>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Add items";
 }
+<h2>View Items</h2>
+<ul class="nav nav-tabs">
+    <li><a href="Admin">Home</a></li>
+    <li><a href="Admin/AddAdmin">View Admins</a></li>
+    <li><a href="Admin/Create">Add Admins</a></li>
+    <li class="active"><a href="#">View Items</a></li>
+    <li><a href="AddItem/Create">Add Items</a></li>
 
-<link href="Content/bootstrap.css" rel="stylesheet">
-<h2>Index</h2>
-<body style="background-image: url(Images/bg.jpg)">
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+</ul>
+
+  
     <table class="table table-striped">
         <tr>
             <th>
@@ -99,4 +103,3 @@
         }
 
     </table>
-</body>
