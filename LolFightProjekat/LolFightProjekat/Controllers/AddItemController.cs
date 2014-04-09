@@ -11,7 +11,7 @@ namespace LolFightProjekat.Controllers
 {
     public class AddItemController : Controller
     {
-        private LolDbContext db = new LolDbContext();
+        private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
         //
         // GET: /AddItem/

@@ -13,10 +13,10 @@ namespace LolFightProjekat.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LolDbContext : DbContext
+    public partial class lolfighdatabaseEntities : DbContext
     {
-        public LolDbContext()
-            : base("name=LolDbContext")
+        public lolfighdatabaseEntities()
+            : base("name=lolfighdatabaseEntities")
         {
         }
     

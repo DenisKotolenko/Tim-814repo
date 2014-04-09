@@ -20,7 +20,7 @@ namespace LolFightProjekat.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (LolDbContext dc = new LolDbContext())
+                using (lolfighdatabaseEntities dc = new lolfighdatabaseEntities())
                 {
                     dc.Users.Add(U);
                     dc.SaveChanges();

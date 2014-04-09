@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="lolfighdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="lolfighdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="IdAdmin" />
@@ -13,6 +13,7 @@
           <Property Name="Username" Type="nvarchar" MaxLength="45" />
           <Property Name="Password" Type="nvarchar" MaxLength="45" />
           <Property Name="eMail" Type="nvarchar" MaxLength="200" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="AdminMail">
           <Key>
@@ -420,8 +421,7 @@
             <End Role="Mail" EntitySet="Mail" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="lolfighdatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -434,6 +434,7 @@
           <Property Name="Password" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="eMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="AdminMails" Relationship="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin" FromRole="Admin" ToRole="AdminMail" />
+          <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="AdminMail">
           <Key>
@@ -879,6 +880,7 @@
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="lolfighdatabaseModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
                 <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
