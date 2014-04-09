@@ -11,14 +11,15 @@ namespace LolFightProjekat.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Item
     {
         public Item()
         {
             this.Inventories = new HashSet<Inventory>();
         }
-    
+      
         public int IdItem { get; set; }
         public Nullable<int> Price { get; set; }
         public Nullable<int> HP { get; set; }

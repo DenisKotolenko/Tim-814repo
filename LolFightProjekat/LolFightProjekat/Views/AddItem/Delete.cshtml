@@ -1,0 +1,103 @@
+﻿@model LolFightProjekat.Models.Item
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Item</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdItem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdItem)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackDamage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackDamage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AbilityDamage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbilityDamage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AttackSpeed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AttackSpeed)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Armor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Armor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MagicResist)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MagicResist)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Critical)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Critical)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArmorPenetration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArmorPenetration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MagicPenetration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MagicPenetration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Heal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Heal)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
