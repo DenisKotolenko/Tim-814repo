@@ -14,17 +14,34 @@ namespace WCFService
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class RestService1 : IRestService1
     {
-        //awbuebawueb
-
-        public String DoWork()
+        public string GetSkillsByChampion(int championId)
         {
-            return "Radi Rest";
+            using (var context = new LolDbContext())
+            {
+                var champions =
+                    from champion in context.Champions
+                    where champion.IdChampion == championId
+                    select champion;
+
+                return champions.Count().ToString();
+
+
+
+                /*
+                IQueryable<Skill> skills = from champion in context.Champions
+                    where champion.IdChampion == championId
+                    select champion.Skill;
+
+                StringBuilder builder = new StringBuilder();
+                foreach (Skill skill in skills)
+                {
+                    builder.Append(skill.HP).AppendLine();
+                }
+                return builder.ToString();
+                 */
+            }
         }
 
-        public Employee GetEmployee()
-        {
-            return new Employee() {Name = "Selvedin", Salary = 123};
-        }
         /*
           public string IspisiSkilove(int idChampiona)
           {

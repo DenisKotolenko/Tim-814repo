@@ -69,3 +69,24 @@ C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-81
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll.config
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\WCFService.pdb
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Optimization.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\WebGrease.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\Antlr3.Runtime.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\LolFightProjekat.pdb
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\EntityFramework.xml
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.xml
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Web.Http.WebHost.xml
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\System.Net.Http.Formatting.xml
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\bin\Newtonsoft.Json.xml
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.dll
+D:\NWT\Tim-814repo\LolFightProjekat\WCFService\obj\Debug\WCFService.pdb

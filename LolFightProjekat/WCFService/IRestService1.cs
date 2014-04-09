@@ -10,29 +10,14 @@ namespace WCFService
     {
         [OperationContract]
         [WebInvoke(
-            Method = "GET", 
+            Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Xml,
             ResponseFormat = WebMessageFormat.Xml,
-            UriTemplate = "/DoWork")]
-        string DoWork();
+            UriTemplate = "/GetSkillsByChampion?championId={championId}")]
+        string GetSkillsByChampion(int championId);
 
-        [OperationContract]
-        [WebInvoke(
-            Method = "POST",
-            RequestFormat = WebMessageFormat.Xml)]
-        Employee GetEmployee();
-
-
-        /* [OperationContract]
-         [WebInvoke(
-             Method = "GET",
-             BodyStyle = WebMessageBodyStyle.Wrapped,
-             RequestFormat = WebMessageFormat.Xml,
-             ResponseFormat = WebMessageFormat.Xml,
-             UriTemplate = "/IspisiSkilove")]
-         string IspisiSkilove(int idChampiona);
-        
+        /*
          [OperationContract]
          [WebInvoke(
              Method = "GET",
@@ -59,7 +44,6 @@ namespace WCFService
             ResponseFormat = WebMessageFormat.Xml,
             UriTemplate = "/PosaljiPorukuAdminu?idChampiona={idChampiona}&naslov={naslov}&tekst={tekst}")]
         void PosaljiPorukuAdminu(int idChampiona, String naslov, String tekst); 
-    */
-
+        */
     }
 }

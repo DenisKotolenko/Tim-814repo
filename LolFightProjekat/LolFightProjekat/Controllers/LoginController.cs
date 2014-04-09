@@ -25,7 +25,7 @@ namespace LolFightProjekat.Controllers
           // this action is for handle post (login)
           if (ModelState.IsValid) // this is check validity
           {
-              using (lolfighdatabaseEntities dc = new lolfighdatabaseEntities())
+              using (LolDbContext dc = new LolDbContext())
               {
                   var v = dc.Users.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
                   if (v != null)

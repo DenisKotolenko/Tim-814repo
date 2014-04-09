@@ -11,7 +11,7 @@ namespace LolFightProjekat.Controllers
 {
     public class AdminController : Controller
     {
-        private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
+        private LolDbContext db = new LolDbContext();
 
         //
         // GET: /Admin/
