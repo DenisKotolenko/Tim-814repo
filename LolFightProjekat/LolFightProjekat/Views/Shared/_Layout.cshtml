@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link href="../Content/bootstrap.css" rel="stylesheet">
+ 
 
         <title>@ViewBag.Title</title>
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/bootstrap")
 </head>
 <body>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryUI")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -5,14 +5,22 @@
 }
 <h2>Add items</h2>
 <ul class="nav nav-tabs">
-    <li><a href="Admin">Home</a></li>
-    <li><a href="Admin/AddAdmin">View Admins</a></li>
-    <li><a href="Admin/Create">Add Admins</a></li>
-    <li><a href="AddItem">View Items</a></li>
-    <li class="active"><a href="#">Add Items</a></li>
-
-</ul>
-<h2>Create</h2>
+    <li><a href="../Admin">Home</a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admins <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../Admin/AddAdmin">View Admins</a></li>
+            <li><a href="../Admin/Create">Add Admins</a></li>
+        </ul>
+    </li>
+    <li class="dropdown active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../AddItem">View Items</a></li>
+            <li><a href="#">Add Items</a></li>
+        </ul>
+    </li>
+    </ul>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
