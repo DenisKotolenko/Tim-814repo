@@ -29,6 +29,7 @@ namespace LolFightProjekat.Models
         public Nullable<int> AttackSpeed { get; set; }
         public Nullable<int> Armor { get; set; }
         public Nullable<int> MagicResist { get; set; }
+        public byte[] ImageURL { get; set; }
     
         public virtual ICollection<Champion> Champions { get; set; }
     }

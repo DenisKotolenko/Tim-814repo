@@ -13,7 +13,7 @@
           <Property Name="Username" Type="nvarchar" MaxLength="45" />
           <Property Name="Password" Type="nvarchar" MaxLength="45" />
           <Property Name="eMail" Type="nvarchar" MaxLength="200" />
-          <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="ImageURL" Type="image" />
         </EntityType>
         <EntityType Name="AdminMail">
           <Key>
@@ -48,6 +48,7 @@
           <Property Name="AttackSpeed" Type="int" />
           <Property Name="Armor" Type="int" />
           <Property Name="MagicResist" Type="int" />
+          <Property Name="ImageURL" Type="image" />
         </EntityType>
         <EntityType Name="Inventory">
           <Key>
@@ -74,6 +75,7 @@
           <Property Name="ArmorPenetration" Type="int" />
           <Property Name="MagicPenetration" Type="int" />
           <Property Name="Heal" Type="int" />
+          <Property Name="ImageURL" Type="image" />
         </EntityType>
         <EntityType Name="LogBattle">
           <Key>
@@ -434,7 +436,7 @@
           <Property Name="Password" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="eMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="AdminMails" Relationship="Self.FK_dbo_AdminMail_dbo_Admin_IdAdmin" FromRole="Admin" ToRole="AdminMail" />
-          <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ImageURL" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="AdminMail">
           <Key>
@@ -485,6 +487,7 @@
           <Property Name="Armor" Type="Int32" />
           <Property Name="MagicResist" Type="Int32" />
           <NavigationProperty Name="Champions" Relationship="Self.FK_dbo_Champion_dbo_ChampionType_IdChampionType" FromRole="ChampionType" ToRole="Champion" />
+          <Property Name="ImageURL" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Inventory">
           <Key>
@@ -514,6 +517,7 @@
           <Property Name="MagicPenetration" Type="Int32" />
           <Property Name="Heal" Type="Int32" />
           <NavigationProperty Name="Inventories" Relationship="Self.FK_dbo_Inventory_dbo_Item_IdItem" FromRole="Item" ToRole="Inventory" />
+          <Property Name="ImageURL" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="LogBattle">
           <Key>
@@ -880,7 +884,7 @@
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="lolfighdatabaseModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
-                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
                 <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -912,6 +916,7 @@
           <EntitySetMapping Name="ChampionTypes">
             <EntityTypeMapping TypeName="lolfighdatabaseModel.ChampionType">
               <MappingFragment StoreEntitySet="ChampionType">
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
                 <ScalarProperty Name="IdChampionType" ColumnName="IdChampionType" />
                 <ScalarProperty Name="Nation" ColumnName="Nation" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -938,6 +943,7 @@
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="lolfighdatabaseModel.Item">
               <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
                 <ScalarProperty Name="IdItem" ColumnName="IdItem" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="HP" ColumnName="HP" />

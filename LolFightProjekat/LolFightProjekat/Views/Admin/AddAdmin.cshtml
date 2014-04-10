@@ -45,7 +45,7 @@
             @Html.DisplayNameFor(model => model.eMail)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImageUrl)
+            @Html.DisplayNameFor(model => model.ImageURL)
         </th>
         <th></th>
     </tr>
@@ -66,12 +66,12 @@
                 @Html.DisplayFor(modelItem => item.eMail)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
+                @Html.DisplayFor(modelItem => item.ImageURL)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdAdmin  }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdAdmin  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdAdmin  })
             </td>
         </tr>
     }

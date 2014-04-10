@@ -23,7 +23,7 @@ namespace LolFightProjekat.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string eMail { get; set; }
-        public string ImageUrl { get; set; }
+        public byte[] ImageURL { get; set; }
     
         public virtual ICollection<AdminMail> AdminMails { get; set; }
     }

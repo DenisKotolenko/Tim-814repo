@@ -39,10 +39,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.ImageUrl)
+         @Html.DisplayNameFor(model => model.ImageURL)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ImageUrl)
+        <img src="@Url.Action("PretvoriUSliku", "Admin", new { id = Model.IdAdmin })" />
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

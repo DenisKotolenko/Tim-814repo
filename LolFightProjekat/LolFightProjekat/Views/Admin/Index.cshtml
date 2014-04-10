@@ -28,3 +28,14 @@
   
 </ul>
 
+
+@using (Html.BeginForm("Upload", "Admin", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        Select a file
+        <input type="file" name="file" />
+        <input type="submit" value="Upload" />
+    </fieldset>
+}

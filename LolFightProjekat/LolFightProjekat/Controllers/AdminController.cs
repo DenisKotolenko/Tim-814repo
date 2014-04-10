@@ -13,6 +13,51 @@ namespace LolFightProjekat.Controllers
     {
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
+
+        //Method who worries about uploading images
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                string targetFolder = System.Web.HttpContext.Current.Server.MapPath("~/");
+                string targetPath = System.IO.Path.Combine(targetFolder, file.FileName);
+                file.SaveAs(targetPath);
+
+                Admin admin = new Admin();
+
+                admin.IdAdmin = 11;
+                admin.Username = "TEstni";
+                admin.Password = "nja";
+                admin.eMail = "blabla";
+
+                byte[] image = new byte[file.ContentLength];
+                file.InputStream.Read(image, 0, image.Length);
+
+                admin.ImageURL = image;
+
+                db.Admins.Add(admin);
+                db.SaveChanges();
+
+            }
+            return RedirectToAction("Index");
+        }
+
+        //Method for turning byte into picture
+        public ActionResult PretvoriUSliku(int id)
+        {
+
+            Admin admin = db.Admins.Find(id);
+            Byte[] imageBytes = admin.ImageURL.ToArray();
+
+            FileContentResult f = File(imageBytes, "image/jpeg");
+            return f;
+
+        }
+
+
+
+
         //
         // GET: /Admin/
 
