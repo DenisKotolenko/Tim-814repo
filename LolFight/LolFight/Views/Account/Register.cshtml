@@ -1,4 +1,5 @@
 ﻿@model LolFight.Models.Account
+@using Recaptcha
 
 @{
     ViewBag.Title = "Register";
@@ -50,10 +51,11 @@
             @Html.EditorFor(model => model.eMail)
             @Html.ValidationMessageFor(model => model.eMail)
         </div>
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+            @Html.Raw(Html.GenerateCaptcha())
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+</fieldset>
 }
 
 <div>
