@@ -9,7 +9,7 @@ using LolFightProjekat.Models;
 
 namespace LolFightProjekat.Controllers
 {
-    public class AddItemController : Controller
+    public class AddItemController : BaseController
     {
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 

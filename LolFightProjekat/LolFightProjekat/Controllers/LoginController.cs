@@ -8,7 +8,7 @@ using LolFightProjekat.Models;
 
 namespace LolFightProjekat.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : BaseController
     {
         //
         // GET: /Login/
