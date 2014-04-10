@@ -1,4 +1,5 @@
-﻿@model IEnumerable<LolFightProjekat.Models.Admin>
+﻿@model LolFightProjekat.Models.Admin
+
 
 @{
     ViewBag.Title = "Index";
@@ -7,6 +8,12 @@
 <h2>Home</h2>
 
 
+@if (Session["LogedUserFullname"] != null)
+{
+    <text>
+        Welcome @Session["LogedUserFullname"].ToString()
+    </text>
+}
 <ul class="nav nav-tabs">
     <li class="active"><a href="#">Home</a></li>
     <li class="dropdown">
@@ -24,18 +31,52 @@
         </ul>
     </li>
 
-    
+      
   
 </ul>
 
+<table class="table">
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.IdAdmin)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.IdAdmin)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Username)
+        </td>
+    </tr>
 
-@using (Html.BeginForm("Upload", "Admin", FormMethod.Post,
+    <tr>
+        <td>
+
+            @Html.DisplayNameFor(model => model.eMail)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.eMail)
+
+        </td>
+    </tr>
+    </table>
+    <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="@Url.Action("PretvoriUSliku", "Admin", new { id = Model.IdAdmin })" alt="..." />
+        </a>
+    </div>
+
+    @using (Html.BeginForm("Upload", "Admin", FormMethod.Post,
                                       new { enctype = "multipart/form-data" }))
-{
-    @Html.ValidationSummary(true)
-    <fieldset>
-        Select a file
-        <input type="file" name="file" />
-        <input type="submit" value="Upload" />
-    </fieldset>
-}
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            Select a file
+            <input type="file" name="file" />
+            <input type="submit" class="btn-default" value="Upload" />
+        </fieldset>
+    }

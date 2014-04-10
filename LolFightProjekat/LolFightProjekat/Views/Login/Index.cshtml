@@ -1,4 +1,4 @@
-﻿@model LolFightProjekat.Models.User
+﻿@model LolFightProjekat.Models.Admin
 
 
 @{
@@ -20,25 +20,23 @@
     }
     <table>
         <tr>
-            <td>@Html.LabelFor(a => a.Username)</td>
-            <td>@Html.TextBoxFor(a => a.Username)</td>
+           
+            <td>@Html.TextBoxFor(a => a.Username, new { @placeholder = "username",@class="form-control"  })</td>
             <td>@Html.ValidationMessageFor(a => a.Username)</td>
         </tr>
         <tr>
+           
             <td>
-                @Html.LabelFor(a => a.Password)
-            </td>
-            <td>
-                @Html.PasswordFor(a => a.Password)
+                @Html.PasswordFor(a => a.Password, new { @placeholder = "password",@class="form-control"  })
             </td>
             <td>
                 @Html.ValidationMessageFor(a => a.Password)
             </td>
         </tr>
         <tr>
-            <td></td>
+           
             <td>
-                <input type="submit" value="Login" />
+                <input type="submit" class="btn btn-default" value=" login" />
             </td>
             <td></td>
         </tr>

@@ -20,19 +20,19 @@ namespace LolFightProjekat.Controllers
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public ActionResult Index(User u)
+      public ActionResult Index(Admin u)
       {
           // this action is for handle post (login)
           if (ModelState.IsValid) // this is check validity
           {
               using (lolfighdatabaseEntities dc = new lolfighdatabaseEntities())
               {
-                  var v = dc.Users.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
+                  var v = dc.Admins.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
                   if (v != null)
                   {
-                      Session["LogedUserID"] = v.IdUser.ToString();
+                      Session["LogedUserID"] = v.IdAdmin.ToString();
                       Session["LogedUserFullname"] = v.Username.ToString();
-                      return RedirectToAction("../AfterLogin");
+                      return RedirectToAction("../Admin");
                   }
               }
           }
