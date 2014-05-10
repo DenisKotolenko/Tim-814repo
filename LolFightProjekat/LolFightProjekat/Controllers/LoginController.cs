@@ -34,6 +34,13 @@ namespace LolFightProjekat.Controllers
                       Session["LogedUserFullname"] = v.Username.ToString();
                       return RedirectToAction("../Admin");
                   }
+                  var va = dc.Users.Where(a => a.Username.Equals(u.Username) && a.Password.Equals(u.Password)).FirstOrDefault();
+                  if (va != null)
+                  {
+                      Session["LogedUserID"] = va.IdUser.ToString();
+                      Session["LogedUserFullname"] = va.Username.ToString();
+                      return RedirectToAction("../User");
+                  }
               }
           }
           return View(u);
