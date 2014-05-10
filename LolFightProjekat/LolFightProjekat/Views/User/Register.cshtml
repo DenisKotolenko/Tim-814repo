@@ -22,7 +22,7 @@
             @Html.LabelFor(model => model.Username)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Username)
+            @Html.TextBoxFor(model => model.Username, new { @placeholder = "username", @class = "form-control" })
             @Html.ValidationMessageFor(model => model.Username)
         </div>
 
