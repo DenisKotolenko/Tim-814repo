@@ -57,7 +57,14 @@ namespace LolFightProjekat.Controllers
             return f;
 
         }
-
+        //Logout
+        public ActionResult Logout(int id)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("../../Home");
+            return View();
+        }
 
 
 

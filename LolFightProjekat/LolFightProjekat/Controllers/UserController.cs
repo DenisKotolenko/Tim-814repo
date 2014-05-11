@@ -18,5 +18,14 @@ namespace LolFightProjekat.Controllers
             User user = db.Users.Find(id);
             return View(user);
         }
+
+
+        public ActionResult Logout(int id)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("../../Home");
+            return View();
+        }
 	}
 }
