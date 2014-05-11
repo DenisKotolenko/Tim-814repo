@@ -56,6 +56,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Random.Org">
+      <HintPath>..\packages\Random.Org.0.1.4759.19552\lib\net40\Random.Org.dll</HintPath>
+    </Reference>
     <Reference Include="Recaptcha">
       <HintPath>..\..\Recaptcha.dll</HintPath>
     </Reference>
@@ -211,6 +214,7 @@
     <Compile Include="Models\Mail.cs">
       <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Rank.cs" />
     <Compile Include="Models\Ranking.cs">
       <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>

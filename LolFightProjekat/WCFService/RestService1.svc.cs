@@ -1,19 +1,22 @@
 ﻿using System;
+using Random.Org;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.ServiceModel.Activation;
 using System.Text;
 using WCFService.Models;
+using LolFightProjekat.Models;
 
 namespace WCFService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "RestService1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select RestService1.svc or RestService1.svc.cs at the Solution Explorer and start debugging.
 
-
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class RestService1 : IRestService1
     {
+        static Random.Org.Random rnd = new Random.Org.Random();
         public string GetSkillsByChampion(int championId)
         {
             // this method is only for show, since nothing works unless you go to this projects'
@@ -44,6 +47,56 @@ namespace WCFService
                 }
                 return builder.ToString();
                  */
+            }
+        }
+
+        public int RandomEnemy(int championId) {
+            // Returns random champion id from a list of champions who are not the
+            // current user nor banned. Using random.org randomizer.
+            using (var context = new lolfighdatabaseEntities1())
+            {
+                var Actives =
+                    from Champion in context.Champions
+                    where Champion.BanCooldown == 0 && Champion.IdChampion != championId
+                    select Champion;
+                List<WCFService.Models.Champion> Actives2 = Actives.ToList();
+                int rank = rnd.Next(0,Actives2.Count());
+                return Actives2[rank].IdChampion;
+            }
+        }
+
+        public List<int> RankFarm()
+        {
+            // Returns ordered list of Champion ids by farmed gold amount.
+            using (var context = new lolfighdatabaseEntities1())
+            {
+                var Ranks =
+                    from Ranking in context.Rankings
+                    orderby Ranking.FarmGold descending
+                    select Ranking.Champion.IdChampion;
+                return Ranks.ToList();
+                // If this cannot be handled later in angular, the following creates
+                // a finished list made from a new model, to display champion and gold amount.
+                /*Ranks.ToList();
+                List<Rank> Results = new List<Rank>();
+                for (int count = 0; count <= Ranks.Count(); count ++)
+                {
+                    WCFService.Models.Ranking OldRank = Ranks.ElementAt(count);
+
+                }*/
+            }
+        }
+
+        public List<int> RankSteal() 
+        { 
+            //Returns ordered list of Champion ids by stolen gold amount.
+            using (var context = new lolfighdatabaseEntities1())
+            {
+                var Ranks =
+                    from Ranking in context.Rankings
+                    orderby Ranking.StolenGold descending
+                    select Ranking.Champion.IdChampion;
+                return Ranks.ToList();
             }
         }
 

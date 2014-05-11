@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LolFightProjekat.Models;
+using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
@@ -16,6 +18,33 @@ namespace WCFService
             ResponseFormat = WebMessageFormat.Xml,
             UriTemplate = "/GetSkillsByChampion?championId={championId}")]
         string GetSkillsByChampion(int championId);
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/RandomEnemy?championId={championId}")]
+        int RandomEnemy(int championId);
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/RankFarm")]
+        List<int> RankFarm();
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/RankSteal")]
+        List<int> RankSteal();
 
         /*
          [OperationContract]
