@@ -7,7 +7,7 @@ namespace LolFightProjekat.Models
 {
     public class Rank
     {
-        public string idChampion {}
-        public int Rank {}
+      //  public string idChampion {}
+      //  public int Rank {}
     }
 }

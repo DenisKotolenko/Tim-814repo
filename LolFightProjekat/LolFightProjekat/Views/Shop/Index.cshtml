@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+}
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+  </head>
+<body>
+
+    <div data-ng-controller="getAdmins">
+
+              
+            <ul>
+
+                <li ng-repeat="admin in getAdmins"> {{admin.Username}} - {{admin.Password}}</li>
+            </ul>
+        </div>
+
+    <input type="button" ng-controller="postAdmin" value="Unesi admina"/>
+
+
+        <script>
+
+            var myApp = angular.module('myApp', []);
+
+            myApp.controller('getAdmins', function($scope, $http) {
+                $http.get('http://localhost:60138/api/kewl/').success(function (data) {
+                    $scope.getAdmins = data;
+                });
+
+            });
+
+            myApp.controller('postAdmin', function ($scope, $http) {
+                var admin = {idAdmina: 99, Username: "radiPost", Password: "sifraPost" };
+                var request = $http({
+                    url: '/api/kewl',
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    data: JSON.stringify(admin),
+               
+                
+                });
+
+            });
+            /* druga varijanta istog ovog odozgo   
+            var FetchAdmins = function ($scope, $http) {
+                $http.get('http://localhost:60138/api/kewl/').success(function (data) {
+                    $scope.getAdmins = data;
+                });
+            };
+            */
+       
+        </script>
+</body>
+</html>
+
