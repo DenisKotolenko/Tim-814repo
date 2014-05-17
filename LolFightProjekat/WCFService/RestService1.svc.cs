@@ -65,7 +65,7 @@ namespace WCFService
             }
         }
 
-        public List<int> RankFarm()
+        public List<string> RankFarm()
         {
             // Returns ordered list of Champion ids by farmed gold amount.
             using (var context = new lolfighdatabaseEntities1())
@@ -73,7 +73,7 @@ namespace WCFService
                 var Ranks =
                     from Ranking in context.Rankings
                     orderby Ranking.FarmGold descending
-                    select Ranking.Champion.IdChampion;
+                    select Ranking.Champion.User.Username;
                 return Ranks.ToList();
                 // If this cannot be handled later in angular, the following creates
                 // a finished list made from a new model, to display champion and gold amount.

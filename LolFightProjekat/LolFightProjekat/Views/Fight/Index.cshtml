@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Fight";
+}
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div data-ng-controller="RandomEnemy">
+        <strong ng-repeat="Champion in RandomEnemy"> {{Champion.User.Username}} </strong>
+    </div>
+
+    <script>
+
+        var myApp = angular.module('myApp', []);
+
+        myApp.controller('RandomEnemy', function ($scope, $http) {
+            $http.get('http://localhost:60138/api/fight/').success(function (data) {
+                $scope.RandomEnemy = data;
+            });
+        });
+    </script>
+</body>
+</html>

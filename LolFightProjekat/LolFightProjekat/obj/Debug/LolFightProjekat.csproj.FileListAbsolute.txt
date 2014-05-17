@@ -72,7 +72,6 @@ C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\WebMatrix.WebData.xml
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.SqlServer.dll
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Helpers.dll
-C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Antlr3.Runtime.pdb
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\EntityFramework.SqlServer.xml
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Helpers.xml
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Optimization.xml
@@ -173,3 +172,4 @@ C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-81
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\LolFightProjekat\obj\Debug\bs\LolFightProjekat.resources.dll
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
 C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Random.Org.dll
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Random.Org.dll

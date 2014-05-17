@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Rank";
+}
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div data-ng-controller="RankFarm">
+        <ol>
+            <li ng-repeat="Champion in RankFarm"> {{Champion.User.Username}} - {{Champion.Ranking.FarmGold}}</li>
+        </ol>
+    </div>
+
+    <script>
+
+        var myApp = angular.module('myApp', []);
+
+        myApp.controller('RankFarm', function ($scope, $http) {
+            $http.get('http://localhost:60138/api/rank/').success(function (data) {
+                $scope.RankFarm = data;
+            });
+
+        });
+
+        myApp.controller('RankSteal', function ($scope, $http) {
+            $http.get('http://localhost:60138/api/rank/').success(function (data) {
+                $scope.RankSteal = data;
+            });
+
+        });
+
+    </script>
+</body>
+</html>
