@@ -14,11 +14,11 @@ namespace LolFightProjekat.Controllers
         // GET: /User/
         public ActionResult Index()
         {
-            int id = Int32.Parse(Session["LogedUserID"].ToString());
-            User user = db.Users.Find(id);
-            return View(user);
+         /*   int id = Int32.Parse(Session["LogedUserID"].ToString());
+            User user = db.Users.Find(id);*/
+            return View();
         }
-
+        
 
         public ActionResult Logout(int id)
         {
