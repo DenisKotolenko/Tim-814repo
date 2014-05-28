@@ -1158,6 +1158,11 @@ jQuery(function ($) {
     processHeaderMultipleBg(path);
 });
 
+jQuery('.skillbar').each(function () {
+    jQuery(this).find('.skillbar-bar').animate({
+        width: jQuery(this).attr('data-percent')
+    }, 6000);
+});
 var processHeaderMultipleBg = (function ($) {
     "use strict";
     return (function (path) {

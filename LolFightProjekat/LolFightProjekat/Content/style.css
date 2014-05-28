@@ -2526,6 +2526,79 @@ tr.Navigator td, td span.Navigator
    margin:0 auto;
    width: 200px;
 }
+/*skillbar*/
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:50%;
+	background:white;
+	height:10px;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:lighter;
+	font-size:10px;
+	color:#fff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 10px;
+	height:10px;
+	line-height:10px;
+	-webkit-border-top-left-radius:1px;
+	-webkit-border-bottom-left-radius:1px;
+	-moz-border-radius-topleft:1px;
+	-moz-border-radius-bottomleft:1px;
+	border-top-left-radius:1px;
+	border-bottom-left-radius:1px;
+}
+
+.skillbar-bar {
+	height:10px;
+	width:0px;
+	background:red;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:5px;
+	top:0;
+	font-size:11px;
+    font-weight:bold;
+	height:35px;
+	line-height:10px;
+	color:black;
+	color:black;
+}
 
 /* Begin Additional CSS Styles */
 .ftc-blockheader .t, .ftc-vmenublockheader .t {white-space: nowrap;}

@@ -32,6 +32,7 @@ namespace LolFightProjekat.Models
         public Nullable<int> MagicPenetration { get; set; }
         public Nullable<int> Heal { get; set; }
         public byte[] ImageURL { get; set; }
+        public string Name { get; set; }
     
         public virtual ICollection<Inventory> Inventories { get; set; }
     }

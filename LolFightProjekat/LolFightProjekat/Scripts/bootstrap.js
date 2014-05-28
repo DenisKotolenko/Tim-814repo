@@ -13,7 +13,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-
+jQuery('.skillbar').each(function () {
+    jQuery(this).find('.skillbar-bar').animate({
+        width: jQuery(this).attr('data-percent')
+    }, 6000);
+});
 
 +function ($) {
   'use strict';

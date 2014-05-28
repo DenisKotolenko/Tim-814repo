@@ -64,6 +64,7 @@
             <PropertyRef Name="IdItem" />
           </Key>
           <Property Name="IdItem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="100" />
           <Property Name="Price" Type="int" />
           <Property Name="HP" Type="int" />
           <Property Name="AttackDamage" Type="int" />
@@ -518,6 +519,7 @@
           <Property Name="Heal" Type="Int32" />
           <NavigationProperty Name="Inventories" Relationship="Self.FK_dbo_Inventory_dbo_Item_IdItem" FromRole="Item" ToRole="Inventory" />
           <Property Name="ImageURL" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="LogBattle">
           <Key>
@@ -943,6 +945,7 @@
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="lolfighdatabaseModel.Item">
               <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
                 <ScalarProperty Name="IdItem" ColumnName="IdItem" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
