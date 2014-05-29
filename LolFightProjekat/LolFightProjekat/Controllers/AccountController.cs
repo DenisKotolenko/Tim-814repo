@@ -15,6 +15,11 @@ namespace LolFightProjekat.Controllers
 {
     public class AccountController : BaseController
     {
+
+        
+        int idu;
+
+        private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
         public ActionResult Register()
         {
             return View();
@@ -40,9 +45,23 @@ namespace LolFightProjekat.Controllers
                     MembershipCreateStatus CS = new MembershipCreateStatus();
                     Membership.CreateUser(U.Username, U.Password, U.eMail, null, null, false, null, out CS);
                     FormsAuthentication.SetAuthCookie(U.Username, false);
-
+                    
                     // Creating user and corresponding empty champion.
                     dc.Users.Add(U);
+                      using (var context = new lolfighdatabaseEntities())
+            {
+                var usernovi =
+                    from User in context.Users
+                    where User.Username == "nerass"
+                    select User.IdUser;
+                idu = usernovi.FirstOrDefault();
+
+                }
+                      
+                   
+                    
+                    
+
                     Champion C = new Champion();
                     C.IdChampion = U.IdUser;
                     C.IdChampionType = 1;
@@ -84,8 +103,13 @@ namespace LolFightProjekat.Controllers
         {
             if (string.IsNullOrEmpty(Token.ToString()))
             {
+
+                
                 ViewBag.Msg = Resources.Resources.BadToken;
-                return View();
+
+                User konj = db.Users.Find(idu);
+                return View(konj);
+
             }
             else
             {
@@ -103,8 +127,8 @@ namespace LolFightProjekat.Controllers
                 {
                     FormsAuthentication.SignOut();
                     ViewBag.Msg = Resources.Resources.EmailAlready;
-                    return View();
-                    //return RedirectToAction("LogOn");
+                    
+                    return RedirectToAction("../Home");
                 }
             }
         }
