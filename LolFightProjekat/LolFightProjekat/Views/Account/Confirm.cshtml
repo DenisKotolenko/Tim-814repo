@@ -2,7 +2,48 @@
 @{
     ViewBag.Title = "Confirm";
 }
-@Html.DisplayFor(model => model.Username)
-<h2>Confirmed!</h2>
-@ViewBag.Message
 
+
+<!DOCTYPE html>
+
+<html ng-app="chooseApp">
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+
+    <script>
+
+        var chooseChampApp = angular.module('chooseApp', []);
+        chooseChampApp.controller('selectorCtrl', function ($scope, $http) {
+            $http.get('../api/ChampionTypeAPI').success(function (data) {
+                
+                $scope.Champions = data;
+                
+            });
+
+      });
+    </script>
+
+    <title>Choose champion</title>
+
+</head>
+
+<body>
+    <h2> Wellcome @Html.DisplayFor(model => model.Username) </h2>
+
+    Choose your champion wisely!!!
+
+    <ul ng-controller="selectorCtrl">
+      
+
+        <li ng-repeat="champion in Champions" >
+            <a href="../ChampionType/method/{{champion.IdChampionType}}">{{champion.Name}} <img src="{{champion.ImageLink}}" /> </a>
+</li>
+
+    </ul>
+
+</body>
+
+
+
+</html>

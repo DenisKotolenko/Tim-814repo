@@ -17,7 +17,7 @@ namespace LolFightProjekat.Controllers
     {
 
         
-        int idu;
+       
 
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
         public ActionResult Register()
@@ -50,15 +50,10 @@ namespace LolFightProjekat.Controllers
                     dc.Users.Add(U);
                       using (var context = new lolfighdatabaseEntities())
             {
-                var usernovi =
-                    from User in context.Users
-                    where User.Username == "nerass"
-                    select User.IdUser;
-                idu = usernovi.FirstOrDefault();
+                
 
                 }
-                      
-                   
+
                     
                     
 
@@ -107,8 +102,12 @@ namespace LolFightProjekat.Controllers
                 
                 ViewBag.Msg = Resources.Resources.BadToken;
 
-                User konj = db.Users.Find(idu);
-                return View(konj);
+                User user =
+                     (from u in db.Users
+                      orderby u.IdUser
+                      select u).First();
+              
+                return View(user);
 
             }
             else

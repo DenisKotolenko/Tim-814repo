@@ -20,6 +20,67 @@ namespace LolFightProjekat.Controllers
             return View(db.ChampionTypes.ToList());
         }
 
+        // GET: /ChampionType/method/id
+        public ActionResult method(int? id)
+        {
+           
+            
+                return RedirectToAction("../Login");
+
+            
+        }
+
+
+        //change byte to picture
+        public ActionResult PretvoriUSliku(int id)
+        {
+            
+
+            ChampionType champTy = db.ChampionTypes.Find(id);
+            Byte[] imageBytes = champTy.ImageURL.ToArray();
+
+            FileContentResult f = File(imageBytes, "image/png");
+            return f;
+        }
+
+
+
+        //Method about POST images
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+
+           
+            if (file != null && file.ContentLength > 0)
+            {
+                string targetFolder = System.Web.HttpContext.Current.Server.MapPath("~/");
+                string targetPath = System.IO.Path.Combine(targetFolder, file.FileName);
+                file.SaveAs(targetPath);
+
+                int id = 0;
+                
+                ChampionType cht = (from ch in db.ChampionTypes
+                                    orderby ch.IdChampionType descending
+                                    select ch).First();
+
+
+                id = cht.IdChampionType;
+
+                ChampionType chTy = db.ChampionTypes.Find(id);
+
+                byte[] image = new byte[file.ContentLength];
+                file.InputStream.Read(image, 0, image.Length);
+
+                chTy.ImageURL = image;
+
+
+                
+                db.SaveChanges();
+
+            }
+            return RedirectToAction("Index");
+        }
+
         // GET: /ChampionType/Details/5
         public ActionResult Details(int? id)
         {

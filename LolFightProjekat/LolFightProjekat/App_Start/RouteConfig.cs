@@ -18,6 +18,12 @@ namespace LolFightProjekat
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                "Inventory",
+                     "ChampionType/{action}/{id}",
+                 new { controller = "ChampionType", action = "method", id = UrlParameter.Optional }
+                );
+           
 
         }
     }
