@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
+
+
+
     <!-- Created by Artisteer v4.1.0.59861 -->
     <meta charset="utf-8">
     <title>Home</title>
@@ -34,6 +37,18 @@
     </style>
 </head>
 <body>
+
+    @if (Session["LogedUserFullname"] != null)
+    {
+        <text>
+            Welcome @Session["LogedUserFullname"].ToString()
+                    @Session["LogedUserID"].ToString()
+        </text>
+    }
+    
+    
+    
+
     <div id="ftc-main">
         <div class="ftc-sheet clearfix">
             <header class="ftc-header">

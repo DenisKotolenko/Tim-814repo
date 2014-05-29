@@ -4,67 +4,67 @@
     <title>Login</title>
 </head>
 <body>
-<h2>Login</h2>
+    <h2>Login</h2>
 
-@using (Html.BeginForm("Index", "Login", FormMethod.Post))
-{
-    //this  is for create form tag
-    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
-                                    @Html.ValidationSummary(true)
-    if (@ViewBag.Message != null)
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post))
     {
-        <div style="border:1px solid red">
-            @ViewBag.Message
-        </div>
+        //this  is for create form tag
+        @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                    @Html.ValidationSummary(true)
+        if (@ViewBag.Message != null)
+        {
+            <div style="border:1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+        <table>
+            <tr>
+
+                <td ng-model="username">@Html.TextBoxFor(a => a.Username, new { @placeholder = "username", @class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(a => a.Username)</td>
+            </tr>
+            <tr>
+
+                <td ng-model="password">
+                    @Html.PasswordFor(a => a.Password, new { @placeholder = "password", @class = "form-control" })
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.Password)
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <input type="submit" ng-controller="PostUser" class="btn btn-default" value=" login" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
     }
-    <table>
-        <tr>
 
-            <td ng-model="username">@Html.TextBoxFor(a => a.Username, new { @placeholder = "username", @class = "form-control" })</td>
-            <td>@Html.ValidationMessageFor(a => a.Username)</td>
-        </tr>
-        <tr>
+    @* This below line is for create javascript section *@
 
-            <td ng-model="password">
-                @Html.PasswordFor(a => a.Password, new { @placeholder = "password", @class = "form-control" })
-            </td>
-            <td>
-                @Html.ValidationMessageFor(a => a.Password)
-            </td>
-        </tr>
-        <tr>
-
-            <td>
-                <input type="submit" ng-controller="PostUser" class="btn btn-default" value=" login" />
-            </td>
-            <td></td>
-        </tr>
-    </table>
-}
-
-@* This below line is for create javascript section *@
-
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 
     <script>
-    var myApp = angular.module('myApp', []);
-    myApp.controller('PostUser', function ($scope, $http) {
-        var user = {  Username: $scope.Username, Password: $scope.Password };
-        var request = $http({
-            url: '/api/kewl',
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify(user),
-               
-                
+        var myApp = angular.module('myApp', []);
+        myApp.controller('PostUser', function ($scope, $http) {
+            var user = { Username: $scope.Username, Password: $scope.Password };
+            var request = $http({
+                url: '/api/kewl',
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                data: JSON.stringify(user),
+
+
+            });
+
         });
 
-    });
-   
-       
+
     </script>
 
-        </body>
-        </html>
+</body>
+</html>
