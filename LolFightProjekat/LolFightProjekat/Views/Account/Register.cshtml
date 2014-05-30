@@ -20,36 +20,39 @@
             </div>
         }
 
-      
-            @Html.LabelFor(model => model.Username)
-            @Html.TextBoxFor(model => model.Username, new { @placeholder = "username", @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Username)
+        <table>
+            <tr>
+                <td>  @Html.LabelFor(model => model.Username)</td>
+                <td>   @Html.TextBoxFor(model => model.Username, new { @placeholder = "username", @class = "form-control" })</td>
+                <td>  @Html.ValidationMessageFor(model => model.Username)</td>
+            </tr>
 
-            <br />
-        
-            @Html.LabelFor(model => model.Password)
-            @Html.PasswordFor(model => model.Password, new { @placeholder = "password", @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Password)
-            <br />
 
-        
-            @Html.LabelFor(model => model.ConfirmPassword)
-            @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.ConfirmPassword)
-            <br />
-            
-       
-            @Html.LabelFor(model => model.eMail)
-       
-        
-            @Html.TextBoxFor(model => model.eMail,new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.eMail)
-     
-        @Html.Raw(Html.GenerateCaptcha())
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+            <tr>
+                <td>@Html.LabelFor(model => model.Password)</td>
+                <td>@Html.PasswordFor(model => model.Password, new { @placeholder = "password", @class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(model => model.Password)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(model => model.ConfirmPassword)</td>
+                <td>@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(model => model.ConfirmPassword)</td>
+</tr>
+
+            <tr>
+                <td>@Html.LabelFor(model => model.eMail)</td>
+
+
+                <td>@Html.TextBoxFor(model => model.eMail, new { @class = "form-control" })</td>
+                <td> @Html.ValidationMessageFor(model => model.eMail)</td>
+</tr>
+            </table>
+                @Html.Raw(Html.GenerateCaptcha())
+                <p>
+                    <input type="submit" value="Create" />
+                </p>
+</fieldset>
 }
 
 

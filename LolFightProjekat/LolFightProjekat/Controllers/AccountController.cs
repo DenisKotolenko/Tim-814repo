@@ -16,8 +16,8 @@ namespace LolFightProjekat.Controllers
     public class AccountController : BaseController
     {
 
-        
-       
+
+
 
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
         public ActionResult Register()
@@ -45,17 +45,17 @@ namespace LolFightProjekat.Controllers
                     MembershipCreateStatus CS = new MembershipCreateStatus();
                     Membership.CreateUser(U.Username, U.Password, U.eMail, null, null, false, null, out CS);
                     FormsAuthentication.SetAuthCookie(U.Username, false);
-                    
+
                     // Creating user and corresponding empty champion.
                     dc.Users.Add(U);
-                      using (var context = new lolfighdatabaseEntities())
-            {
-                
+                    using (var context = new lolfighdatabaseEntities())
+                    {
 
-                }
 
-                    
-                    
+                    }
+
+
+
 
                     Champion C = new Champion();
                     C.IdChampion = U.IdUser;
@@ -99,14 +99,14 @@ namespace LolFightProjekat.Controllers
             if (string.IsNullOrEmpty(Token.ToString()))
             {
 
-                
+
                 ViewBag.Msg = Resources.Resources.BadToken;
 
                 User user =
                      (from u in db.Users
-                      orderby u.IdUser
+                      orderby u.IdUser descending
                       select u).First();
-              
+
                 return View(user);
 
             }
@@ -126,7 +126,7 @@ namespace LolFightProjekat.Controllers
                 {
                     FormsAuthentication.SignOut();
                     ViewBag.Msg = Resources.Resources.EmailAlready;
-                    
+
                     return RedirectToAction("../Home");
                 }
             }

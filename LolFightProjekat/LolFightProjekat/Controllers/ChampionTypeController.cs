@@ -21,20 +21,49 @@ namespace LolFightProjekat.Controllers
         }
 
         // GET: /ChampionType/method/id
-        public ActionResult method(int? id)
+        public ActionResult method(int id)
         {
-           
-            
-                return RedirectToAction("../Login");
 
-            
+            Champion champion =
+                 (from u in db.Champions
+                  orderby u.IdChampion descending
+                  select u).First();
+
+            Champion champ = db.Champions.Find(champion.IdChampion);
+
+            champ.IdChampionType = id;
+            champ.Gold = 500;
+
+
+
+            ChampionType skillchamp = db.ChampionTypes.Find(id);
+            Skill skillnew = new Skill();
+            skillnew.IdSkill = champ.IdChampion;
+            skillnew.HP = skillchamp.HP;
+            skillnew.AttackDamage = skillchamp.AttackDamage;
+            skillnew.AbilityDamage = skillchamp.AbilityDamage;
+            skillnew.Armor = skillchamp.Armor;
+            skillnew.AttackSpeed = skillchamp.AttackSpeed;
+            skillnew.MagicResist = skillchamp.MagicResist;
+            skillnew.Critical = 1;
+            skillnew.ArmorPenetration = 5;
+            skillnew.MagicPenetration = 5;
+
+            db.Skills.Add(skillnew);
+
+
+            db.Entry(champ).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("../Login");
+
+
         }
 
 
         //change byte to picture
         public ActionResult PretvoriUSliku(int id)
         {
-            
+
 
             ChampionType champTy = db.ChampionTypes.Find(id);
             Byte[] imageBytes = champTy.ImageURL.ToArray();
@@ -50,7 +79,7 @@ namespace LolFightProjekat.Controllers
         public ActionResult Upload(HttpPostedFileBase file)
         {
 
-           
+
             if (file != null && file.ContentLength > 0)
             {
                 string targetFolder = System.Web.HttpContext.Current.Server.MapPath("~/");
@@ -58,7 +87,7 @@ namespace LolFightProjekat.Controllers
                 file.SaveAs(targetPath);
 
                 int id = 0;
-                
+
                 ChampionType cht = (from ch in db.ChampionTypes
                                     orderby ch.IdChampionType descending
                                     select ch).First();
@@ -74,7 +103,7 @@ namespace LolFightProjekat.Controllers
                 chTy.ImageURL = image;
 
 
-                
+
                 db.SaveChanges();
 
             }
@@ -107,7 +136,7 @@ namespace LolFightProjekat.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="IdChampionType,Nation,Name,ImageLink,HP,AttackDamage,AbilityDamage,AttackSpeed,Armor,MagicResist,ImageURL")] ChampionType championtype)
+        public ActionResult Create([Bind(Include = "IdChampionType,Nation,Name,ImageLink,HP,AttackDamage,AbilityDamage,AttackSpeed,Armor,MagicResist,ImageURL")] ChampionType championtype)
         {
             if (ModelState.IsValid)
             {
@@ -139,7 +168,7 @@ namespace LolFightProjekat.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="IdChampionType,Nation,Name,ImageLink,HP,AttackDamage,AbilityDamage,AttackSpeed,Armor,MagicResist,ImageURL")] ChampionType championtype)
+        public ActionResult Edit([Bind(Include = "IdChampionType,Nation,Name,ImageLink,HP,AttackDamage,AbilityDamage,AttackSpeed,Armor,MagicResist,ImageURL")] ChampionType championtype)
         {
             if (ModelState.IsValid)
             {

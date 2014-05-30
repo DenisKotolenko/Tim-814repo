@@ -33,14 +33,17 @@
 
     Choose your champion wisely!!!
 
-    <ul ng-controller="selectorCtrl">
+    <table ng-controller="selectorCtrl">
       
+      <tr><th>Name</th>
+          <th>Picture</th>
+          <th>Stats</th></tr>
+        <tr ng-repeat="champion in Champions" >
 
-        <li ng-repeat="champion in Champions" >
-            <a href="../ChampionType/method/{{champion.IdChampionType}}">{{champion.Name}} <img src="{{champion.ImageLink}}" /> </a>
-</li>
+      <td> <a href="../ChampionType/method/{{champion.IdChampionType}}">{{champion.Name}} </a></td><td> <img src="{{champion.ImageLink}}" class="thumbnail" /> </td> <td>Nation: {{champion.Nation}}<br /> Atk dmg: {{champion.AttackDamage}}<br> Ability dmg: {{champion.AbilityDamage}} <br>Atk speed: {{champion.Attackspeed}} <br> Armor: {{champion.Armor}} <br> Magic resist: {{champion.MagicResist}} <br />Hp: {{champion.HP}}</td></tr>
 
-    </ul>
+       
+    </table>
 
 </body>
 
