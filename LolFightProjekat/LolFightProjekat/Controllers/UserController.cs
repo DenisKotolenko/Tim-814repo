@@ -14,9 +14,9 @@ namespace LolFightProjekat.Controllers
         // GET: /User/
         public ActionResult Index()
         {
-         /*   int id = Int32.Parse(Session["LogedUserID"].ToString());
-            User user = db.Users.Find(id);*/
-            return View();
+         int id = Int32.Parse(Session["LogedUserID"].ToString());
+            User user = db.Users.Find(id);
+            return View(user);
         }
         
 
