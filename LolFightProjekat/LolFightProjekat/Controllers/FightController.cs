@@ -33,5 +33,37 @@ namespace LolFightProjekat.Controllers
             int rank = 0;
             return Ok(Actives2[rank]);
         }
+
+        [AcceptVerbs("PUT")]
+        [ResponseType(typeof(IHttpActionResult))]
+        public IHttpActionResult Fight(int attackId, int defendId)
+        {
+            Champion Attacker = db.Champions.Find(attackId);
+            Champion Defender = db.Champions.Find(defendId);
+            LogBattle Fajt = new LogBattle();
+            Fajt.IdAttacker = attackId;
+            Fajt.IdDefender = defendId;
+            Fajt.StartTime = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            Int32 IdLoser;
+            if (Attacker.Skill.AttackDamage > Defender.Skill.Armor)
+            {
+                Fajt.IdWinner = attackId;
+                IdLoser = defendId;
+            }
+            else
+            {
+                Fajt.IdWinner = defendId;
+                IdLoser = attackId;
+            }
+            Champion Winner = db.Champions.Find(Fajt.IdWinner);
+            Champion Loser = db.Champions.Find(IdLoser);
+            Fajt.Gold = (Int32)(Loser.Gold * 0.05);
+            Fajt.Report = Attacker.User.Username + " attacked " + Defender.User.Username + "!!! " + Winner.User.Username + " won " + Fajt.Gold + " gold!";
+            Loser.Gold -= Fajt.Gold;
+            Winner.Gold += Fajt.Gold;
+            db.LogBattles.Add(Fajt);
+            db.SaveChanges();
+            return Ok();
+        }
     }
 }
