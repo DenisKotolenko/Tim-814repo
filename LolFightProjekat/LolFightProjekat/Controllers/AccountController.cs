@@ -68,8 +68,8 @@ namespace LolFightProjekat.Controllers
                     System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
                     msg.Subject = Resources.Resources.EmailSubject;
                     var user = Membership.GetUser(U.Username.ToString());
-                    var Token = user.ProviderUserKey.ToString();
-                    msg.Body = string.Format(Resources.Resources.EmailBody, U.Username, Url.Action("Confirm", "Account", new { Token }, Request.Url.Scheme));
+             //       var Token = user.ProviderUserKey.ToString();
+                    msg.Body = string.Format(Resources.Resources.EmailBody, U.Username, Url.Action("Confirm", "Account", Request.Url.Scheme));
                     msg.From = new MailAddress("lolfight814@gmail.com");
                     msg.To.Add(U.eMail);
                     msg.IsBodyHtml = true;

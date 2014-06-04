@@ -14,5 +14,10 @@ namespace LolFightProjekat.Controllers
         {
             return View();
         }
+
+        public ActionResult home()
+        {
+            return View();
+        }
 	}
 }

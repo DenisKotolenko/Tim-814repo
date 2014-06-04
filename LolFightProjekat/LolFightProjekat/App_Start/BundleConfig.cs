@@ -16,7 +16,8 @@ namespace LolFightProjekat
                         "~/Scripts/script.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                "~/Scripts/angular.js"));
+                "~/Scripts/angular.js",
+            "~/Scripts/angular-ui-router.js"));
 
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
