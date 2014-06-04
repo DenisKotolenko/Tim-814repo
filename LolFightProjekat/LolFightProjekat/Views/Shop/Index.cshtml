@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="ShopApp" dir="ltr" lang="en-US">
+<html ng-app="app" dir="ltr" lang="en-US">
 <head>
     <!-- Created by Artisteer v4.1.0.59861 -->
     <meta charset="utf-8">
@@ -8,24 +8,9 @@
     <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya+SC&amp;subset=latin">
 
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
 
-
-    <script>
-
-        var countryApp = angular.module('ShopApp', []);
-        countryApp.controller('GetItemsCtrl', function ($scope, $http) {
-            $http.get('/api/ShopApi').success(function (data) {
-                $scope.Items = data;
-            });
-
-            $scope.BuyItem = function (Price) {
-                var i = $scope.names.indexOf(Price);
-                $scope.names.splice(i, 1);
-            };
-        });
-
-
-    </script>
+   
 
     <style>
         .ftc-content .ftc-postcontent-0 .layout-item-0 {
@@ -120,27 +105,8 @@
                                         <div class="ftc-content-layout-row">
                                             <div class="ftc-layout-cell layout-item-0" style="width: 100%">
 
-
-                                                <table ng-controller="GetItemsCtrl">
-                                                    <tr>
-                                                        <th>Name</th>
-
-                                                        <th>Price</th>
-                                                        <th>Ad DMG</th>
-                                                        <th>Ap DMG</th>
-                                                        <th>HP</th>
-                                                        <th></th>
-                                                    </tr>
-                                                    <tr ng-repeat="item in Items">
-                                                        <td>{{item.Name}}</td>
-                                                        <td>{{item.Price}}</td>
-                                                        <td>{{item.AttackDamage}}</td>
-                                                        <td>{{item.AbilityDamage}}</td>
-                                                        <td>{{item.HP}}</td>
-                                                        <td> <a href="">Buy</a> </td>
-
-                                                    </tr>
-                                                </table>
+                                                
+                                               <div ui-view></div>
 
 
 

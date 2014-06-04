@@ -330,6 +330,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="PartialViews\Proba.html" />
+    <Content Include="PartialViews\ShopPartial\ShopPartial.html" />
+    <Content Include="PartialViews\UserPartial\UserPartial.html" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\CustomScripts\AddAdminREST.js" />

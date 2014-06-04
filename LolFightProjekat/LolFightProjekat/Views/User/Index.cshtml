@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html ng-app="app" dir="ltr" lang="en-US">
 <head>
 
 
@@ -12,12 +12,9 @@
     <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link rel="stylesheet" href="style.css" media="screen">
     <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="style.responsive.css" media="all">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya+SC&amp;subset=latin">
 
-    <script src="jquery.js"></script>
-    <script src="script.js"></script>
-    <script src="script.responsive.js"></script>
+
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
 
 
     <style>
@@ -67,7 +64,9 @@
             <nav class="ftc-nav">
                 <ul class="ftc-hmenu"><li><a href="home.html" class="active">Home</a>
               </li>
-                <li><a href="../Shop">Shop</a></li>
+
+                  
+                <li><a ui-sref="shop">Shop</a></li>
                 <li><a href="User/battle">Battle</a></li>
                 <li><a href="User/farm_jungle">Farm & Jungle</a>
                     <ul>
@@ -112,100 +111,9 @@
                         </div>
                         <div class="ftc-layout-cell ftc-content">
                             <article class="ftc-post ftc-article">
-                                <div class="ftc-postmetadataheader">
-                                    <h2 class="ftc-postheader">Home</h2>
+                             
                                 
-                                    <div>
-                                    <a href="#" class="img-rounded">
-                                        <img src="../Images/lux.png" alt="..." />
-                                    </a>
-                                    </div>
-                                    Name: Lux</br>
-                                    Nation: Demaciaaaaa
-                                </div>
-
-                                <div class="ftc-postcontent ftc-postcontent-0 clearfix">
-                                    <div class="ftc-content-layout">
-                                        <div class="ftc-content-layout-row">
-                                            <div class="ftc-layout-cell layout-item-0" style="width: 100%">
-                                                Skills:
-
-                                                <div class="skillbar clearfix " data-percent="80%">
-
-                                                    <div class="skillbar-title" style="background: red;"><span>Attack dmg</span></div>
-
-                                                    <div class="skillbar-bar" style="background: red;"></div>
-
-                                                    <div class="skill-bar-percent">
-                                                        10
-                                                        <a href="#"><b>+</b></a>
-                                                    </div>
-
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="30%">
-                                                    <div class="skillbar-title" style="background: blue;"><span>Ability dmg</span></div>
-                                                    <div class="skillbar-bar" style="background: blue;"></div>
-                                                    <div class="skill-bar-percent">10<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: #88cd2a;"><span>Attack speed</span></div>
-                                                    <div class="skillbar-bar" style="background: #88cd2a;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: yellow;"><span>Armor</span></div>
-                                                    <div class="skillbar-bar" style="background: yellow;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                   
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: lightblue;"><span>Magic resist</span></div>
-                                                    <div class="skillbar-bar" style="background: lightblue;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: purple;"><span>Critical chance</span></div>
-                                                    <div class="skillbar-bar" style="background: purple;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: green;"><span>Armor penetration</span></div>
-                                                    <div class="skillbar-bar" style="background: green;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: green;"><span>Magic penetration</span></div>
-                                                    <div class="skillbar-bar" style="background: green;"></div>
-                                                    <div class="skill-bar-percent">40<a href="#"><b>+</b></a></div>
-                                                </div>
-                                                <div class="skillbar clearfix " data-percent="40%">
-                                                    <div class="skillbar-title" style="background: #ff6a00"><span>Health</span></div>
-                                                    <div class="skillbar-bar" style="background: #ff6a00;"></div>
-                                                    <div class="skill-bar-percent">4<a href="#"><b>+</b></a></div>
-                                                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-
+                                 <div ui-view></div>
 
                             </article>
                         </div>

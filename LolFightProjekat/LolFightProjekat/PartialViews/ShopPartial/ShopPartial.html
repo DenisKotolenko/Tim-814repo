@@ -1,0 +1,20 @@
+﻿<table ng-controller="GetItemsCtrl">
+    <tr>
+        <th>Name</th>
+
+        <th>Price</th>
+        <th>Ad DMG</th>
+        <th>Ap DMG</th>
+        <th>HP</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="item in Items">
+        <td>{{item.Name}}</td>
+        <td>{{item.Price}}</td>
+        <td>{{item.AttackDamage}}</td>
+        <td>{{item.AbilityDamage}}</td>
+        <td>{{item.HP}}</td>
+        <td> <a href="">Buy</a> </td>
+
+    </tr>
+</table>
