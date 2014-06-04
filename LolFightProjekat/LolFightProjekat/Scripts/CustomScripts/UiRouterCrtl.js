@@ -114,3 +114,12 @@ angular.module('app').controller("Username", function ($scope, $window) {
     $scope.username = $window.sessionStorage.token;
 
 });
+angular.module('app').controller("Logout", function ($scope, $window) {
+    $scope.Logout = function () {
+        $window.sessionStorage.token = "";
+        $scope.username = "";
+
+        window.location = '../../Home';
+    };
+
+})

@@ -127,5 +127,11 @@ namespace LolFightProjekat.Controllers
         {
             return db.Users.Count(e => e.IdUser == id) > 0;
         }
+
+        [HttpGet]
+        public string Logout()
+        {
+            return null;
+        }
     }
 }
