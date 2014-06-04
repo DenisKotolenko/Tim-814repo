@@ -99,6 +99,20 @@ namespace LolFightProjekat.Controllers
 
             return Ok(user);
         }
+        [HttpGet]
+        // GET api/LoginApi/5
+        public User Login(string username, string pass)
+        {
+
+            User kor = new User();
+            kor = db.Users.Where(a => a.Username.Equals(username) && a.Password.Equals(pass)).FirstOrDefault();
+
+            if (kor != null)
+            {
+                return kor;
+            }
+            return null;
+        }
 
         protected override void Dispose(bool disposing)
         {

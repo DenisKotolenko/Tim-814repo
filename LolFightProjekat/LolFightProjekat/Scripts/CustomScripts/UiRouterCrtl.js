@@ -1,10 +1,6 @@
-﻿/// <reference path="Shop/Index.cshtml" />
-/// <reference path="../PartialViews/Proba.html" />
-/// <reference path="../PartialViews/Proba.html" />
-/// <reference path="../PartialViews/Proba.html" />
-/// <reference path="../PartialViews/Proba.html" />
+﻿
 angular
-  .module('app', [
+.module('app', [
     'ui.router'
   ])
   .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
@@ -25,10 +21,7 @@ angular
 
   }])
 
-
-angular
-.module('app')
-.controller('GetItemsCtrl', function ($scope, $http) {
+angular.module('app').controller('GetItemsCtrl', function ($scope, $http) {
    
     $http.get('/api/ShopApi').success(function (data) {
         $scope.Items = data;
@@ -58,3 +51,40 @@ angular
   }]);
 
 */
+angular.module('app').controller("Login", function ($scope, $http, $window) {
+
+    $scope.login = {};
+
+    $scope.login.submitTheForm = function (item, event) {
+        console.log("--> Submitting form");
+
+
+        var dataObject = {
+            user: $scope.login.name,
+            pass: $scope.login.pass
+        };
+     
+        var responsePromise = $http.get("api/LoginApi/Login?username=" + dataObject.user + "&pass=" + dataObject.pass, {});
+
+        responsePromise.success(function (data) {
+            if (data != "null") {
+                $scope.user = data;
+                $window.sessionStorage.token = dataObject.user;
+                window.location = '../../User/Index';
+                AuthService.setUserAuthenticated(true);
+
+                //location.path = '/home';
+            }
+            else {
+                window.location = 'index.html#';
+            }
+        });
+
+    }
+})
+angular.module('app').controller("Username", function ($scope, $window) {
+
+   
+    $scope.username = $window.sessionStorage.token;
+
+});

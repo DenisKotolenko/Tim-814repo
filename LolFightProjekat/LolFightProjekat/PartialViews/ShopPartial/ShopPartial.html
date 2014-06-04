@@ -1,20 +1,49 @@
-﻿<table ng-controller="GetItemsCtrl">
-    <tr>
-        <th>Name</th>
+﻿<div ng-app="app">
 
-        <th>Price</th>
-        <th>Ad DMG</th>
-        <th>Ap DMG</th>
-        <th>HP</th>
-        <th></th>
-    </tr>
-    <tr ng-repeat="item in Items">
-        <td>{{item.Name}}</td>
-        <td>{{item.Price}}</td>
-        <td>{{item.AttackDamage}}</td>
-        <td>{{item.AbilityDamage}}</td>
-        <td>{{item.HP}}</td>
-        <td> <a href="">Buy</a> </td>
+    <div class="ftc-postmetadataheader">
+        <h2 class="ftc-postheader">Home</h2>
+    </div>
 
-    </tr>
-</table>
+    <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+        <div class="ftc-content-layout">
+            <div class="ftc-content-layout-row">
+                <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+
+
+
+
+
+                    <table ng-controller="GetItemsCtrl">
+                        <tr>
+                            <th>Name</th>
+
+                            <th>Price</th>
+                            <th>Ad DMG</th>
+                            <th>Ap DMG</th>
+                            <th>HP</th>
+                            <th></th>
+                        </tr>
+                        <tr ng-repeat="item in Items">
+                            <td>{{item.Name}}</td>
+                            <td>{{item.Price}}</td>
+                            <td>{{item.AttackDamage}}</td>
+                            <td>{{item.AbilityDamage}}</td>
+                            <td>{{item.HP}}</td>
+                            <td> <a href="">Buy</a> </td>
+
+                        </tr>
+                    </table>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
