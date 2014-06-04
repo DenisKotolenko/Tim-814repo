@@ -1,0 +1,43 @@
+﻿<div ng-app="app">
+    <div ng-controller="Username">
+        <div>
+        </div><div class="ftc-postmetadataheader">
+
+
+            {{username}}
+
+
+        </div>
+
+        <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+            <div class="ftc-content-layout">
+                <div class="ftc-content-layout-row">
+                    <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+                        <div ng-controller="farmingCtrl">
+                            <h2> Farming </h2>
+
+                            All i want to do is Farm Farm Farm:
+                            <br />
+                            <button class="btn btn-success">Farm</button>
+
+                        </div>
+                        <div ng-controller="junglingCtrl">
+                            <h2>Jungling </h2>
+                            How many hours do you wanna jungle: <input type="text" ng-model="duration" style="width: 20px;" />
+                                             
+                           
+                            <br />
+                            
+                            <button ng-model="dugmeZaJungle" class="btn btn-warning" ng-click="PostJungling()">Jungle</button>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

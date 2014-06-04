@@ -18,8 +18,34 @@ angular
             controller: 'GetItemsCtrl'
         })
 
-
+         .state('farmjungle', {
+             url: '/farmjungle',
+             templateUrl: '../PartialViews/FarmJunglePartial/FarmJunglePartial.html'
+         })
+      
   }])
+
+
+angular.module('app').controller('farmingCtrl', function ($scope, $http) {
+
+
+    alert("radiFarmingCtrl");
+});
+
+angular.module('app').controller('junglingCtrl', function ($scope, $http) {
+
+    $scope.PostJungling = function () {
+        
+        alert("Uspješan odlazak u junglu! Neka vas sv.Teo cuva od zla!");
+    $http.get('../api/JungleAPI?username=' + $scope.username + "&duration="+$scope.duration).success(function (data) {
+        $scope.status = data;
+    });
+
+    };
+
+});
+
+
 
 angular.module('app').controller('GetItemsCtrl', function ($scope, $http) {
    
