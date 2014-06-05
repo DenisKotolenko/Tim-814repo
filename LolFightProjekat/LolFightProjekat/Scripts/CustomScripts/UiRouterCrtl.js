@@ -22,6 +22,14 @@ angular
              url: '/farmjungle',
              templateUrl: '../PartialViews/FarmJunglePartial/FarmJunglePartial.html'
          })
+          .state('login', {
+              url: '/login',
+              templateUrl: '../PartialViews/LoginPartial/Index.html'
+          })
+        .state('prazno', {
+            url: '/prazno',
+            templateUrl: '../PartialViews/LoginPartial/prazno.cshtml'
+        })
       
   }])
 
@@ -117,7 +125,7 @@ angular.module('app').controller("Login", function ($scope, $http, $window) {
                 //location.path = '/home';
             }
             else {
-                window.location = 'index.html#';
+                window.location = 'Login';
             }
         });
 

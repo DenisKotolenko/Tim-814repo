@@ -1,63 +1,171 @@
 ﻿@model LolFightProjekat.Models.Account
 @using Recaptcha
+<!DOCTYPE html>
+<html ng-app="app" dir="ltr" lang="en-US">
+<head>
+    <!-- Created by Artisteer v4.1.0.59861 -->
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya+SC&amp;subset=latin">
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
 
-@{
-    ViewBag.Title = "Register";
-}
 
-<h2>Register</h2>
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>User</legend>
-        @Html.AntiForgeryToken()
-        @if (ViewBag.Message != null)
-        {
-            <div style="border:solid 1px green">
-                @ViewBag.Message
-            </div>
+    <style>
+        .ftc-content .ftc-postcontent-0 .layout-item-0 {
+            padding-right: 10px;
+            padding-left: 10px;
         }
 
-        <table>
-            <tr>
-                <td>  @Html.LabelFor(model => model.Username)</td>
-                <td>   @Html.TextBoxFor(model => model.Username, new { @placeholder = "username", @class = "form-control" })</td>
-                <td>  @Html.ValidationMessageFor(model => model.Username)</td>
-            </tr>
+        .ie7 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
 
+        .ie6 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="Username">
+        <div ng-controller="getEverythingCtrl">
+            <div id="ftc-main">
+                <div class="ftc-sheet clearfix">
+                    <header class="ftc-header">
 
-            <tr>
-                <td>@Html.LabelFor(model => model.Password)</td>
-                <td>@Html.PasswordFor(model => model.Password, new { @placeholder = "password", @class = "form-control" })</td>
-                <td>@Html.ValidationMessageFor(model => model.Password)</td>
-            </tr>
-
-            <tr>
-                <td>@Html.LabelFor(model => model.ConfirmPassword)</td>
-                <td>@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })</td>
-                <td>@Html.ValidationMessageFor(model => model.ConfirmPassword)</td>
-</tr>
-
-            <tr>
-                <td>@Html.LabelFor(model => model.eMail)</td>
-
-
-                <td>@Html.TextBoxFor(model => model.eMail, new { @class = "form-control" })</td>
-                <td> @Html.ValidationMessageFor(model => model.eMail)</td>
-</tr>
-            </table>
-                @Html.Raw(Html.GenerateCaptcha())
-                <p>
-                    <input type="submit" value="Create" />
-                </p>
-</fieldset>
-}
+                        <div class="ftc-shapes">
+                        </div>
+                        <h1 class="ftc-headline" data-left="56.9%">
+                            <a href="#">LolFight</a>
+                        </h1>
 
 
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
 
+                    </header>
+                    <nav class="ftc-nav">
+                        <ul class="ftc-hmenu">
+
+
+                            <li class="active"><a href="../Home">Home</a></li>
+                            <li><a href="../Login" class="active">Login</a></li>
+                            <li><a href="#" class="active">Register</a></li>
+                            <li><a href="#">High Score</a></li>
+                        </ul>
+
+                    </nav>
+                    <div class="ftc-layout-wrapper">
+                        <div class="ftc-content-layout">
+                            <div class="ftc-content-layout-row">
+                                <div class="ftc-layout-cell ftc-sidebar1">
+                                    <div class="ftc-block clearfix">
+                                        <br /><br /><br /><br /><br />
+
+                                    </div>
+                                </div>
+                                <div class="ftc-layout-cell ftc-content">
+                                    <article class="ftc-post ftc-article">
+
+
+                                        <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+                                            <div class="ftc-content-layout">
+                                                <div class="ftc-content-layout-row">
+                                                    <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+                                                        <div ng-controller="Login">
+
+                                                            <br>
+                                                            @using (Html.BeginForm())
+                                                            {
+                                                                @Html.ValidationSummary(true)
+
+                                                                <fieldset>
+                                                                    <legend>User</legend>
+                                                                    @Html.AntiForgeryToken()
+                                                                    @if (ViewBag.Message != null)
+                                                                    {
+                                                                        <div style="border:solid 1px green">
+                                                                            @ViewBag.Message
+                                                                        </div>
+                                                                    }
+
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>  @Html.LabelFor(model => model.Username)</td>
+                                                                            <td>   @Html.TextBoxFor(model => model.Username, new { @placeholder = "username", @class = "form-control" })</td>
+                                                                            <td>  @Html.ValidationMessageFor(model => model.Username)</td>
+                                                                        </tr>
+
+
+                                                                        <tr>
+                                                                            <td>@Html.LabelFor(model => model.Password)</td>
+                                                                            <td>@Html.PasswordFor(model => model.Password, new { @placeholder = "password", @class = "form-control" })</td>
+                                                                            <td>@Html.ValidationMessageFor(model => model.Password)</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td>@Html.LabelFor(model => model.ConfirmPassword)</td>
+                                                                            <td>@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })</td>
+                                                                            <td>@Html.ValidationMessageFor(model => model.ConfirmPassword)</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td>@Html.LabelFor(model => model.eMail)</td>
+
+
+                                                                            <td>@Html.TextBoxFor(model => model.eMail, new { @class = "form-control" })</td>
+                                                                            <td> @Html.ValidationMessageFor(model => model.eMail)</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    @Html.Raw(Html.GenerateCaptcha())
+                                                                    <p>
+                                                                        <input type="submit" value="Create" />
+                                                                    </p>
+                                                                </fieldset>
+                                                            }
+
+
+
+                                                            @section Scripts {
+                                                                @Scripts.Render("~/bundles/jqueryval")
+                                                            }
+
+
+                                                            <br />
+                                                            <br />
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><footer class="ftc-footer">
+                        <div style="position:relative;padding-left:10px;padding-right:10px">
+                            <p>Copyright © 2014. Tim 814</p>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

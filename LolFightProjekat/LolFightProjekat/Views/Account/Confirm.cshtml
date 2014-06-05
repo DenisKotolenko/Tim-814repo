@@ -2,51 +2,127 @@
 @{
     ViewBag.Title = "Confirm";
 }
-
-
-<!DOCTYPE html>
-
-<html ng-app="chooseApp">
+<html ng-app="chooseApp" dir="ltr" lang="en-US">
 <head>
+    <!-- Created by Artisteer v4.1.0.59861 -->
     <meta charset="utf-8">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-
+ 
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
     <script>
-
         var chooseChampApp = angular.module('chooseApp', []);
         chooseChampApp.controller('selectorCtrl', function ($scope, $http) {
             $http.get('../api/ChampionTypeAPI').success(function (data) {
-                
+
                 $scope.Champions = data;
-                
+
             });
 
-      });
+        });
     </script>
 
     <title>Choose champion</title>
 
+
+    <style>
+        .ftc-content .ftc-postcontent-0 .layout-item-0 {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .ie7 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .ie6 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+    </style>
 </head>
-
 <body>
-    <h2> Wellcome @Html.DisplayFor(model => model.Username) </h2>
+    
+        
+            <div id="ftc-main">
+                <div class="ftc-sheet clearfix">
+                    <header class="ftc-header">
 
-    Choose your champion wisely!!!
+                        <div class="ftc-shapes">
+                        </div>
+                        <h1 class="ftc-headline" data-left="56.9%">
+                            <a href="#">LolFight</a>
+                        </h1>
 
-    <table ng-controller="selectorCtrl">
-      
-      <tr><th>Name</th>
-          <th>Picture</th>
-          <th>Stats</th></tr>
-        <tr ng-repeat="champion in Champions" >
 
-      <td> <a href="../ChampionType/method/{{champion.IdChampionType}}">{{champion.Name}} </a></td><td> <img src="{{champion.ImageLink}}" class="thumbnail" /> </td> <td>Nation: {{champion.Nation}}<br /> Atk dmg: {{champion.AttackDamage}}<br> Ability dmg: {{champion.AbilityDamage}} <br>Atk speed: {{champion.Attackspeed}} <br> Armor: {{champion.Armor}} <br> Magic resist: {{champion.MagicResist}} <br />Hp: {{champion.HP}}</td></tr>
 
-       
-    </table>
 
+                    </header>
+
+                    <div class="ftc-layout-wrapper">
+                        <div class="ftc-content-layout">
+                            <div class="ftc-content-layout-row">
+                                <div class="ftc-layout-cell ftc-sidebar1">
+                                    <div class="ftc-block clearfix">
+                                        <br />
+                                        <br />
+                                        <br /><br /><br /><br /><br /><br /><br />
+
+                                    </div>
+                                </div>
+                                <div class="ftc-layout-cell ftc-content">
+                                    <article class="ftc-post ftc-article">
+
+
+                                        <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+                                            <div class="ftc-content-layout">
+                                                <div class="ftc-content-layout-row">
+                                                    <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+                                                        <h2> Wellcome @Html.DisplayFor(model => model.Username) </h2>
+
+                                                        Choose your champion wisely!!!
+
+                                                        <table ng-controller="selectorCtrl">
+
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Picture</th>
+                                                                <th>Stats</th>
+                                                            </tr>
+                                                            <tr ng-repeat="champion in Champions">
+
+                                                                <td> <a href="../ChampionType/method/{{champion.IdChampionType}}">{{champion.Name}} </a></td>
+                                                                <td><a href="../ChampionType/method/{{champion.IdChampionType}}"> <img src="{{champion.ImageLink}}" class="thumbnail" /> </a></td>
+                                                                <td>Nation: {{champion.Nation}}<br /> Atk dmg: {{champion.AttackDamage}}<br> Ability dmg: {{champion.AbilityDamage}} <br>Atk speed: {{champion.Attackspeed}} <br> Armor: {{champion.Armor}} <br> Magic resist: {{champion.MagicResist}} <br />Hp: {{champion.HP}}</td>
+                                                            </tr>
+
+
+                                                        </table>
+
+
+                                                    </div>
+                                               
+                                            
+
+                                        </div>
+
+
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><footer class="ftc-footer">
+                        <div style="position:relative;padding-left:10px;padding-right:10px">
+                            <p>Copyright © 2014. Tim 814</p>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
-
-
 </html>

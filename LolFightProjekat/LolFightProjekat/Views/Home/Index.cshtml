@@ -1,22 +1,107 @@
-﻿@{
-    ViewBag.Title = "Home";
-}
-
+﻿
 <!DOCTYPE html>
-<html>
+<html ng-app="app" dir="ltr" lang="en-US">
 <head>
-<title>Home</title>
+    <!-- Created by Artisteer v4.1.0.59861 -->
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya+SC&amp;subset=latin">
+
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
+
+
+
+    <style>
+        .ftc-content .ftc-postcontent-0 .layout-item-0 {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .ie7 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .ie6 .ftc-post .ftc-layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+    </style>
 </head>
 <body>
-    <ul class="nav nav-pills">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="Login">Login</a></li>
-        <li><a href="Account/Register">Register</a></li>
-        <li><a href="#">High Score</a></li>
-    </ul>
+    <div ng-controller="Username">
+        <div ng-controller="getEverythingCtrl">
+            <div id="ftc-main">
+                <div class="ftc-sheet clearfix">
+                    <header class="ftc-header">
+
+                        <div class="ftc-shapes">
+                        </div>
+                        <h1 class="ftc-headline" data-left="56.9%">
+                            <a href="#">LolFight</a>
+                        </h1>
 
 
 
 
+                    </header>
+                    <nav class="ftc-nav">
+                        <ul class="ftc-hmenu">
+     
+                         
+                            <li class="active"><a href="#" class="active">Home</a></li>
+                            <li><a href="Login">Login</a></li>
+                            <li><a href="Account/Register">Register</a></li>
+                            <li><a href="#">High Score</a></li>
+                        </ul>
+
+                    </nav>
+                    <div class="ftc-layout-wrapper">
+                        <div class="ftc-content-layout">
+                            <div class="ftc-content-layout-row">
+                                <div class="ftc-layout-cell ftc-sidebar1">
+                                    <div class="ftc-block clearfix">
+                                      <br />
+                                        <br />
+                                        <br /><br /><br /><br /><br /><br /><br />
+                                        
+                                    </div>
+                                </div>
+                                <div class="ftc-layout-cell ftc-content">
+                                    <article class="ftc-post ftc-article">
+
+
+                                        <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+                                            <div class="ftc-content-layout">
+                                                <div class="ftc-content-layout-row">
+                                                    <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><footer class="ftc-footer">
+                        <div style="position:relative;padding-left:10px;padding-right:10px">
+                            <p>Copyright © 2014. Tim 814</p>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
