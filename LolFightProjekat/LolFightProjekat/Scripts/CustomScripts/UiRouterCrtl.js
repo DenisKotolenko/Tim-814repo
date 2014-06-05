@@ -30,8 +30,31 @@ angular
             url: '/prazno',
             templateUrl: '../PartialViews/LoginPartial/prazno.cshtml'
         })
+      .state('mail', {
+          url: '/mail',
+          templateUrl: '../PartialViews/MailPartial/MailPartial.html'
+      })
       
   }])
+
+angular.module('app').controller('MailCtrl', function ($scope, $http) {
+
+    $http.get('../api/mailAPI/GetMail/' + $scope.username).success(function (data) {
+        $scope.data = data;
+
+    });
+
+
+    $scope.sendMail = function () {
+
+        alert("Poslana poruka korisniku:" + $scope.reciverName);
+        $http.get('../api/MailAPI/SendMail?username=' + $scope.username + "&reciverName=" + $scope.reciverName + "&text=" + $scope.text + "&title=" + $scope.title).success(function (data) {
+            $scope.data = data;
+        });
+
+    };
+
+});
 
 angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
 

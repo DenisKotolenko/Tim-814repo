@@ -1,0 +1,54 @@
+﻿<div ng-app="app">
+    <div ng-controller="Username">
+        <div ng-controller="MailCtrl">
+            <div class="ftc-postmetadataheader">
+
+
+                <div>
+
+                    Name: {{username}}<br />
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="ftc-postcontent ftc-postcontent-0 clearfix">
+                <div class="ftc-content-layout">
+                    <div class="ftc-content-layout-row">
+                        <div class="ftc-layout-cell layout-item-0" style="width: 100%">
+
+                            To: <input type="text" ng-model="reciverName" /> <br />
+                            <br />
+                            Title:<input type="text" ng-model="title" /> <br />
+                            <br />
+                            Text:<textarea ng-model="text"></textarea> <br />
+                            <br />
+                            <button class="btn btn-warning" ng-click="sendMail()"> Send</button> <br />
+
+                            <br />
+                            All mails:
+                            <ul ng-repeat="mail in data">
+                                <li> {{mail.Title}}</li>
+                                <li>{{mail.Text}}  </li>
+                                <li>{{mail.Username}}</li>
+
+
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
