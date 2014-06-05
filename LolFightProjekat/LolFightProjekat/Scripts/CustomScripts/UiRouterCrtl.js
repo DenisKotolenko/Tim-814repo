@@ -44,7 +44,7 @@ angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
 angular.module('app').controller('farmingCtrl', function ($scope, $http) {
 
 
-    alert("radiFarmingCtrl");
+ 
 });
 
 angular.module('app').controller('junglingCtrl', function ($scope, $http) {

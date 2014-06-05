@@ -1690,7 +1690,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 80S%;
+  width: 80%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -5782,4 +5782,39 @@ button.close {
     display: none !important;
   }
 }
+
+
+.bean-skills { 
+	width: 100%;
+  margin: 0 auto;
+  padding:0;
+	}
+
+.bean-skills p { 
+	margin-bottom: 20px; 
+	}
+
+ul.bean-skillset {
+	float: left;
+	width: 100%;
+	}
+
+.skill-percent { 
+	float: right; 
+	}
+
+li.skill-bar {
+	background-color: #7BC673;
+	color: #FFF;
+	font: bold 12px/23px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 3px;
+	padding: 1px 4px;
+	width: 300px;	
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+		    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);        
+	}
 /*# sourceMappingURL=bootstrap.css.map */
