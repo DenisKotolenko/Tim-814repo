@@ -158,6 +158,7 @@
     <Compile Include="Controllers\AddItemController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ChampionAPIController.cs" />
     <Compile Include="Controllers\ChampionTypeAPIController.cs" />
     <Compile Include="Controllers\ChampionTypeController.cs" />
     <Compile Include="Controllers\FarmAPIController.cs" />

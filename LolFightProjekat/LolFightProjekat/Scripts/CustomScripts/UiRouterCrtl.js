@@ -25,6 +25,21 @@ angular
       
   }])
 
+angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
+
+       
+
+    
+            $http.get('../api/ChampionAPI?username=' + $scope.username).success(function (data) {
+            $scope.data = data;
+            
+        });
+
+    
+
+});
+
+
 
 angular.module('app').controller('farmingCtrl', function ($scope, $http) {
 
