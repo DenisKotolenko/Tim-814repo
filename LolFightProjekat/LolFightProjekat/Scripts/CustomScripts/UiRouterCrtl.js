@@ -34,8 +34,44 @@ angular
           url: '/mail',
           templateUrl: '../PartialViews/MailPartial/MailPartial.html'
       })
+
+      .state('rank', {
+          url: '/rank',
+          templateUrl: '../PartialViews/RankPartial/RankPartial.html'
+      })
+
+         .state('fight', {
+             url: '/fight',
+             templateUrl: '../PartialViews/FightPartial/FightPartial.html'
+         })
+
+         .state('random', {
+             url: '/random',
+             templateUrl: '../PartialViews/FightPartial/RandomPartial.html'
+         })
       
   }])
+
+angular.module('app').controller('rank', function ($scope, $http) {
+
+    $http.get('../api/rank').success(function (data) {
+        $scope.data = data;
+    });
+});
+
+angular.module('app').controller('fight', function ($scope, $http) {
+
+    $http.put('../api/fight?attackId=' + 1 + '&defendId=' + 3).success(function (data) {
+        $scope.data = data;
+    });
+});
+
+angular.module('app').controller('random', function ($scope, $http) {
+
+    $http.get('../api/fight?championId=' + 1).success(function (data) {
+        $scope.data = data;
+    });
+});
 
 angular.module('app').controller('MailCtrl', function ($scope, $http) {
 

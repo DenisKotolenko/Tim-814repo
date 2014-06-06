@@ -240,3 +240,4 @@ C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-81
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.csprojResolveAssemblyReference.cache
 C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.Properties.Resources.resources
 C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.Properties.Resources.resources
+C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\obj\Debug\LolFightProjekat.Properties.Resources.resources

@@ -2,22 +2,24 @@
     ViewBag.Title = "Fight";
 }
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="App" dir="ltr" lang="en-US">
 <head>
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
     <title></title>
 </head>
 <body>
-    <div data-ng-controller="RandomEnemy">
-        <strong ng-repeat="Champion in RandomEnemy"> {{Champion.User.Username}} </strong>
+  
+    <div data-ng-controller="Fight">
+
     </div>
 
     <script>
 
-        var myApp = angular.module('myApp', []);
+        var App = angular.module('App', []);
 
-        myApp.controller('RandomEnemy', function ($scope, $http) {
+        App.controller('Fight', function ($scope, $http) {
             $http.get('http://localhost:60138/api/fight/').success(function (data) {
-                $scope.RandomEnemy = data;
+                $scope.data = data;
             });
         });
     </script>

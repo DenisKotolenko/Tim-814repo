@@ -21,21 +21,21 @@ namespace LolFightProjekat.Controllers
         // Returns random champion id from a list of champions who are not the
         // current user nor banned. Using random.org randomizer.
         [AcceptVerbs("GET")]
-        [ResponseType(typeof(Champion))]
+        //[ResponseType(typeof(IHttpActionResult))]
         public IHttpActionResult RandomEnemy(int championId)
         {
             var Actives =
                     from Champion in db.Champions
                     where Champion.BanCooldown == 0 && Champion.IdChampion != championId
-                    select Champion;
-            List<Champion> Actives2 = Actives.ToList();
+                    select Champion.IdChampion;
+            List<Int32> Actives2 = Actives.ToList();
             //int rank = rnd.Next(0, Actives2.Count());
             int rank = 0;
-            return Ok(Actives2[rank]);
+            return Fight(championId, Actives2[rank]);
         }
 
-        [AcceptVerbs("PUT")]
-        [ResponseType(typeof(IHttpActionResult))]
+        [AcceptVerbs("PUT", "GET")]
+        //[ResponseType(typeof(String))]
         public IHttpActionResult Fight(int attackId, int defendId)
         {
             Champion Attacker = db.Champions.Find(attackId);
@@ -45,7 +45,8 @@ namespace LolFightProjekat.Controllers
             Fajt.IdDefender = defendId;
             Fajt.StartTime = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
             Int32 IdLoser;
-            if (Attacker.Skill.AttackDamage > Defender.Skill.Armor)
+            //if (Attacker.Skill.AttackDamage > Defender.Skill.Armor)
+            if (true)
             {
                 Fajt.IdWinner = attackId;
                 IdLoser = defendId;
@@ -63,7 +64,7 @@ namespace LolFightProjekat.Controllers
             Winner.Gold += Fajt.Gold;
             db.LogBattles.Add(Fajt);
             db.SaveChanges();
-            return Ok();
+            return Ok(Fajt.Report);
         }
     }
 }

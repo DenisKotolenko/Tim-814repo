@@ -17,19 +17,19 @@ namespace LolFightProjekat.Controllers
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
         // Returns ordered list of Champion ids by farmed gold amount.
-        [ResponseType(typeof(List<Champion>))]
+        //[ResponseType(typeof(IQueryable<String>))]
         [AcceptVerbs("GET")]
         public IHttpActionResult RankFarm()
         {
             var Ranks =
                     from Ranking in db.Rankings
                     orderby Ranking.FarmGold descending
-                    select Ranking.Champion;
-            return Ok(Ranks.ToList());
+                    select Ranking.Champion.User.Username;
+            return Ok(Ranks);
         }
 
         //Returns ordered list of Champion ids by stolen gold amount.
-        [ResponseType(typeof(List<Champion>))]
+        /*[ResponseType(typeof(List<Champion>))]
         [AcceptVerbs("GET")]
         public IHttpActionResult RankSteal()
         {
@@ -38,6 +38,6 @@ namespace LolFightProjekat.Controllers
                     orderby Ranking.StolenGold descending
                     select Ranking.Champion;
             return Ok(Ranks.ToList());
-        }
+        }*/
     }
 }

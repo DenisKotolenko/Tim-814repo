@@ -1,33 +1,26 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Rank";
 }
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="App" dir="ltr" lang="en-US">
 <head>
+    <script src="~/Scripts/CustomScripts/UiRouterCrtl.js"></script>
     <title></title>
 </head>
 <body>
-    <div data-ng-controller="RankFarm">
+    <div data-ng-controller="Rank">
         <ol>
-            <li ng-repeat="Champion in RankFarm"> {{Champion.User.Username}} - {{Champion.Ranking.FarmGold}}</li>
+
         </ol>
     </div>
 
     <script>
 
-        var myApp = angular.module('myApp', []);
+        var App = angular.module('App', []);
 
-        myApp.controller('RankFarm', function ($scope, $http) {
+        App.controller('Rank', function ($scope, $http) {
             $http.get('http://localhost:60138/api/rank/').success(function (data) {
-                $scope.RankFarm = data;
-            });
-
-        });
-
-        myApp.controller('RankSteal', function ($scope, $http) {
-            $http.get('http://localhost:60138/api/rank/').success(function (data) {
-                $scope.RankSteal = data;
+                $scope.data = data;
             });
 
         });
