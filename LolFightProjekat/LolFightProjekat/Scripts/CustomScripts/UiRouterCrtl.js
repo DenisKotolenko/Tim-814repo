@@ -28,7 +28,7 @@ angular
           })
         .state('prazno', {
             url: '/prazno',
-            templateUrl: '../PartialViews/LoginPartial/prazno.cshtml'
+            templateUrl: '../PartialViews/LoginPartial/prazno.html'
         })
       .state('mail', {
           url: '/mail',

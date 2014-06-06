@@ -334,7 +334,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="PartialViews\FarmJunglePartial\FarmJunglePartial.html" />
-    <None Include="PartialViews\LoginPartial\prazno.cshtml" />
+    <Content Include="PartialViews\LoginPartial\prazno.html" />
     <Content Include="PartialViews\MailPartial\MailPartial.html" />
     <Content Include="PartialViews\ShopPartial\ShopPartial.html" />
     <Content Include="PartialViews\UserPartial\UserPartial.html" />
