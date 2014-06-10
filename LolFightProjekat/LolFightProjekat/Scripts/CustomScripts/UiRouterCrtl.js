@@ -49,12 +49,24 @@ angular
              url: '/random',
              templateUrl: '../PartialViews/FightPartial/RandomPartial.html'
          })
+
+         .state('battles', {
+             url: '/battles',
+             templateUrl: '../PartialViews/BattlesPartial/BattlesPartial.html'
+         })
       
   }])
 
 angular.module('app').controller('rank', function ($scope, $http) {
 
     $http.get('../api/rank').success(function (data) {
+        $scope.data = data;
+    });
+});
+
+angular.module('app').controller('battles', function ($scope, $http) {
+
+    $http.get('../api/battles?championId=' + 1).success(function (data) {
         $scope.data = data;
     });
 });

@@ -166,6 +166,7 @@
     <Compile Include="Controllers\JungleAPIController.cs" />
     <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\MailAPIController.cs" />
+    <Compile Include="Controllers\BattlesController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -333,9 +334,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="PartialViews\BattlesPartial\BattlesPartial.html" />
     <Content Include="PartialViews\FarmJunglePartial\FarmJunglePartial.html" />
+    <Content Include="PartialViews\FightPartial\FightPartial.html" />
+    <Content Include="PartialViews\FightPartial\RandomPartial.html" />
     <Content Include="PartialViews\LoginPartial\prazno.html" />
     <Content Include="PartialViews\MailPartial\MailPartial.html" />
+    <Content Include="PartialViews\RankPartial\RankPartial.html" />
     <Content Include="PartialViews\ShopPartial\ShopPartial.html" />
     <Content Include="PartialViews\UserPartial\UserPartial.html" />
     <Content Include="Scripts\angular-ui-router.js" />
