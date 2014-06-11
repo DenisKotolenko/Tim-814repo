@@ -22,10 +22,10 @@ namespace LolFightProjekat.Controllers
         public IHttpActionResult Battles(int championId)
         {
             var Battles =
-                    from LogBattle in db.LogBattles
-                    where (LogBattle.IdAttacker == championId) || (LogBattle.IdDefender == championId)
-                    orderby LogBattle.StartTime descending
-                    select LogBattle.Report;
+                    from log in db.LogBattles
+                    where (log.IdAttacker == championId) || (log.IdDefender == championId)
+                    orderby log.StartTime descending
+                    select new { log.StartTime, log.Report};
             return Ok(Battles);
         }
     }

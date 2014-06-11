@@ -24,7 +24,8 @@ namespace LolFightProjekat.Controllers
             var Ranks =
                     from Ranking in db.Rankings
                     orderby Ranking.FarmGold descending
-                    select Ranking.Champion.User.Username;
+                    //select Ranking.Champion;
+                    select new { Ranking.Champion.IdChampion, Ranking.Champion.User.Username, Ranking.Champion.Ranking.FarmGold };
             return Ok(Ranks);
         }
 

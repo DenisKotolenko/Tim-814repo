@@ -59,7 +59,7 @@ namespace LolFightProjekat.Controllers
             Champion Winner = db.Champions.Find(Fajt.IdWinner);
             Champion Loser = db.Champions.Find(IdLoser);
             Fajt.Gold = (Int32)(Loser.Gold * 0.05);
-            Fajt.Report = Attacker.User.Username + " attacked " + Defender.User.Username + "!!! " + Winner.User.Username + " won " + Fajt.Gold + " gold!";
+            Fajt.Report = Attacker.User.Username + " attacked " + Defender.User.Username + "! " + Winner.User.Username + " won " + Fajt.Gold + " $!";
             Loser.Gold -= Fajt.Gold;
             Winner.Gold += Fajt.Gold;
             db.LogBattles.Add(Fajt);
