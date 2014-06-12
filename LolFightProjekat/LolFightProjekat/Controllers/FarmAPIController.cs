@@ -16,10 +16,64 @@ namespace LolFightProjekat.Controllers
     {
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
+
+        public void goFarm(String username)
+        {
+
+
+
+
+        }
+
         // GET api/FarmAPI
         public IQueryable<LogFarm> GetLogFarms()
         {
             return db.LogFarms;
+        }
+
+
+        // GET api/FarmAPI/5
+        [ResponseType(typeof(LogFarm))]
+        public IHttpActionResult GetLogFarm(String username)
+        {
+            //Treba implementirati blokadu ako je duration+stariStarTime < NoviStarttime 
+
+
+            //idChampion == idUser 1 na prema 1 veza
+            var item = (from x in db.Users where x.Username == username select x.IdUser).First();
+            int idChampion = (int)item;
+
+            LogFarm logfarm = new LogFarm();
+
+            System.Random r = new System.Random();
+            int rInt = r.Next(0, 100); //for ints
+            List<String> listOfReports = new List<String> { "u have been sucsessful", "you are good, well played", "jungle OP, GG WP" };
+            int reportRandom = r.Next(0, listOfReports.Count);
+
+            if (logfarm.DailyRemaining <= 5) logfarm.DailyRemaining--;
+            else logfarm.DailyRemaining = 5;
+
+            logfarm.Report = listOfReports[reportRandom];
+            logfarm.Gold = rInt;
+            logfarm.StartTime = (int)DateTime.Now.Hour;
+            logfarm.IdChampion = idChampion;
+
+            Champion c = db.Champions.Find(idChampion);
+
+            c.Gold = c.Gold + logfarm.Gold;
+
+
+            db.LogFarms.Add(logfarm);
+
+            db.SaveChanges();
+
+
+            if (logfarm == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(logfarm);
         }
 
         // GET api/FarmAPI/5

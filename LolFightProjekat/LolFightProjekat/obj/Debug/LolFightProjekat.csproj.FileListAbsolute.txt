@@ -310,3 +310,38 @@ C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ru\System.Spatial.resources.dll
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Tar\Documents\GitHub\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Data.Edm.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Data.OData.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Spatial.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.OData.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Data.Edm.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\Microsoft.Data.OData.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Spatial.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\System.Web.Http.OData.xml
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\de\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\es\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\fr\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\it\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ja\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ko\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\ru\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\bin\zh-Hant\System.Spatial.resources.dll

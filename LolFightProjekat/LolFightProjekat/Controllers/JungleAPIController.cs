@@ -52,12 +52,15 @@ namespace LolFightProjekat.Controllers
             logjungle.IdChampion = 17;
 
             db.LogJungles.Add(logjungle);
-          
 
-           
+            Champion c = db.Champions.Find(idChampion);
+
+            c.Gold = c.Gold + logjungle.Gold;
+
+
             await db.SaveChangesAsync();
 
-           
+
             if (logjungle == null)
             {
                 return NotFound();
@@ -101,7 +104,7 @@ namespace LolFightProjekat.Controllers
         }
 
         // POST api/JungleAPI
-      //Obrisano nervira !!!! 405 error
+        //Obrisano nervira !!!! 405 error
 
         // DELETE api/JungleAPI/5
         [ResponseType(typeof(LogJungle))]

@@ -31,17 +31,26 @@
 
                             <br />
                             All mails:
-                            <ul ng-repeat="mail in data">
-                                <li> {{mail.Title}}</li>
-                                <li>{{mail.Text}}  </li>
-                                <li>{{mail.Username}}</li>
+                            <table class="table table-hover">
+                                
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Text</th>
+                                        <th>Sender</th>
 
+                                    </tr>
 
-                            </ul>
+                               
+                                <tr ng-repeat="mail in data">
+                                    <td> {{mail.Title}}</td>
+                                    <td>{{mail.Text}} </td>
+                                    <td>{{mail.Username}} </td>
+                                </tr>
 
+                            </table>
+                          
 
-
-                        </div>
+                      </div>
                     </div>
                 </div>
 
