@@ -58,11 +58,10 @@
                                 <a ui-sref="farmjungle">Farm & Jungle</a>
 
                             </li>
-                            <li><a ui-sref="fight({ attackId: 1, defendId: 3 })">Fight</a></li>
-                            <li><a ui-sref="battles">Battles</a></li>
+                            <li ng-controller="id"><a ui-sref="battles({ championId: userid })">Battles</a></li>
                             <li><a ui-sref="rank">Ranking</a></li>
                             <li><a ui-sref="mail">Messages</a></li>
-                            <li><a ui-sref="random">Feelin Lucky?</a></li>
+                            <li ng-controller="id"><a ui-sref="random({ championId: userid })">Feelin Lucky?</a></li>
                             <li><a href="#" ng-click="Logout()"> Logout</a></li>
                         </ul>
 

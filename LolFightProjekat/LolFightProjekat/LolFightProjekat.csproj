@@ -175,6 +175,7 @@
     <Compile Include="Controllers\ChampionTypeController.cs" />
     <Compile Include="Controllers\FarmAPIController.cs" />
     <Compile Include="Controllers\FightController.cs" />
+    <Compile Include="Controllers\IdController.cs" />
     <Compile Include="Controllers\JungleAPIController.cs" />
     <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\MailAPIController.cs" />
