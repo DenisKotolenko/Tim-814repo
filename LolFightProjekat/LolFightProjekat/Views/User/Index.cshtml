@@ -47,7 +47,7 @@
 
                     </header>
                     <nav class="ftc-nav">
-                        <ul class="ftc-hmenu">
+                        <ul class="ftc-hmenu" ng-controller="Logout">
                             <li>
                                 <a href="../User">Home</a>
 
@@ -63,7 +63,7 @@
                             <li><a ui-sref="rank">Ranking</a></li>
                             <li><a ui-sref="mail">Messages</a></li>
                             <li><a ui-sref="random">Feelin Lucky?</a></li>
-                            <li><button ng-controller="Logout" type="button" class="btn btn-primary" ng-click="Logout()"> Logout</button></li>
+                            <li><a href="#" ng-click="Logout()"> Logout</a></li>
                         </ul>
 
                     </nav>

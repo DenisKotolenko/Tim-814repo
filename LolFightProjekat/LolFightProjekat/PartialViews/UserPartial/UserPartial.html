@@ -21,52 +21,65 @@
             <div class="ftc-content-layout">
                 <div class="ftc-content-layout-row">
                     <div class="ftc-layout-cell layout-item-0" style="width: 100%">
-                        <h2>Skills:</h2> 
-                        <div class="bean-skills">
 
-                            <ul class="bean-skillset">
-                                Attack Dmg:
-                                <li class="skill-bar" style="width:{{(data.Skill.AttackDamage/300)*100}}%; background-color:#FF5353">
-                                    
-                                    <span class="skill-percent">{{data.Skill.AttackDamage}}/300</span>
-                                </li>
-                                Ability Dmg:
-                                <li class="skill-bar" style="width:{{((data.Skill.AbilityDamage+1)/500)*100}}%; background-color:#1CDCFF">
-                                    
-                                    <span class="skill-percent">{{data.Skill.AbilityDamage}}/500</span>
-                                </li>
-                                Attack Speed:
-                                <li class="skill-bar" style="width:{{(data.Skill.AttackSpeed/1500)*100}}%; background-color:#C799FF">
-                                   
-                                    <span class="skill-percent">{{data.Skill.AttackSpeed}}/1500</span>
-                                </li>
-                                Armor:
-                                <li class="skill-bar" style="width:{{(data.Skill.Armor/100)*100}}%; background-color:yellow">
-                                
-                                    <span class="skill-percent">{{data.Skill.Armor}}/100</span>
-                                </li>
-                                Magic Resistance:
-                                <li class="skill-bar" style="width:{{(data.Skill.MagicResist/100)*100}}%; background-color:purple">
-                                    
-                                    <span class="skill-percent">{{data.Skill.MagicResist}}/100</span>
-                                </li>
-                               Critical chance
-                                <li class="skill-bar" style="width:{{(data.Skill.Critical/100)*100}}%; background-color:orange">
-                              
-                                    <span class="skill-percent">{{data.Skill.Critical}}/100</span>
-                                </li>
-                                Armor Pene:
-                                <li class="skill-bar" style="width:{{(data.Skill.ArmorPenetration/100)*100}}%; background-color:orangered">
-                                    
-                                    <span class="skill-percent">{{data.Skill.ArmorPenetration}}/100</span>
-                                </li>
-                                Magic Pene:
-                                <li class="skill-bar" style="width:{{(data.Skill.MagicPenetration/100)*100}}%; background-color:orangered">
-         
-                                    <span class="skill-percent">{{data.Skill.MagicPenetration}}/100</span>
-                                </li>
-                            </ul>
+                        <div ng-controller="Skill">
+                            <h2>Skills:</h2>
+                       
+                           
+                            
+                            <div class="bean-skills">
 
+                                <ul class="bean-skillset">
+                                    Attack Dmg:
+                                    <button ng-click="AttackUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.AttackDamage/300)*100}}%; background-color:#FF5353">
+
+                                        <span class="skill-percent">{{data.Skill.AttackDamage}}/300</span>
+                                    </li>
+                                    Ability Dmg: <button ng-click="AbilityUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{((data.Skill.AbilityDamage+1)/500)*100}}%; background-color:#1CDCFF">
+
+                                        <span class="skill-percent">{{data.Skill.AbilityDamage}}/500</span>
+                                    </li>
+                                    Attack Speed: <button ng-click="AttackSpeedUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.AttackSpeed/1500)*100}}%; background-color:#C799FF">
+
+                                        <span class="skill-percent">{{data.Skill.AttackSpeed}}/1500</span>
+                                    </li>
+                                    Armor:<button ng-click="ArmorUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.Armor/100)*100}}%; background-color:yellow">
+
+                                        <span class="skill-percent">{{data.Skill.Armor}}/100</span>
+                                    </li>
+                                    Magic Resistance:<button ng-click="MagicResistUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.MagicResist/100)*100}}%; background-color:purple">
+
+                                        <span class="skill-percent">{{data.Skill.MagicResist}}/100</span>
+                                    </li>
+                                    Critical chance<button ng-click="CritUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.Critical/100)*100}}%; background-color:orange">
+
+                                        <span class="skill-percent">{{data.Skill.Critical}}/100</span>
+                                    </li>
+                                    Armor Pene:<button ng-click="ArmorPeneUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.ArmorPenetration/100)*100}}%; background-color:orangered">
+
+                                        <span class="skill-percent">{{data.Skill.ArmorPenetration}}/100</span>
+                                    </li>
+                                    Magic Pene:<button ng-click="MagicPeneUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.MagicPenetration/100)*100}}%; background-color:orangered">
+
+                                        <span class="skill-percent">{{data.Skill.MagicPenetration}}/100</span>
+                                    </li>
+                                    Health:<button ng-click="HpUp()" value="+"><b>+</b></button>
+                                    <li class="skill-bar" style="width:{{(data.Skill.HP/2000)*100}}%; background-color:orange">
+
+                                        <span class="skill-percent">{{data.Skill.HP}}/2000</span>
+                                    </li>
+                                </ul>
+                               
+                          
+                            </div>
                         </div>
 
                     </div>

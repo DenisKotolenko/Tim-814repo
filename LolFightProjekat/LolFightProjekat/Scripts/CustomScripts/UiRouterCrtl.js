@@ -213,7 +213,91 @@ angular.module('app').controller("Logout", function ($scope, $window) {
         $window.sessionStorage.token = "";
         $scope.username = "";
 
-        window.location = '../../Home';
+        window.location = '../../Home#/prazno';
     };
 
+})
+angular.module('app').controller('Skill', function ($scope, $http) {
+    $scope.AttackUp= function () {
+
+        alert("Successfully added Attack Dmg");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "attack").success(function (data) {
+            $scope.status = data;
+           
+        });
+
+    };
+    $scope.ArmorUp = function () {
+
+        alert("Successfully added Armor");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "armor").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.MagicResistUp = function () {
+
+        alert("Successfully added MagicResistance");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "magicResist").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.AttackSpeedUp = function () {
+
+        alert("Successfully added Attack Speed");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "attackSpeed").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+
+
+    $scope.ArmorPeneUp = function () {
+
+        alert("Successfully added Armor Penetration");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "armorpene").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.MagicPeneUp = function () {
+
+        alert("Successfully added Magic Penetration");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "magicpene").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.HpUp = function () {
+
+        alert("Successfully added Health Points");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "hp").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.CritUp = function () {
+
+        alert("Successfully added Critical Chance");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "crit").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+    $scope.AbilityUp = function () {
+
+        alert("Successfully added Ability Dmg");
+        $http.get('../api/SkillAPI?username=' + $scope.username + "&skillUp=" + "ability").success(function (data) {
+            $scope.status = data;
+        });
+
+    };
+});
+angular.module.directive('eatClick', function () {
+    return function (scope, element, attrs) {
+        $(element).click(function (event) {
+            event.preventDefault();
+        });
+    }
 })

@@ -49,7 +49,7 @@ namespace LolFightProjekat.Controllers
             logjungle.Gold = rInt * duration;
             logjungle.StartTime = (int)DateTime.Now.Hour;
             logjungle.Duration = duration;
-            logjungle.IdChampion = idChampion;
+            logjungle.IdChampion = 17;
 
             db.LogJungles.Add(logjungle);
           
