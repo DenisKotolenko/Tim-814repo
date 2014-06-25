@@ -42,7 +42,7 @@ namespace LolFightProjekat.Controllers
 
             System.Random r = new System.Random();
             int rInt = r.Next(0, 100); //for ints
-            List<String> listOfReports = new List<String> { "u have been sucsessful", "you are good, well played", "jungle OP, GG WP" };
+            List<String> listOfReports = new List<String> { "u have been successful", "you are good, well played", "jungle OP, GG WP" };
             int reportRandom = r.Next(0, listOfReports.Count);
 
             logjungle.Report = listOfReports[reportRandom];
@@ -57,6 +57,7 @@ namespace LolFightProjekat.Controllers
 
             c.Gold = c.Gold + logjungle.Gold;
 
+            c.Ranking.StolenGold += logjungle.Gold;
 
             await db.SaveChangesAsync();
 

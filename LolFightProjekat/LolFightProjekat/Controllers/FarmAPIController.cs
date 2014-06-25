@@ -47,7 +47,7 @@ namespace LolFightProjekat.Controllers
 
             System.Random r = new System.Random();
             int rInt = r.Next(0, 100); //for ints
-            List<String> listOfReports = new List<String> { "u have been sucsessful", "you are good, well played", "jungle OP, GG WP" };
+            List<String> listOfReports = new List<String> { "u have been successful", "you are good, well played", "jungle OP, GG WP" };
             int reportRandom = r.Next(0, listOfReports.Count);
 
             if (logfarm.DailyRemaining <= 5) logfarm.DailyRemaining--;
@@ -62,6 +62,7 @@ namespace LolFightProjekat.Controllers
 
             c.Gold = c.Gold + logfarm.Gold;
 
+            c.Ranking.FarmGold += logfarm.Gold;
 
             db.LogFarms.Add(logfarm);
 

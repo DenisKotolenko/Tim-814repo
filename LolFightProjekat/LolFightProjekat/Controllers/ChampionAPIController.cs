@@ -109,6 +109,12 @@ namespace LolFightProjekat.Controllers
             }
 
             db.Champions.Add(champion);
+            Ranking rank = new Ranking();
+            rank.Champion = champion;
+            rank.FarmGold = 0;
+            rank.StolenGold = 0;
+            db.Rankings.Add(rank);
+
 
             try
             {

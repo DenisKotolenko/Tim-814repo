@@ -9,14 +9,13 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using LolFightProjekat.Models;
-using Random.Org;
 
 namespace LolFightProjekat.Controllers
 {
     public class FightController : ApiController
     {
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
-        static Random.Org.Random rnd = new Random.Org.Random();
+        System.Random rand = new System.Random();
 
         // Returns random champion id from a list of champions who are not the
         // current user nor banned. Using random.org randomizer.
@@ -29,8 +28,7 @@ namespace LolFightProjekat.Controllers
                     where Champion.BanCooldown == 0 && Champion.IdChampion != championId
                     select Champion.IdChampion;
             List<Int32> Actives2 = Actives.ToList();
-            //int rank = rnd.Next(0, Actives2.Count());
-            int rank = 0;
+            int rank = rand.Next(0, Actives2.Count());
             return Fight(championId, Actives2[rank]);
         }
 
@@ -68,7 +66,7 @@ namespace LolFightProjekat.Controllers
                 Winner.Gold += Fajt.Gold;
                 db.LogBattles.Add(Fajt);
                 db.SaveChanges();
-                return Ok(Fajt.Report);
+                return Ok(Fajt);
             }
         }
     }
