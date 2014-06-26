@@ -1,4 +1,13 @@
 ﻿﻿<div ng-app="app" ng-controller="battles">
     <h1>Battles</h1>
-    <ul><li ng-repeat="log in data"><b>{{log.StartTime * 1000 | date:'dd.MM.yyyy, HH:mm'}}</b>: {{log.Report}}</li></ul>
+     <table class="table-condensed">
+         <tr>
+             <th><b>Time</b></th>
+             <th>Quicklog</th>
+         </tr>
+         <tr ng-repeat ="log in data">
+             <td><b>{{log.StartTime * 1000 | date:'dd.MM.yyyy, HH:mm'}}</b></td>
+             <td align="right">{{log.Report}}</td>
+         </tr>
+     </table>
 </div>

@@ -1,6 +1,17 @@
 ﻿﻿<div ng-app="app" ng-controller="rank">
      <h1>LOLFighters: The best and the worst</h1>
-     <div ng-controller ="id">
-         <ol><li ng-repeat="Ranking in data"><b>{{Ranking.Username}}</b>: {{Ranking.FarmGold}} $ - <a style="color:red" ui-sref="fight({ attackId: userid, defendId: Ranking.IdChampion })">Fight</a></li></ol>
-     </div>
+     <table ng-controller="id" class="table-condensed">
+         <tr>
+             <th><b>Rank</b></th>
+             <th><b>Champion</b></th>
+             <th><b>Gold</b></th>
+             <th> </th>
+         </tr>
+         <tr ng-repeat="Ranking in data">
+             <td><b>{{$index + 1}}/b></td>
+             <td align="left">{{Ranking.Username}}</td>
+             <td align="right">{{Ranking.FarmGold}} $</td>
+             <td align="right"><a style="color:red" ui-sref="fight({ attackId: userid, defendId: Ranking.IdChampion })">Fight</a></td>
+         </tr>
+     </table>
 </div>
