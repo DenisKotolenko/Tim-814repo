@@ -1,13 +1,10 @@
 ﻿
-angular
-.module('app', [
-    'ui.router'
-])
+angular.module('app', ['ui.router'])
   .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
       $urlRouterProvider.otherwise('/');
       $stateProvider
          .state('home', {
-             url: '/',
+             url: '/home',
              templateUrl: '../PartialViews/UserPartial/UserPartial.html'
 
          })
@@ -27,7 +24,7 @@ angular
               templateUrl: '../PartialViews/LoginPartial/Index.html'
           })
         .state('prazno', {
-            url: '/prazno',
+            url: '/',
             templateUrl: '../PartialViews/LoginPartial/prazno.html'
         })
       .state('mail', {
@@ -56,7 +53,6 @@ angular
          })
 
   }])
-
 angular.module('app').controller('rank', function ($scope, $http) {
 
     $http.get('../api/rank').success(function (data) {
@@ -194,12 +190,12 @@ angular.module('app').controller("Login", function ($scope, $http, $window) {
         };
 
         var responsePromise = $http.get("api/LoginApi/Login?username=" + dataObject.user + "&pass=" + dataObject.pass, {});
-
+        
         responsePromise.success(function (data) {
             if (data != "null") {
                 $scope.user = data;
                 $window.sessionStorage.token = dataObject.user;
-                window.location = '../../User/Index';
+                window.location = '../../User#/home';
                 AuthService.setUserAuthenticated(true);
 
                 //location.path = '/home';
@@ -208,9 +204,14 @@ angular.module('app').controller("Login", function ($scope, $http, $window) {
                 window.location = 'Login';
             }
         });
+      
 
     }
 })
+
+
+
+
 angular.module('app').controller("Username", function ($scope, $window) {
 
 
@@ -229,7 +230,7 @@ angular.module('app').controller("Logout", function ($scope, $window) {
         $window.sessionStorage.token = "";
         $scope.username = "";
 
-        window.location = '../../Home#/prazno';
+        window.location = '../../Home';
     };
 
 })

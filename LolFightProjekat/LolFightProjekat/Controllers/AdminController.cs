@@ -73,9 +73,10 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult Index()
         {
-           int id = Int32.Parse(Session["LogedUserID"].ToString());
-           Admin admin = db.Admins.Find(id);
-           return View(admin);
+           
+
+           
+           return View();
         }
 
         //

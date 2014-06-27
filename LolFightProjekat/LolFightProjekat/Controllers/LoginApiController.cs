@@ -102,15 +102,13 @@ namespace LolFightProjekat.Controllers
         [HttpGet]
         // GET api/LoginApi/5
         public User Login(string username, string pass)
-        {
-
+        {         
             User kor = new User();
-            kor = db.Users.Where(a => a.Username.Equals(username) && a.Password.Equals(pass)).FirstOrDefault();
-
+            kor = db.Users.Where(a => a.Username.Equals(username) && a.Password.Equals(pass)).FirstOrDefault(); 
             if (kor != null)
             {
                 return kor;
-            }
+            }                
             return null;
         }
 
@@ -133,5 +131,21 @@ namespace LolFightProjekat.Controllers
         {
             return null;
         }
+
+
+        [HttpGet]
+        // GET api/LoginApi/5
+        public Admin LoginAd(string username, string pass, string jeli)
+        {
+            Admin ad = new Admin();
+            ad = db.Admins.Where(a => a.Username.Equals(username) && a.Password.Equals(pass)).FirstOrDefault();
+            if (ad != null)
+            {
+                if (jeli=="jeste")
+                return ad;
+            }
+            return null;
+        }
+
     }
 }
