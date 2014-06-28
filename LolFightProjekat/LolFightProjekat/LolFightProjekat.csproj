@@ -710,6 +710,7 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Fight\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

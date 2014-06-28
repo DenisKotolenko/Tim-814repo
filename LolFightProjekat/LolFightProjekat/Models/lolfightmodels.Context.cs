@@ -18,6 +18,7 @@ namespace LolFightProjekat.Models
         public lolfighdatabaseEntities()
             : base("name=lolfighdatabaseEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

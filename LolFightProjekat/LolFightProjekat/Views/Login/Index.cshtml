@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model LolFightProjekat.Models.Admin
+<!DOCTYPE html>
 <html ng-app="app" dir="ltr" lang="en-US">
 <head>
     <!-- Created by Artisteer v4.1.0.59861 -->
@@ -79,15 +80,45 @@
 
                                                         <div ng-controller="Login">
 
-                                                            <br>
+                                                            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                                                            {
+                                                                //this  is for create form tag
+                                                                @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                        @Html.ValidationSummary(true)
+                                                                if (@ViewBag.Message != null)
+                                                                {
+                                                                    <div style="border:1px solid red">
+                                                                        @ViewBag.Message
 
-                                                            <form>
-                                                                <table border="0">
-                                                                    <tr><td>Username</td><td><input type="text" id="name" class="form-control" ng-model="login.name" /> </td></tr>
-                                                                    <tr><td>Password</td><td><input type="password" class="form-control" id="pass" ng-model="login.pass" /></td></tr>
-                                                                    <tr><td><button class="btn btn-default" ng-click="login.submitTheForm()" >Prijavi</button></td> <td></td></tr>
+                                                                    </div>
+                                                                }
+                                                                <table>
+                                                                    <tr>
+                                                                        <td ng-model="username">@Html.TextBoxFor(a => a.Username, new { @placeholder = "username", @class = "form-control" })</td>
+                                                                        <td>@Html.ValidationMessageFor(a => a.Username)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td ng-model="password">
+                                                                            @Html.PasswordFor(a => a.Password, new { @placeholder = "password", @class = "form-control" })
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @Html.ValidationMessageFor(a => a.Password)
+
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+
+                                                                        <td>
+                                                                            <input type="submit" ng-controller="PostUser" class="btn btn-default" value=" login" />
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
                                                                 </table>
-                                                            </form>
+                                                            }
                                                             <br />
                                                             <br />
                                                            

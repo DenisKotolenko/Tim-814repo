@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Denis\Documents\Visual Studio 2013\Projects\LoLFight\Tim-814repo\Tim-814repo\LolFightProjekat\LolFightProjekat\Models\lolfightmodels.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\NerA\Documents\Visual Studio 2013\Projects\Tim-814repo\LolFightProjekat\LolFightProjekat\Models\lolfightmodels.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

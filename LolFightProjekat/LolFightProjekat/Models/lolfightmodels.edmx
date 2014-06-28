@@ -802,7 +802,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="lolfighdatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="lolfighdatabaseEntities" annotation:LazyLoadingEnabled="false">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="AdminMails" EntityType="Self.AdminMail" />
           <EntitySet Name="Champions" EntityType="Self.Champion" />

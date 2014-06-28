@@ -8,9 +8,9 @@
              <th> </th>
          </tr>
          <tr ng-repeat="Ranking in data">
-             <td><b>{{$index + 1}}/b></td>
+             <td><b>{{$index + 1}}</b></td>
              <td align="left">{{Ranking.Username}}</td>
-             <td align="right">{{Ranking.FarmGold}} $</td>
+             <td align="right"><font color="yellow"> <i> {{Ranking.FarmGold}}g</i></font></td>
              <td align="right"><a style="color:red" ui-sref="fight({ attackId: userid, defendId: Ranking.IdChampion })">Fight</a></td>
          </tr>
      </table>

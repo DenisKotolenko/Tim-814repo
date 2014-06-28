@@ -14,7 +14,7 @@ namespace LolFightProjekat.Controllers
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
 
 
-        
+
 
         //Method who worries about uploading images
         [HttpPost]
@@ -26,8 +26,8 @@ namespace LolFightProjekat.Controllers
                 string targetPath = System.IO.Path.Combine(targetFolder, file.FileName);
                 file.SaveAs(targetPath);
 
-                
-                int id=0;
+
+                int id = 0;
                 if (Session["LogedUserID"] != null)
                     id = Int32.Parse(Session["LogedUserID"].ToString());
 
@@ -37,9 +37,9 @@ namespace LolFightProjekat.Controllers
                 file.InputStream.Read(image, 0, image.Length);
 
                 admin.ImageURL = image;
-                 
 
-          //      db.Admins.Add(admin);
+
+                //      db.Admins.Add(admin);
                 db.SaveChanges();
 
             }
@@ -73,10 +73,11 @@ namespace LolFightProjekat.Controllers
 
         public ActionResult Index()
         {
-           
 
-           
-           return View();
+         int id = Int32.Parse(Session["LogedUserID"].ToString());
+         Admin admin = db.Admins.Find(id);
+         return View(admin);
+
         }
 
         //
