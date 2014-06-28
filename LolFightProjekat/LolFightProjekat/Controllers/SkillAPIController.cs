@@ -31,7 +31,9 @@ namespace LolFightProjekat.Controllers
             int idChampion = (int)id;
             Champion champ = db.Champions.Find(idChampion);
             Skill skill = db.Skills.Find(idChampion);
-        
+
+            if (champ.Gold > 50) { 
+
             if (skillUp == "attack")
             {
                 champ.Gold = champ.Gold - 15;
@@ -90,7 +92,12 @@ namespace LolFightProjekat.Controllers
 
            
             return Ok(skill);
-        }
+            }
+            else
+            {
+                return NotFound();
+            }
+        } 
 
         // PUT api/SkillAPI/5
         public async Task<IHttpActionResult> PutSkill(int id, Skill skill)

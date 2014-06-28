@@ -20,6 +20,7 @@ namespace LolFightProjekat.Controllers
         // GET api/ShopApi
         public IQueryable<Item> GetItems()
         {
+            db.Configuration.LazyLoadingEnabled = false;
             return db.Items;
         }
 
@@ -43,42 +44,52 @@ namespace LolFightProjekat.Controllers
         public async Task<IHttpActionResult> BuyItem(int userid, int IdItem)
         {
 
+            db.Configuration.LazyLoadingEnabled = false;
 
             Champion ch = db.Champions.Find(userid);
             Item it = db.Items.Find(IdItem);
 
-            ch.Gold -= it.Price;
-
-            Inventory invent = new Inventory();
-
-            invent.IdChampion=ch.IdChampion;
-            invent.IdItem = it.IdItem;
-            invent.Activated=0;
-
-            db.Inventories.Add(invent);
-
-            db.SaveChanges();
-            db.Entry(it).State = EntityState.Modified;
-
-
-            try
+            if (ch.Gold > it.Price)
             {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ItemExists(it.IdItem))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
 
-            return StatusCode(HttpStatusCode.NoContent);
+                ch.Gold -= it.Price;
+
+                Inventory invent = new Inventory();
+
+                invent.IdChampion = ch.IdChampion;
+                invent.IdItem = it.IdItem;
+                invent.Activated = 0;
+
+                db.Inventories.Add(invent);
+
+                db.SaveChanges();
+                db.Entry(it).State = EntityState.Modified;
+
+
+
+                try
+                {
+                    await db.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ItemExists(it.IdItem))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return StatusCode(HttpStatusCode.NoContent);
+            }
+            else {
+                return StatusCode(HttpStatusCode.MethodNotAllowed);
+            }
         }
+        
 
         // POST api/ShopApi
         [ResponseType(typeof(Item))]

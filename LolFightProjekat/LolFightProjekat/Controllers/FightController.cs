@@ -36,6 +36,10 @@ namespace LolFightProjekat.Controllers
         //[ResponseType(typeof(String))]
         public IHttpActionResult Fight(int attackId, int defendId)
         {
+
+
+            db.Configuration.LazyLoadingEnabled = true;
+
             if (attackId == defendId)
                 return Ok(db.Users.Find(attackId).Username + " is confused! It hurt itself in its confusion!");
             else

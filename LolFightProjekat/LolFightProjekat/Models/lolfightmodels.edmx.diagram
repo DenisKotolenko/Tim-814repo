@@ -33,6 +33,7 @@
         <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Mail_IdReceiver_dbo_Champion_IdChampion" ManuallyRouted="false" />
         <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Mail_IdSender_dbo_Champion_IdChampion" ManuallyRouted="false" />
         <AssociationConnector Association="lolfighdatabaseModel.FK_dbo_Inventory_dbo_Item_IdItem" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="lolfighdatabaseModel.News" Width="1.5" PointX="3.375" PointY="3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

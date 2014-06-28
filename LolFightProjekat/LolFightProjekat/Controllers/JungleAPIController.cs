@@ -32,42 +32,51 @@ namespace LolFightProjekat.Controllers
         {
             //Treba implementirati blokadu ako je duration+stariStarTime < NoviStarttime 
 
+            if (duration > 0 && duration<=8)
+            {
+                //idChampion == idUser 1 na prema 1 veza
+                var item = (from x in db.Users where x.Username == username select x.IdUser).First();
+                int idChampion = (int)item;
 
-            //idChampion == idUser 1 na prema 1 veza
-            var item = (from x in db.Users where x.Username == username select x.IdUser).First();
-            int idChampion = (int)item;
+                LogJungle logjungle = new LogJungle();
 
-            LogJungle logjungle = new LogJungle();
+                System.Random r = new System.Random();
+                int rInt = r.Next(0, 100); //for ints
+                List<String> listOfReports = new List<String> { "u have been successful", "you are good, well played", "jungle OP, GG WP" };
+                int reportRandom = r.Next(0, listOfReports.Count);
 
-            System.Random r = new System.Random();
-            int rInt = r.Next(0, 100); //for ints
-            List<String> listOfReports = new List<String> { "u have been successful", "you are good, well played", "jungle OP, GG WP" };
-            int reportRandom = r.Next(0, listOfReports.Count);
+                logjungle.Report = listOfReports[reportRandom];
+                logjungle.Gold = rInt * duration;
+                logjungle.StartTime = (int)DateTime.Now.Hour;
+                logjungle.Duration = duration;
+                logjungle.IdChampion = idChampion;
 
-            logjungle.Report = listOfReports[reportRandom];
-            logjungle.Gold = rInt * duration;
-            logjungle.StartTime = (int)DateTime.Now.Hour;
-            logjungle.Duration = duration;
-            logjungle.IdChampion = 17;
+                db.LogJungles.Add(logjungle);
 
-            db.LogJungles.Add(logjungle);
+                Champion c = db.Champions.Find(idChampion);
 
-            Champion c = db.Champions.Find(idChampion);
+                c.Gold = c.Gold + logjungle.Gold;
 
-            c.Gold = c.Gold + logjungle.Gold;
+                // c.Ranking.StolenGold += logjungle.Gold;
 
-           // c.Ranking.StolenGold += logjungle.Gold;
-
-            await db.SaveChangesAsync();
+                await db.SaveChangesAsync();
 
 
-            if (logjungle == null)
+
+                if (logjungle == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(logjungle);
+
+            }
+            else
             {
                 return NotFound();
             }
-
-            return Ok(logjungle);
         }
+
 
         // PUT api/JungleAPI/5
         public async Task<IHttpActionResult> PutLogJungle(int id, LogJungle logjungle)

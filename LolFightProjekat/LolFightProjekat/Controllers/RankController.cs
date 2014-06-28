@@ -15,12 +15,14 @@ namespace LolFightProjekat.Controllers
     public class RankController : ApiController
     {
         private lolfighdatabaseEntities db = new lolfighdatabaseEntities();
+       
 
         // Returns ordered list of Champion ids by farmed gold amount.
         //[ResponseType(typeof(IQueryable<String>))]
         [AcceptVerbs("GET")]
         public IHttpActionResult RankFarm()
         {
+
             var Ranks =
                     from Ranking in db.Rankings
                     orderby Ranking.FarmGold descending

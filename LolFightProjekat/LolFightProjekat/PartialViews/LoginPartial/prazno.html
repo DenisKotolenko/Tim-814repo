@@ -1,1 +1,24 @@
-﻿<h2>Obavijesti</h2><br /><br /><br /><br /><br /><br /><br /><br />
+﻿﻿<div ng-app="app" ng-controller="newsCtrl">
+
+
+    <div class="ftc-postmetadataheader">
+        <h2 class="ftc-postheader">News</h2>
+    </div>
+
+
+
+     <ol style="list-style-type:none;" ng-repeat="notification in news">
+
+         <li>
+             <span class="glyphicon glyphicon-info-sign"></span> <br />
+             <strong>
+                 Title: </strong> <br />
+                 {{notification.Title}} <br />
+                 Text:  <br />
+                 {{notification.Text}}
+                 <br />
+
+</li>
+</ol>
+
+</div>

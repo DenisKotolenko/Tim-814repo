@@ -123,6 +123,14 @@
           <Property Name="Title" Type="nvarchar" MaxLength="45" />
           <Property Name="Text" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="IdNews" />
+          </Key>
+          <Property Name="IdNews" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="Ranking">
           <Key>
             <PropertyRef Name="IdRanking" />
@@ -360,6 +368,7 @@
           <EntitySet Name="LogFarm" EntityType="Self.LogFarm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LogJungle" EntityType="Self.LogJungle" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mail" EntityType="Self.Mail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ranking" EntityType="Self.Ranking" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -802,7 +811,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="lolfighdatabaseEntities" annotation:LazyLoadingEnabled="false">
+        <EntityContainer Name="lolfighdatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="AdminMails" EntityType="Self.AdminMail" />
           <EntitySet Name="Champions" EntityType="Self.Champion" />
@@ -876,7 +885,16 @@
             <End Role="Item" EntitySet="Items" />
             <End Role="Inventory" EntitySet="Inventories" />
           </AssociationSet>
+          <EntitySet Name="News" EntityType="lolfighdatabaseModel.News" />
         </EntityContainer>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="IdNews" />
+          </Key>
+          <Property Name="IdNews" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1043,6 +1061,15 @@
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="eMail" ColumnName="eMail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="lolfighdatabaseModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IdNews" ColumnName="IdNews" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

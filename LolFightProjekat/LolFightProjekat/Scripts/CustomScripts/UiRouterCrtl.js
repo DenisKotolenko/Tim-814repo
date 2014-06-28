@@ -55,6 +55,16 @@ angular.module('app', ['ui.router'])
   }])
 
 
+
+angular.module('app').controller('newsCtrl', function ($scope, $http) {
+
+    $http.get('../api/NewsAPI').success(function (data) {
+        $scope.news = data;
+
+    });
+});
+
+
 angular.module('app').controller('rank', function ($scope, $http) {
 
     $http.get('../api/rank').success(function (data) {
@@ -107,6 +117,7 @@ angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
 
     $scope.activateItem = function (username, IdItem) {
         $http.get('../api/ChampionAPI/activateItem?username=' + username + '&itemId=' + IdItem).success(function (data) {
+            alert("Item activated!")
             $scope.activatedItem= data;
         });
     };
@@ -132,8 +143,9 @@ angular.module('app').controller('farmingCtrl', function ($scope, $http) {
 
     $scope.PostFarming = function () {
 
-        alert("Sucsessfull farming! May saint Teo save your soul!");
+       
         $http.get('../api/FarmAPI?username=' + $scope.username).success(function (data) {
+            alert("Sucsessfull farming! May saint Teo save your soul!");
             $scope.status = data;
         });
 
@@ -168,7 +180,7 @@ angular.module('app').controller('GetItemsCtrl', function ($scope, $http) {
     $scope.BuyItem = function (idUser,idItem) {
         
         $http.get('../api/shopapi/buyitem?userid=' + idUser + '&iditem=' + idItem).success(function (data) {
-            alert("radi");
+            alert("You have successfuly bought item!");
             $scope.data = data;
         });
 

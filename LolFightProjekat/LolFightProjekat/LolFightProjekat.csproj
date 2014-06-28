@@ -180,6 +180,7 @@
     <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\MailAPIController.cs" />
     <Compile Include="Controllers\BattlesController.cs" />
+    <Compile Include="Controllers\NewsAPIController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -236,6 +237,9 @@
       <DependentUpon>lolfightmodels.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Mail.cs">
+      <DependentUpon>lolfightmodels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\News.cs">
       <DependentUpon>lolfightmodels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Rank.cs" />

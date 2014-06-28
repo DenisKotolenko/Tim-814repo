@@ -20,9 +20,6 @@ namespace LolFightProjekat.Controllers
         public void goFarm(String username)
         {
 
-
-
-
         }
 
         // GET api/FarmAPI

@@ -18,7 +18,6 @@ namespace LolFightProjekat.Models
         public lolfighdatabaseEntities()
             : base("name=lolfighdatabaseEntities")
         {
-            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -39,5 +38,6 @@ namespace LolFightProjekat.Models
         public DbSet<Ranking> Rankings { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<News> News { get; set; }
     }
 }
