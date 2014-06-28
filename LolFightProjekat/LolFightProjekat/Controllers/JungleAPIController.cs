@@ -56,7 +56,7 @@ namespace LolFightProjekat.Controllers
 
             c.Gold = c.Gold + logjungle.Gold;
 
-            c.Ranking.StolenGold += logjungle.Gold;
+           // c.Ranking.StolenGold += logjungle.Gold;
 
             await db.SaveChangesAsync();
 

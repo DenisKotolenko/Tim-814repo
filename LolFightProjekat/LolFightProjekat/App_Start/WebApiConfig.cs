@@ -14,11 +14,7 @@ namespace LolFightProjekat
             json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
             config.Formatters.Remove(config.Formatters.XmlFormatter);
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+
             config.Routes.MapHttpRoute(
                name: "DefaultApi2",
                routeTemplate: "api/{controller}/{action}/{username}/{duration}",
@@ -26,6 +22,17 @@ namespace LolFightProjekat
                                 duration = RouteParameter.Optional      }
            );
 
+            config.Routes.MapHttpRoute(
+              name: "DefaultApi3",
+              routeTemplate: " api/{controller}/{action}",
+              defaults: null
+          );
+
+         config.Routes.MapHttpRoute(
+         name: "DefaultApi4",
+         routeTemplate: "api/{controller}/{id}",
+         defaults: new { id = RouteParameter.Optional }
+);
             
 
            

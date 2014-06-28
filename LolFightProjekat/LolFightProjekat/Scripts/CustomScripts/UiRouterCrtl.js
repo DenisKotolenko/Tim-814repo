@@ -93,7 +93,7 @@ angular.module('app').controller('MailCtrl', function ($scope, $http) {
 
     $scope.sendMail = function () {
 
-        alert("Poslana poruka korisniku:" + $scope.reciverName);
+        alert("Message sent to user:" + $scope.reciverName);
         $http.get('../api/MailAPI/SendMail?username=' + $scope.username + "&reciverName=" + $scope.reciverName + "&text=" + $scope.text + "&title=" + $scope.title).success(function (data) {
             $scope.data = data;
         });
@@ -104,15 +104,18 @@ angular.module('app').controller('MailCtrl', function ($scope, $http) {
 
 angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
 
-    $scope.showInventory = function () {
 
-        alert("prikazuje se inventory:" + $scope.username);
-        $http.get('../api/ChampionAPI/ShowInventory?username=' + $scope.username).success(function (data) {
-            $scope.inventory = data;
+    $scope.activateItem = function (username, IdItem) {
+        $http.get('../api/ChampionAPI/activateItem?username=' + username + '&itemId=' + IdItem).success(function (data) {
+            $scope.activatedItem= data;
         });
-
     };
 
+    $scope.ShowInventory = function () {
+        $http.get('../api/ChampionAPI/ShowInventory?username=' + $scope.username+ "&bla=1&blabla=1").success(function (data) {
+            $scope.inventory = data;
+        });
+    };
 
     $http.get('../api/ChampionAPI?username=' + $scope.username).success(function (data) {
         $scope.data = data;
@@ -143,7 +146,7 @@ angular.module('app').controller('junglingCtrl', function ($scope, $http) {
 
     $scope.PostJungling = function () {
 
-        alert("Uspješan odlazak u junglu! Neka vas sv.Teo cuva od zla!");
+        alert("Sucssesfull jungling route!");
         $http.get('../api/JungleAPI?username=' + $scope.username + "&duration=" + $scope.duration).success(function (data) {
             $scope.status = data;
         });

@@ -9,13 +9,33 @@
                   Name: {{username}}<br />
                     Nation: {{data.ChampionType.Nation}}<br />
                     Champion name: {{data.ChampionType.Name}}
+
+                        <br />
+                    <button class="btn btn-info" ng-click="ShowInventory(); showTable = !showTable">Show Inventory</button>
+                    
+
+                    <table class="table table-condensed" ng-show="showTable">
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Attack Dmg</th>
+                            <th>Ability Dmg</th>
+
+                        </tr>
+
+
+                        <tr ng-repeat="item in inventory">
                         
-                  Inventory:
-                     <ul ng-repeat="item in inventory">
-                            <li> {{item.Name}}</li>
-                            <li> {{item.Price}}</li>
-                       </ul> 
-                </div>
+                            <td> {{item.Name}}</td>
+                            <td>{{item.AttackDamage}} </td>
+                            <td>{{item.AbilityDamage}} </td>
+                            <td><button class="btn btn-warning" ng-click="activateItem(username,item.IdItem)"> Activate</button> </td>
+
+                        </tr>
+
+                    </table>
+                        
+</div>
                 </div>
             </div>
         

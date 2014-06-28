@@ -47,6 +47,8 @@ namespace LolFightProjekat.Controllers
             Champion ch = db.Champions.Find(userid);
             Item it = db.Items.Find(IdItem);
 
+            ch.Gold -= it.Price;
+
             Inventory invent = new Inventory();
 
             invent.IdChampion=ch.IdChampion;
@@ -55,7 +57,7 @@ namespace LolFightProjekat.Controllers
 
             db.Inventories.Add(invent);
 
-
+            db.SaveChanges();
             db.Entry(it).State = EntityState.Modified;
 
 

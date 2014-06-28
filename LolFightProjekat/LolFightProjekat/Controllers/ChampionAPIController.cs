@@ -23,24 +23,45 @@ namespace LolFightProjekat.Controllers
             return db.Champions;
         }
 
-         [ResponseType(typeof(List<Item>))]
-        public async Task<IHttpActionResult> ShowInventory(String username) {
 
+        //activate item
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
+        public async Task<IHttpActionResult> activateItem(String username, int itemId)
+        {
+             
             var champ = (from x in db.Users where x.Username == username select x.IdUser).First();
             int idChampion = (int)champ;
-            var inventory = (from x in db.Inventories where x.IdChampion == idChampion select x);
+            Inventory inventory = (from x in db.Inventories where x.IdChampion == idChampion && x.IdItem == itemId select x).First();
+            inventory.Activated = 1;
 
-            List<Item> listaItema = new List<Item>();
+            await db.SaveChangesAsync();
 
-            foreach (var item in inventory) {
-                Item it = await db.Items.FindAsync(item.IdItem);
+            return Ok(inventory);
+        
+        }
+
+
+        //show inventory
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
+        public IQueryable ShowInventory(String username, int bla, int blabla)
+        {
+             
+            var champ = (from x in db.Users where x.Username == username select x.IdUser).First();
+            int idChampion = (int)champ;
+            IQueryable<int> inventory = (from x in db.Inventories where x.IdChampion == idChampion select x.IdItem);
+
+            var listaItema = new List<Object>();            
+
+            foreach (var itemId in inventory) {
+                var it = (from x in db.Items where x.IdItem == itemId select new {x.IdItem, x.Name, x.AttackDamage,x.AbilityDamage }).First();
                 listaItema.Add(it);
             }
 
-            return Ok(listaItema);
-
-        
+            return listaItema.AsQueryable();
         }
+
           // GET api/ChampionAPI?username="neki string"
         [ResponseType(typeof(Champion))]
         public async Task<IHttpActionResult> GetEverything(String username)
