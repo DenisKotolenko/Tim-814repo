@@ -53,6 +53,8 @@ angular.module('app', ['ui.router'])
          })
 
   }])
+
+
 angular.module('app').controller('rank', function ($scope, $http) {
 
     $http.get('../api/rank').success(function (data) {
@@ -102,7 +104,14 @@ angular.module('app').controller('MailCtrl', function ($scope, $http) {
 
 angular.module('app').controller('getEverythingCtrl', function ($scope, $http) {
 
+    $scope.showInventory = function () {
 
+        alert("prikazuje se inventory:" + $scope.username);
+        $http.get('../api/ChampionAPI/ShowInventory?username=' + $scope.username).success(function (data) {
+            $scope.inventory = data;
+        });
+
+    };
 
 
     $http.get('../api/ChampionAPI?username=' + $scope.username).success(function (data) {
@@ -152,10 +161,16 @@ angular.module('app').controller('GetItemsCtrl', function ($scope, $http) {
         $scope.Items = data;
     });
 
-    $scope.BuyItem = function (Price) {
-        var i = $scope.names.indexOf(Price);
-        $scope.names.splice(i, 1);
+
+    $scope.BuyItem = function (idUser,idItem) {
+        
+        $http.get('../api/shopapi/buyitem?userid=' + idUser + '&iditem=' + idItem).success(function (data) {
+            alert("radi");
+            $scope.data = data;
+        });
+
     };
+
 });
 
 

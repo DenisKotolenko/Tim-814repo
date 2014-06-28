@@ -36,20 +36,28 @@ namespace LolFightProjekat.Controllers
             return Ok(item);
         }
 
-        // PUT api/ShopApi/5
-        public async Task<IHttpActionResult> PutItem(int id, Item item)
+
+        [System.Web.Http.AcceptVerbs("GET")]
+        [System.Web.Http.HttpGet]
+        // GET api/ShopApi/BuyItem?userid=id&itemid=idItem
+        public async Task<IHttpActionResult> BuyItem(int userid, int IdItem)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            if (id != item.IdItem)
-            {
-                return BadRequest();
-            }
 
-            db.Entry(item).State = EntityState.Modified;
+            Champion ch = db.Champions.Find(userid);
+            Item it = db.Items.Find(IdItem);
+
+            Inventory invent = new Inventory();
+
+            invent.IdChampion=ch.IdChampion;
+            invent.IdItem = it.IdItem;
+            invent.Activated=0;
+
+            db.Inventories.Add(invent);
+
+
+            db.Entry(it).State = EntityState.Modified;
+
 
             try
             {
@@ -57,7 +65,7 @@ namespace LolFightProjekat.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ItemExists(id))
+                if (!ItemExists(it.IdItem))
                 {
                     return NotFound();
                 }

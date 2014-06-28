@@ -23,6 +23,24 @@ namespace LolFightProjekat.Controllers
             return db.Champions;
         }
 
+         [ResponseType(typeof(List<Item>))]
+        public async Task<IHttpActionResult> ShowInventory(String username) {
+
+            var champ = (from x in db.Users where x.Username == username select x.IdUser).First();
+            int idChampion = (int)champ;
+            var inventory = (from x in db.Inventories where x.IdChampion == idChampion select x);
+
+            List<Item> listaItema = new List<Item>();
+
+            foreach (var item in inventory) {
+                Item it = await db.Items.FindAsync(item.IdItem);
+                listaItema.Add(it);
+            }
+
+            return Ok(listaItema);
+
+        
+        }
           // GET api/ChampionAPI?username="neki string"
         [ResponseType(typeof(Champion))]
         public async Task<IHttpActionResult> GetEverything(String username)

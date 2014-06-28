@@ -10,7 +10,11 @@
                     Nation: {{data.ChampionType.Nation}}<br />
                     Champion name: {{data.ChampionType.Name}}
                         
-                  
+                  Inventory:
+                     <ul ng-repeat="item in inventory">
+                            <li> {{item.Name}}</li>
+                            <li> {{item.Price}}</li>
+                       </ul> 
                 </div>
                 </div>
             </div>

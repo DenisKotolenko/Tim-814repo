@@ -27,7 +27,6 @@ namespace LolFightProjekat.Controllers
 
 
 
-        // GET api/JungleAPI/5
         [ResponseType(typeof(LogJungle))]
         public async Task<IHttpActionResult> GetLogJungle(String username, int duration)
         {

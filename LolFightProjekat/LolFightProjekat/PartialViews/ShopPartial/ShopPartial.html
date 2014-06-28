@@ -9,32 +9,45 @@
             <div class="ftc-content-layout-row">
                 <div class="ftc-layout-cell layout-item-0" style="width: 100%">
 
+                    <div ng-controller="id">
+                       
 
 
+                            {{userid}}
+                            <table ng-controller="GetItemsCtrl">
+                                <tr>
+                                    <th>Name</th>
+
+                                    <th>Price</th>
+                                    <th>Ad DMG</th>
+                                    <th>Ap DMG</th>
+                                    <th>HP</th>
+                                    <th></th>
+                                </tr>
+                                <tr ng-repeat="item in Items">
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Price}}</td>
+                                    <td>{{item.AttackDamage}}</td>
+                                    <td>{{item.AbilityDamage}}</td>
+                                    <td>{{item.HP}}</td>
+                                   
+                                    <td><button class="btn btn-warning" ng-click="BuyItem(userid,item.IdItem)"> Buy</button> </td>
+                                    
+                                    <!--
+                                    <tr ng-repeat="Ranking in data">
+                                        <td><b>{{$index + 1}}/b></td>
+                                        <td align="left">{{Ranking.Username}}</td>
+                                        <td align="right">{{Ranking.FarmGold}} $</td>
+                                        <td align="right"><a style="color:red" ui-sref="fight({ attackId: userid, defendId: Ranking.IdChampion })">Fight</a></td>
+                                    </tr>
+                -->
+
+                                </tr>
+                            </table>
 
 
-
-                    <table ng-controller="GetItemsCtrl">
-                        <tr>
-                            <th>Name</th>
-
-                            <th>Price</th>
-                            <th>Ad DMG</th>
-                            <th>Ap DMG</th>
-                            <th>HP</th>
-                            <th></th>
-                        </tr>
-                        <tr ng-repeat="item in Items">
-                            <td>{{item.Name}}</td>
-                            <td>{{item.Price}}</td>
-                            <td>{{item.AttackDamage}}</td>
-                            <td>{{item.AbilityDamage}}</td>
-                            <td>{{item.HP}}</td>
-                            <td> <a href="">Buy</a> </td>
-
-                        </tr>
-                    </table>
-
+                        </div>
+                  
 
 
 
