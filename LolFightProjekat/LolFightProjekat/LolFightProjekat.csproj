@@ -181,6 +181,7 @@
     <Compile Include="Controllers\MailAPIController.cs" />
     <Compile Include="Controllers\BattlesController.cs" />
     <Compile Include="Controllers\NewsAPIController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -715,6 +716,11 @@
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Fight\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

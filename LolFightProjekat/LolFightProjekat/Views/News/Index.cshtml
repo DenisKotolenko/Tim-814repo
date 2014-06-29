@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LolFightProjekat.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="dropdown">
+        <a href="Admin/AddAdmin" class="dropdown-toggle" data-toggle="dropdown">Admins <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="Admin/AddAdmin">View Admins</a></li>
+            <li><a href="Admin/Create">Add Admins</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="AddItem">View Items</a></li>
+            <li><a href="AddItem/Create">Add Items</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Champions<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="ChampionType">View Champions</a></li>
+            <li><a href="ChampionType/Create">Add Champions</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="News">View News</a></li>
+            <li><a href="News/Create">Add News</a></li>
+        </ul>
+    </li>
+    <li><a href=" @Url.Action("Logout", "Admin", new { id = 1}) ">Logout</a></li>
+
+
+</ul>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdNews }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdNews }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdNews })
+        </td>
+    </tr>
+}
+
+</table>

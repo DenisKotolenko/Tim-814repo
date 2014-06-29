@@ -231,7 +231,7 @@ angular.module('app').controller("Login", function ($scope, $http, $window) {
                 //location.path = '/home';
             }
             else {
-                window.location = 'Login';
+                alert("pogrešno unesen username ili password");
             }
         });
       
