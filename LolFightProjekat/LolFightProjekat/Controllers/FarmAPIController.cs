@@ -59,7 +59,7 @@ namespace LolFightProjekat.Controllers
 
             c.Gold = c.Gold + logfarm.Gold;
 
-           // c.Ranking.FarmGold += logfarm.Gold;
+           //c.Ranking.FarmGold += logfarm.Gold;
 
             
 

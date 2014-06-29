@@ -41,7 +41,11 @@ namespace LolFightProjekat.Controllers
             db.Configuration.LazyLoadingEnabled = true;
 
             if (attackId == defendId)
-                return Ok(db.Users.Find(attackId).Username + " is confused! It hurt itself in its confusion!");
+            {
+                LogBattle Fajt = new LogBattle();
+                Fajt.Report = db.Users.Find(attackId).Username + " is confused! It hurt itself in its confusion!";
+                return Ok(Fajt);
+            }
             else
             {
                 Champion Attacker = db.Champions.Find(attackId);
