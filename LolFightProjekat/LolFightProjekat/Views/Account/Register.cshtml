@@ -61,7 +61,7 @@
 
                     </nav>
                     <div class="ftc-layout-wrapper">
-                        <div class="ftc-content-layout">
+                        
                             <div class="ftc-content-layout-row">
                                 <div class="ftc-layout-cell ftc-sidebar1">
                                     <div class="ftc-block clearfix">
@@ -77,7 +77,11 @@
                                             <div class="ftc-content-layout">
                                                 <div class="ftc-content-layout-row">
                                                     <div class="ftc-layout-cell layout-item-0" style="width: 100%">
-
+                                                        <br />
+                                                        <div class="ftc-postmetadataheader">
+                                                            <h2 class="ftc-postheader">Register</h2>
+                                                        </div>
+                                                       
                                                         <div ng-controller="Login">
 
                                                             <br>
@@ -86,7 +90,7 @@
                                                                 @Html.ValidationSummary(true)
 
                                                                 <fieldset>
-                                                                    <legend>User</legend>
+                                                                    
                                                                     @Html.AntiForgeryToken()
                                                                     @if (ViewBag.Message != null)
                                                                     {
@@ -141,8 +145,7 @@
                                                             <br />
 
 
-                                                        </div>
-
+                                                     
 
                                                     </div>
                                                 </div>

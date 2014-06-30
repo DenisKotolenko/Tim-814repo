@@ -95,15 +95,15 @@
                                                                 <table class="table-condensed">
                                                                     <tr>
                                                                         <td ng-model="username">@Html.TextBoxFor(a => a.Username, new { @placeholder = "username", @class = "form-control" })</td>
-                                                                        <td>@Html.ValidationMessageFor(a => a.Username)</td>
+                                                                        @Html.ValidationMessageFor(a => a.Username)
                                                                     </tr>
                                                                     <tr>
                                                                         <td ng-model="password">
                                                                             @Html.PasswordFor(a => a.Password, new { @placeholder = "password", @class = "form-control" })
                                                                         </td>
-                                                                        <td>
+                                                                        
                                                                             @Html.ValidationMessageFor(a => a.Password)
-                                                                        </td>
+                                                                        
                                                                     </tr>
                                                                 </table>
                                                                 <br />
