@@ -103,9 +103,9 @@ angular.module('app').controller('MailCtrl', function ($scope, $http) {
 
     $scope.sendMail = function () {
 
-        alert("Message sent to user:" + $scope.reciverName);
         $http.get('../api/MailAPI/SendMail?username=' + $scope.username + "&reciverName=" + $scope.reciverName + "&text=" + $scope.text + "&title=" + $scope.title).success(function (data) {
             $scope.data = data;
+            alert("Šaljem: " + $scope.reciverName + "...\nLolMail kaže:" + $scope.data);
         });
 
     };

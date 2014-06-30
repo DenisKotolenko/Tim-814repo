@@ -25,26 +25,28 @@ namespace LolFightProjekat.Controllers
         public IHttpActionResult SendMail(String username, String reciverName, String text, String title)
         {
 
-            var item = (from x in db.Users where x.Username == username select x.IdUser).First();
-            int sender = (int)item;
+            if ((db.Users.SingleOrDefault(user => user.Username == reciverName) == null))
+                return Ok("Ne postoji korisnik, pokušajte ponovo!");
+            else
+            {
+                var item = (from x in db.Users where x.Username == username select x.IdUser).First();
+                int sender = (int)item;
 
+                var item2 = (from x in db.Users where x.Username == reciverName select x.IdUser).First();
+                int reciver = (int)item2;
 
-            var item2 = (from x in db.Users where x.Username == reciverName select x.IdUser).First();
-            int reciver = (int)item2;
+                Mail m = new Mail();
+                m.IdSender = sender;
+                m.IdReceiver = reciver;
+                m.Text = text;
+                m.Time = DateTime.Now.Hour;
+                m.Title = title;
 
-            Mail m = new Mail();
-            m.IdSender = sender;
-            m.IdReceiver = reciver;
-            m.Text = text;
-            m.Time = DateTime.Now.Hour;
-            m.Title = title;
+                db.Mails.Add(m);
+                db.SaveChanges();
 
-
-            db.Mails.Add(m);
-            db.SaveChanges();
-
-
-            return Ok("Uspjesno poslana poruka");
+                return Ok("Uspjesno poslana poruka!");
+            }
         }
 
         public IQueryable GetMail(String username)
@@ -60,7 +62,6 @@ namespace LolFightProjekat.Controllers
                     on mail.IdReceiver equals user.IdUser
                     where mail.IdReceiver == idChampion
                     select new { mail.Title, user.Username, mail.Text, mail.Time, });
-
 
         }
 

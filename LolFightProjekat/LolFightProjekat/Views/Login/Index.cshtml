@@ -78,6 +78,7 @@
                                                     <div class="ftc-layout-cell layout-item-0" style="width: 100%">
 
                                                         <div ng-controller="Login">
+                                                            <h2 class="ftc-postheader">Top Secret Adminzone</h2>
 
                                                             @using (Html.BeginForm("Index", "Login", FormMethod.Post))
                                                             {
@@ -91,7 +92,7 @@
 
                                                                     </div>
                                                                 }
-                                                                <table>
+                                                                <table class="table-condensed">
                                                                     <tr>
                                                                         <td ng-model="username">@Html.TextBoxFor(a => a.Username, new { @placeholder = "username", @class = "form-control" })</td>
                                                                         <td>@Html.ValidationMessageFor(a => a.Username)</td>
@@ -99,24 +100,14 @@
                                                                     <tr>
                                                                         <td ng-model="password">
                                                                             @Html.PasswordFor(a => a.Password, new { @placeholder = "password", @class = "form-control" })
-
                                                                         </td>
-
                                                                         <td>
                                                                             @Html.ValidationMessageFor(a => a.Password)
-
                                                                         </td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>
-                                                                            <input type="submit" ng-controller="PostUser" class="btn btn-default" value=" login" />
-                                                                        </td>
-                                                                        <td></td>
                                                                     </tr>
                                                                 </table>
+                                                                <br />
+                                                                <input type="submit" ng-controller="PostUser" class="btn btn-default" value=" login" />
                                                             }
                                                             <br />
                                                             <br />
